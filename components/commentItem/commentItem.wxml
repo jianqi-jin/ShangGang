@@ -1,0 +1,19 @@
+<!--components/commentItem/commentItem.wxml-->
+<!-- commentItem组件抽象 Start -->
+<view class='commentItem'>
+  <view class='commentLeft'>
+    <view class='userImg'><image src=''></image></view>
+  </view>
+  <view class='commentRight'>
+  
+    <view class='commentTitle'>
+      <view>用户昵称你好</view>
+      <view>2019.03.03</view>
+    </view>
+    <view class='commentContent'>很好吃对身体还健康，真的是不错的选择以后会常来,
+成为您家忠实粉</view>
+<view class='commentImg'>
+</view>
+  </view>
+</view>
+<!-- commentItem组件抽象 End -->

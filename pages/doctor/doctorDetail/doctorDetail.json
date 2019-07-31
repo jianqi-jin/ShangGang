@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "医生详情",
+  "usingComponents": {
+    "theme-view": "/components/themeView/themeView"
+  }
+}

@@ -1,0 +1,44 @@
+<!--pages/join/message/message.wxml-->
+<view class='back' wx:if='{{false}}'>
+  <view class='title'>
+    成为代理规则说明
+  </view>
+
+  <view class='contentItem'>
+    <view class='contentTitle'>代理（合伙人）致辞： </view>
+    <text class='contentText'>产品，始终是代理商全部的寄托。 
+  选择怎样的产品，注定了代理商将进入怎样的市场角色； 
+  中奇品牌源于高科专利，掌控市场脉动，自然成就每一位选择者的财富人生！
+  </text>
+  </view>
+
+  <view class='contentItem'>
+    <view class='contentTitle'>代理（合伙人）致辞： </view>
+    <text class='contentText'>产品，始终是代理商全部的寄托。 
+  选择怎样的产品，注定了代理商将进入怎样的市场角色； 
+  中奇品牌源于高科专利，掌控市场脉动，自然成就每一位选择者的财富人生！
+  </text>
+  </view>
+</view>
+<image src='{{upgreadInfo.cwdl_img}}' mode='widthFix'></image>
+<view class='footBtn'>
+
+  <button bindtap='payClick' class='btnSpecialBlock'>
+    <view class='btn'>去支付{{upgreadInfo.cwdl_money}}元</view>
+  </button>
+
+</view>
+
+
+<dialog wx:if='{{paySuccFlag}}'>
+  <view class='succBox'>
+    <image mode='widthFix' class='succImg' src='/res/icon/target-img@3x.png'></image>
+
+    <view class='succTitle'>
+    <view>恭喜您成为三级代理</view>
+    <view>拥有代理分销特权</view>
+    </view>
+
+    <navigator open-type='redirect' url='/pages/user/user' class='succBtn'>知道啦</navigator>
+  </view>
+</dialog>

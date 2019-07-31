@@ -1,0 +1,307 @@
+/* components/cardBar/carBar.wxss */
+
+/* 组件抽象 */
+
+.chooseMask {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.titleRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.priceText {
+  color: rgba(153, 153, 153, 1);
+}
+
+.carListBox {
+  width: 100%;
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 2;
+  padding-bottom: 120rpx;
+}
+scroll-view{
+  height: 100%;
+  max-height: 700rpx!important;
+}
+.titleLeft {
+  color: rgba(153, 153, 153, 1);
+}
+
+.titleBox {
+  padding: 0 25rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 88rpx;
+  background: var(--bgColor);
+}
+
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.carBarBox {
+  position: fixed;
+  bottom: 10rpx;
+  width: 100%;
+  z-index: 3;
+}
+
+.mainBox {
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  width: 702rpx;
+  height: 98rpx;
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 15rpx 0px rgba(102, 102, 102, 0.1);
+  border-radius: 100rpx;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.carBarLeft {
+  flex-direction: row;
+  margin-left: 45rpx;
+  height: 80rpx;
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.btnBox {
+  width: 180rpx;
+  height: 80rpx;
+  text-align: center;
+  line-height: 80rpx;
+  margin-right: 9rpx;
+  background: var(--themeBackCG);
+  border-radius: 40rpx;
+  font-size: 32rpx;
+  color: #fff;
+  font-weight: bold;
+}
+
+.carBarLeftImg {
+  width: 100rpx;
+  height: 100rpx;
+  position: relative;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.carBarLeftImg image {
+  position: absolute;
+  bottom: 18rpx;
+}
+
+/* 
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clear {
+  clear: both;
+}
+
+/* 底部导航 
+
+.footer {
+  width: 648rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 49rpx;
+  position: fixed;
+  bottom: 9rpx;
+  left: 24rpx;
+  box-shadow: 0px 0px 5px #f5f5f5;
+  padding-left: 45rpx;
+  padding-right: 9rpx;
+}
+
+
+
+.food {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.selected {
+  width: 180rpx;
+  height: 80rpx;
+  background: #cdcdcd;
+  border-radius: 40rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 36rpx;
+  font-weight: bold;
+  margin-top: 9rpx;
+}
+
+/* 展开列表开始 
+
+.select_status {
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+  position: fixed;
+  top: 0rpx;
+  left: 0rpx;
+}
+
+.open_title {
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+  height: 88rpx;
+  line-height: 88rpx;
+  background: #f5f5f5;
+}
+
+.open {
+  position: fixed;
+  z-index: 100;
+  bottom: 0rpx;
+  left: 0rpx;
+  width: 100%;
+  background: #fff;
+}
+
+.selected_goods {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.open_right>image {
+  width: 31rpx;
+  height: 31rpx;
+  margin-right: 10rpx;
+  position: relative;
+  top: 5rpx;
+}
+
+.open_right>text {
+  font-size: 28rpx;
+  color: #999;
+}
+
+.part {
+  padding-left: 25rpx;
+  padding-right: 25rpx;
+}
+
+.part1 {
+  padding-top: 33rpx;
+  padding-bottom: 25rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.part1:last-child {
+  border-bottom: none;
+}
+
+.part1>image {
+  width: 180rpx;
+  height: 180rpx;
+  margin-right: 16rpx;
+}
+
+.part_right {
+  width: 507rpx;
+  position: relative;
+}
+
+.part_right_title {
+  font-size: 28rpx;
+  color: #333;
+  font-weight: bold;
+  margin-top: 12rpx;
+  margin-bottom: 83rpx;
+}
+
+/* .yuan{
+  font-size: 24rpx;
+  color: #EA9E17;
+} 
+
+.part_detail_left {
+  font-size: 22rpx;
+  color: #333;
+}
+
+.dign {
+  position: absolute;
+  top: 123rpx;
+  right: 0rpx;
+}
+
+.footer_nav {
+  width: 646rpx;
+  padding-left: 45rpx;
+  padding-right: 11rpx;
+  height: 98rpx;
+  line-height: 98rpx;
+  margin: 0 auto;
+  border-radius: 49rpx;
+  box-shadow: 0px 0px 10px #f5f5f5;
+  position: relative;
+  /* box-shadow:  
+}
+
+.footer_nav>image {
+  width: 78rpx;
+  height: 78rpx;
+  margin-right: 15rpx;
+  position: relative;
+  top: -10rpx;
+}
+
+.footer_price {
+  font-size: 35rpx;
+  color: var(--themeC);
+  font-weight: bold;
+}
+
+.footer_price>text {
+  font-size: 25rpx;
+  font-weight: normal;
+}
+
+
+
+.footer_num {
+  position: absolute;
+  top: -22rpx;
+  left: 93rpx;
+  width: 32rpx;
+  height: 32rpx;
+  border-radius: 100%;
+  background: #e1372f;
+  color: #fff;
+  text-align: center;
+  line-height: 32rpx;
+  font-weight: bold;
+  font-size: 24rpx;
+} */

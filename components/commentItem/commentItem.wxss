@@ -1,0 +1,41 @@
+/* components/commentItem/commentItem.wxss */
+
+.commentItem {
+  padding: 35rpx 23rpx;
+  margin-top: 3rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.userImg {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 1rpx solid #ccc;
+}
+
+image {
+  width: 100%;
+  height: 100%;
+}
+
+.commentRight {
+  margin-left: 20rpx;
+}
+
+.commentTitle {
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.commentContent{
+  margin-top: 26rpx;
+}
+.commentContent{
+  font-size: 26rpx;
+}

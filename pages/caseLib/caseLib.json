@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "案例库",
+  "usingComponents": {
+    "theme-view": "/components/themeView/themeView",
+    "nav-bottom": "/components/navBottom/index",
+    "nav-title": "/components/navTitle/navTitle"
+  }
+}

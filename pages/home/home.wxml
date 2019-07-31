@@ -1,0 +1,32 @@
+<!--pages/home/home.wxml-->
+<theme-view>
+  <!-- searchBar -->
+  <search-bar></search-bar>
+
+  <!-- searchBar End-->
+
+  <!-- swiper -->
+  <swiper>
+    <swiper-item wx:for='{{imgList}}' wx:key='{{item}}'>
+      <image src='{{item}}'></image>
+    </swiper-item>
+  </swiper>
+  <!-- swiper End-->
+
+
+<!-- doctorList -->
+
+<view class='doctorListBox'>
+  <doctor-item bindtap='doctorItemClick' data-item='{{item}}' info='{{item}}' wx:for='{{doctorList}}' wx:key='{{item.id}}' />
+</view>
+
+<!-- doctorList End -->
+
+
+
+</theme-view>
+
+
+<!-- nav-bottom -->
+<nav-bottom selectedIndex='{{0}}' />
+<!-- nav-bottom End -->

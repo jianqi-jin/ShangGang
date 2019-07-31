@@ -1,0 +1,48 @@
+<!--pages/join/paySuccess/paySuccess.wxml-->
+<theme-view type='theme'>
+  <view class='back'>
+    <view class='backLineBox'>
+      <view class='backLine'></view>
+
+      <view class='backBox'>
+        <view class='backBoxTop'>
+          <view class='backBoxTopTop'></view>
+          <view class='cardPrice'>
+            <view class='cardPrice0'>￥</view>
+            <view class='cardPrice1'>{{info.cwdl_money}}</view>
+          </view>
+        </view>
+        <view class='backBottom'>
+          <view class='backBottomItem'>
+            <view class='backBottomItemTitle'>订单编号：</view>
+            <view class='backBottomItemValue'>{{info.order_sn}}</view>
+          </view>
+          <view class='backBottomItem'>
+            <view class='backBottomItemTitle'>下单时间：</view>
+            <view class='backBottomItemValue'>{{info.create_time}}</view>
+          </view>
+          <view class='backBottomItem'>
+            <view class='backBottomItemTitle'>支付方式：</view>
+            <view class='backBottomItemValue'>微信支付</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='contentBox'>
+      <view class='topBox'>支付成功</view>
+      <view class='bottomBox'>恭喜成为代理 拥有
+        <view style='color:#FFC011;'>分销特权</view>
+      </view>
+    </view>
+  </view>
+</theme-view>
+
+<view class='footBox'>
+
+  <navigator open-type='redirect' url='/pages/user/user' class='btnSpecialBlock'>
+    <theme-view type='themeBack'>我知道了</theme-view>
+  </navigator>
+
+
+  <view class='info'>到我的订单-全部订单 查看兑换详情</view>
+</view>

@@ -1,0 +1,4 @@
+<!--components/loading.wxml-->
+<view class='mainBox'>
+  <image class='icon' src='/res/icon/ja01.gif'></image>
+</view>

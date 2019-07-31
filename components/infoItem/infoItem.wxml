@@ -1,0 +1,15 @@
+<view class='infoItem' style='{{info.style.length>0?info.style:""}}!important'>
+  <view class='title'>
+    <image wx:if="{{info.iconImg.length > 0}}" src='{{info.iconImg}}'></image>
+    <view class='titleText' style='margin-left:{{info.iconImg.length > 0?"20rpx":"0"}};color:{{info.titleColor.length > 0 ? info.titleColor:""}};{{info.titleStyle}}'>{{info.title}}</view>
+  </view>
+  <view class='infoItemRight'>
+
+    <view wx:if="{{info.value.length > 0}}" class='value' style='color:{{info.valueColor.length > 0 ?info.valueColor:""}};{{info.valueStyle}}'>
+      {{info.value}}
+    </view>
+    <view wx:if="{{info.iconArr.length > 0}}" class='icon' style='{{info.iconArrStyle.length>0?info.iconArrStyle:""}}!important;'>
+      <image src='{{info.iconArr}}'></image>
+    </view>
+  </view>
+</view>

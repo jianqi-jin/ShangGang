@@ -1,0 +1,79 @@
+/* components/doctorItem/doctorItem.wxss */
+
+.doctorBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background: #fff;
+  padding: 50rpx 26rpx;
+  margin-bottom: 2rpx;
+}
+
+.avatar {
+  border: 1px solid #ccc;
+  height: 84rpx;
+  width: 84rpx;
+  border-radius: 50%;
+}
+
+
+
+.doctorRight {
+  margin-left: 24rpx;
+}
+.statusBox {
+  border-radius: 100rpx;
+  border: 2rpx solid rgba(64, 152, 252, 1);
+  text-align: center;
+  font-size: 20rpx;
+  color: rgba(64, 152, 252, 1);
+  height: 34rpx;
+  line-height: 34rpx;
+  margin-top: 12rpx;
+}
+.doctorName {
+  font-size: 32rpx;
+  font-family: PingFang-SC-Heavy;
+  font-weight: 800;
+  color: rgba(28, 28, 28, 1);
+}
+
+.doctorinfo {
+  margin: 16rpx 0 16rpx 0;
+  font-size: 24rpx;
+  color: #ccc;
+  display: flex;
+  flex-direction: row;
+}
+
+.numBox {
+  color: #973f2b;
+  font-weight: 800;
+}
+
+.infoBox {
+}
+
+.btnBox {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20rpx;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+}
+
+.btn:last-child {
+  margin-left: 48rpx;
+}
+
+.icon {
+  width: 25rpx;
+  height: 25rpx;
+}
+
+.price {
+  color: #973f2b;
+}

@@ -1,0 +1,9 @@
+{
+  "navigationBarTitleText": "商刚",
+  "usingComponents": {
+    "theme-view": "/components/themeView/themeView",
+    "search-bar": "/components/searchBar/searchBar",
+    "doctor-item": "/components/doctorItem/doctorItem",
+    "nav-bottom": "/components/navBottom/index"
+  }
+}

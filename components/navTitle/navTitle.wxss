@@ -1,0 +1,30 @@
+/* components/navTitle/navTitle.wxss */
+
+.navItem {
+  color: rgba(102, 102, 102, 1);
+  margin-right: 40rpx;
+  padding-bottom: 15rpx;
+}
+.navTitleBox{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+.active {
+  font-size: 36rpx;
+  font-family: PingFang-SC-Heavy;
+  font-weight: 800;
+  color: rgba(28, 28, 28, 1);
+  position: relative;
+}
+
+.active::after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  width: 100%;
+  left: 0;
+  height: 8rpx;
+  border-radius: 4rpx;
+  background: var(--themeC);
+}

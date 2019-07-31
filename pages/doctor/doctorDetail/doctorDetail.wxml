@@ -1,0 +1,83 @@
+<!--pages/doctor/doctorDetail/doctorDetail.wxml-->
+<theme-view>
+  <view class='topBox'>
+
+    <view class='backBox'></view>
+
+
+    <view class='userBox'>
+      <view class='avatar'>
+        <image src=''></image>
+      </view>
+      <view class='userInfo'>
+        <view class='statusBox'>空闲</view>
+        <view class='doctorName'>李贤慧</view>
+        <view class='doctorinfo'>
+          已服务
+          <view class='numBox'>185648</view>
+          人
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+
+  <view class='infoItem'>
+    <view class='infoTitle'>
+      <view class='titleLeft'></view>
+      <view class='titleRight'>擅长</view>
+    </view>
+
+    <view class='content'>中西医结合治疗银屑病、黄褐斑、白癜风、脱发、痤疮、皮炎 湿疹、荨麻疹。对病毒性疾病中西医结合治疗银屑病、黄褐斑、 白癜风、脱发、痤疮、皮炎湿疹、荨麻疹。对病毒性疾病有着 多年治疗研发经验中西医结合治疗银屑病、黄褐斑、白癜风、 发、痤疮、皮炎湿疹、荨麻疹。对病毒性疾病
+    </view>
+  </view>
+
+
+  <view class='infoItem'>
+    <view class='infoTitle'>
+      <view class='titleLeft'></view>
+      <view class='titleRight'>医生简介</view>
+    </view>
+
+    <view class='content'>中西医结合治疗银屑病、黄褐斑、白癜风、脱发、痤疮、皮炎 湿疹、荨麻疹。对病毒性疾病中西医结合治疗银屑病、黄褐斑、 白癜风、脱发、痤疮、皮炎湿疹、荨麻疹。对病毒性疾病有着 多年治疗研发经验中西医结合治疗银屑病、黄褐斑、白癜风、 发、痤疮、皮炎湿疹、荨麻疹。对病毒性疾病
+    </view>
+  </view>
+
+
+
+<!-- navBottom 底部-->
+<view class='navBottom'>
+  <view class='navBtn' bindtap='btnItemClick' data-item='{{0}}'>
+    <view class='navLeft'>
+      <view class='icon'>
+        <image src=''></image>
+      </view>
+    </view>
+    <view class='navRight'>
+      <view class=''>图文问诊</view>
+      <view class=''>￥15</view>
+    </view>
+    <view class='navPop'>抵扣15</view>
+  </view>
+
+  
+  <view class='navBtn'>
+    <view class='navLeft'>
+      <view class='icon'>
+        <image src=''></image>
+      </view>
+    </view>
+    <view class='navRight' bindtap='btnItemClick' data-item='{{1}}'>
+      <view class=''>视频问诊</view>
+      <view class=''>￥15</view>
+    </view>
+    <view class='navPop'>抵扣15</view>
+  </view>
+  
+</view>
+<!-- navBottom 底部 End-->
+
+
+</theme-view>

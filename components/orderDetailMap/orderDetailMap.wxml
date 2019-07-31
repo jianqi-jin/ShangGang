@@ -1,0 +1,4 @@
+<!--components/orderDetailMap/orderDetailMap.wxml-->
+<theme-view>
+  <map markers="{{markers}}" longitude="113.324520" latitude="23.099994" class='map'></map>
+</theme-view>

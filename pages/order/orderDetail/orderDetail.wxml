@@ -1,0 +1,34 @@
+<!--pages/order/orderDetail/orderDetail.wxml-->
+
+<view class='statusBar'>待付款</view>
+<!-- <address-item class='addressBar'></address-item> -->
+<view class='addressBar'>
+  <view class='addTop'>
+    <view class=''>收货人：安春雨</view>
+    <view class=''>13623623369</view>
+  </view>
+  <view class='addBottom'>黑龙江省 哈尔滨市 南岗区 中宣街20-6号科技大厦5单元302
+室安春雨收</view>
+</view>
+
+
+<view class='mainBox'>
+  <view class='mainTitle'>诊断药单</view>
+
+  <view class='name'>荨麻生鱼汤</view>
+
+  <rich-text>rich-text 富文本</rich-text>
+
+</view>
+
+
+<view class='infoBox'>
+
+  <info-item info='{{item}}' wx:for='{{infoList}}' wx:key='{{item.title}}'/>
+</view>
+
+
+<view class='footer'>
+    <view class='btn'>立即付款</view>
+    <view class='btn'>取消订单</view>
+</view>

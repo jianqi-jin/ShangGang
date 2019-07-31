@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单列表",
+  "usingComponents": {
+    "theme-view": "/components/themeView/themeView",
+    "nav-title": "/components/navTitle/navTitle"
+  }
+}

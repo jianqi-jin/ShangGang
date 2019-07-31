@@ -1,0 +1,158 @@
+/* pages/address/address.wxss */
+
+.addressItem {
+  background: #fff;
+  margin: 35rpx 24rpx 0 35rpx;
+  padding: 39rpx 26rpx 20rpx 26rpx;
+}
+
+.titleBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.typeClass {
+  background: #fff;
+  border-radius: 15rpx;
+  font-size: 20rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  line-height: 24rpx;
+}
+.typeClass view{
+  padding: 0rpx 10rpx;
+  display: inline;
+}
+
+.contentBox {
+  margin-top: 24rpx;
+  padding-bottom: 30rpx;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+
+.iconSelect {
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.iconSelect image {
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.footLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.fontTitle {
+  margin: 0 10rpx 0 10rpx;
+}
+
+.iconEdit image {
+  width: 32rpx;
+  height: 32rpx;
+}
+
+.iconDel image {
+  width: 32rpx;
+  height: 35rpx;
+}
+
+.addrFoot {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30rpx;
+}
+
+.footRight {
+  display: flex;
+  flex-direction: row;
+  justify-items: flex-end;
+}
+
+.btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.btn view:first-child {
+  margin-left: 20rpx;
+}
+
+.btnSpecialBlock {
+  margin: 35rpx;
+  width: auto;
+  background: #fff;
+}
+
+.diaLog {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.diaLogBox {
+  margin: 350rpx auto 0 auto;
+  width: 508rpx;
+  height: 264rpx;
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+}
+
+.diaLogBtns {
+  height: 87rpx;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.diaLogInfo {
+  margin: auto;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(102, 102, 102, 1);
+}
+
+.diaLogBtns view {
+  flex-grow: 1;
+  text-align: center;
+  line-height: 87rpx;
+  border-top: 1rpx solid #f6f6f6;
+}
+
+.diaLogBtns view:last-child {
+  background: #f5f5f5;
+  font-size: 32rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(130, 76, 31, 1);
+}
+
+.diaLogBtns view:first-child {
+  font-size: 32rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+}
+
+.backMask {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #000;
+  opacity: 0.5;
+}

@@ -1,0 +1,67 @@
+<!--pages//order/orderList/orderList.wxml-->
+
+<view class='navTitle'>
+  <nav-title navTitleInfo='{{navTitleInfo}}' bindonAction='onNavChange' />
+</view>
+
+<view class='mainBox'>
+  <!-- orderItem Start-->
+  <view class='orderItem'>
+    <view class='orderTitle'>
+      <view class='titleLeft'>2019.03.03 12.23.03</view>
+      <view class='titleRight'>待付款</view>
+    </view>
+    <view class='orderContent' bindtap='onItemClick' data-item=''>
+      <view class='contentTop'>荨麻疹生鱼汤</view>
+      <view class='contentBottom'>
+        <view class='title'>病情分析：</view>
+        <view class='value'>荨麻疹</view>
+        <view class='splic'></view>
+        <view class='title'>诊断医生：</view>
+        <view class='value'>李丽</view>
+      </view>
+    </view>
+    <view class='orderBtnBar'>
+      <view class='btnLeft'>
+        <view class='totle'>总价</view>
+        <view class='price'>￥106.36</view>
+      </view>
+      <view class='btnRight'>
+        <view class='btnList'>
+          <view class='btnItem'>立即支付</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- orderItem End-->
+
+  <!-- orderItem Start-->
+  <view class='orderItem'>
+    <view class='orderTitle'>
+      <view class='titleLeft'>2019.03.03 12.23.03</view>
+      <view class='titleRight'>待付款</view>
+    </view>
+    <view class='orderContent' bindtap='onItemClick' data-item=''>
+      <view class='contentTop'>荨麻疹生鱼汤</view>
+      <view class='contentBottom'>
+        <view class='title'>病情分析：</view>
+        <view class='value'>荨麻疹</view>
+        <view class='splic'></view>
+        <view class='title'>诊断医生：</view>
+        <view class='value'>李丽</view>
+      </view>
+    </view>
+    <view class='orderBtnBar'>
+      <view class='btnLeft'>
+        <view class='totle'>总价</view>
+        <view class='price'>￥106.36</view>
+      </view>
+      <view class='btnRight'>
+        <view class='btnList'>
+          <view class='btnItem'>立即支付</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- orderItem End-->
+</view>

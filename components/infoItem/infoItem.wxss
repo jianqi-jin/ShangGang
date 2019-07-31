@@ -1,0 +1,45 @@
+.infoItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25rpx;
+  background: #fff;
+  margin-top: 3rpx;
+  align-items: center;
+}
+
+.title image {
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-left: 10rpx;
+}
+
+.icon image {
+  width: 100%;
+  height: 100%;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.titleText {
+  /* margin-left: 20rpx; */
+}
+
+.infoItemRight {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}

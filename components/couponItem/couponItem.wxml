@@ -1,0 +1,20 @@
+<!--components/couponItem/couponItem.wxml-->
+<view wx:for='{{couponInfo}}' wx:key='index' class='couponBack'>
+  <view class='couponItem'>
+    <view class='couponLeft'>
+      <view class='couponPrice'>{{item.price}}
+        <view>元</view>
+      </view>
+      <view class='couponLess fontInfo'>满{{item.less}}可用</view>
+    </view>
+    <view class='couponMiddle'>
+      <view class='couponTitle fontTitle'>{{item.title}}</view>
+      <view class='couponValid fontInfo'>有效期至{{item.validTime}}</view>
+    </view>
+    <view class='couponRight'>
+      <theme-view>
+        <view data-type='onBtnClick' data-item='{{item}}' bindtap='onTap' class='couponBtn'>立即使用</view>
+      </theme-view>
+    </view>
+  </view>
+</view>

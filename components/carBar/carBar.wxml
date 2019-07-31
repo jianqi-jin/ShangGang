@@ -1,0 +1,111 @@
+<!--components/cardBar/carBar.wxml-->
+<theme-view>
+  <view class='chooseMask' bindtap='close' catchtouchmove='move' wx:if='{{showFlag}}' />
+  <view class='carBarBox'>
+    <view class='mainBox'>
+      <view class='carBarLeft' bindtap='show'>
+        <view class='carBarLeftImg'>
+          <image src="/res/icon/seletct-not-cart@3x.png"></image>
+        </view>
+
+        <view class="priceText">未选择食物</view>
+      </view>
+      <view class='carBarRight'>
+        <view class="btnBox" bindtap='onTap'>选好了</view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <view class='carListBox' wx:if='{{showFlag}}'>
+    <view class='titleBox'>
+      <view class='titleLeft'>已选商品</view>
+      <view class='titleRight'>
+        <view class='icon'>
+          <image src='./res/icon/icon-delete.png'></image>
+        </view>
+        <view class='titleLeft'>清空</view>
+      </view>
+    </view>
+    <view class='listContent'>
+    <scroll-view scroll-y='true' catchtouchmove='move'>
+      <good-item goodInfo='{{goodInfo}}'/>
+      <good-item goodInfo='{{goodInfo}}'/>
+      <good-item goodInfo='{{goodInfo}}'/>
+      <good-item goodInfo='{{goodInfo}}'/>
+      <good-item goodInfo='{{goodInfo}}'/>
+      <good-item goodInfo='{{goodInfo}}'/>
+      <good-item goodInfo='{{goodInfo}}'/>
+    </scroll-view>
+    </view>
+  </view>
+
+</theme-view>
+
+
+
+
+<!-- 底部导航开始 
+<view class="footer" hidden='true'>
+  <view bindtap='onTap' data-type='open' class='carBarLeft fl'>
+    <image src="/res/icon/seletct-not-cart@3x.png" class="fl"></image>
+    <view class="food fl">未选择食物</view>
+    <view class="clear"></view>
+  </view>
+  <view class='carBarRight fr'>
+    <view class="selected" data-type='submit' bindtap='onTap'>选好了</view>
+  </view>
+  <view class="clear"></view>
+</view>
+<!-- 点开底部展开系列开始 
+<view class="select_status"></view>
+<!-- 点开底部展开系列结束 
+<view class="open" hidden='true'>
+  <view class="open_title">
+    <view class="fl selected_goods">已选商品</view>
+    <view class="fr open_right">
+      <image src="/res/icon/icon-qk@3x.png"></image>
+      <text>清空</text>
+    </view>
+  </view>
+  <view class="part">
+    <view class="part1">
+      <image src="/res/icon/banner@3x.png" class="fl"></image>
+      <view class="fl part_right">
+        <view class="part_right_title">招牌帕尼尼汉堡</view>
+        <view class="part_detail">
+          <view class="part_detail_left">
+            <text class="yuan">￥</text>
+            <text class="price">16.9</text>元/分</view>
+          <reduce-add class="dign"></reduce-add>
+        </view>
+      </view>
+      <view class="clear"></view>
+    </view>
+    <view class="part1">
+      <image src="/res/icon/banner@3x.png" class="fl"></image>
+      <view class="fl part_right">
+        <view class="part_right_title">招牌帕尼尼汉堡</view>
+        <view class="part_detail">
+          <view class="part_detail_left">
+            <text class="yuan">￥</text>
+            <text class="price">16.9</text>元/分</view>
+          <reduce-add class="dign"></reduce-add>
+        </view>
+      </view>
+      <view class="clear"></view>
+    </view>
+  </view>
+  <!-- 底部的导航开始 
+  <view class="footer_nav">
+    <image src="/res/icon/select-cart@3x.png" class="fl"></image>
+    <view class="footer_num fl">3</view>
+    <view class="fl footer_price">
+      <text>￥</text>96.6</view>
+    <view class="fr select_right" bindtap='onTap'>选好了</view>
+  </view>
+  <!-- 底部的导航结束
+</view>
+
+ -->

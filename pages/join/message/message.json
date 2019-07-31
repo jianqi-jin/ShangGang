@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "theme-view": "/components/themeView/themeView",
+    "dialog": "/components/dialog/dialog"
+  }
+}

@@ -1,0 +1,66 @@
+<!--pages/user/user.wxml-->
+
+
+
+
+<theme-view>
+</theme-view>
+<view class='topBox'>
+  <view class='backBox'></view>
+  <view class='userBox'>
+    <view class='userLeft'>
+      <view class='userName'>用户的昵称</view>
+      <view class='userMoney'>
+        余额
+        <view>￥0.00</view>
+      </view>
+    </view>
+    <view class='userRight'>
+      <view class='userImg'>
+        <image src=''></image>
+      </view>
+    </view>
+  </view>
+  <view class='joinBar'>
+    <view class='joinLeft'>
+      <view class='icon'>
+        <image src='/res/icon/vip-icon@3x.png'></image>
+      </view>
+      <view>加入合伙人</view>
+    </view>
+    <view class='joinRight'>
+      <navigator open-type='navigate' url='/pages/join/message/message' class='joinBtn'>立即加入</navigator>
+    </view>
+  </view>
+</view>
+
+<view class='mainBox'>
+
+  <view class='mainItem'>
+    <view class='mainTitle'>我的订单</view>
+    <view class='btnList'>
+      <navigator open-type='navigate' url='{{item.url}}' class='btnItem' wx:for='{{orderBtnList}}' wx:key='{{item.title}}'>
+        <view class='icon'>
+          <image mode='widthFix' src='{{item.icon}}'></image>
+        </view>
+        <view class='title'>{{item.title}}</view>
+      </navigator>
+    </view>
+  </view>
+</view>
+<view class='mainItem'>
+  <view class='mainTitle'>医疗服务</view>
+  <view class='btnList'>
+    <navigator open-type='navigate' url='{{item.url}}' class='btnItem' wx:for='{{serviceBtnList}}' wx:key='{{item.title}}'>
+      <view class='icon'>
+        <image mode='widthFix' src='{{item.icon}}'></image>
+      </view>
+      <view class='title'>{{item.title}}</view>
+    </navigator>
+  </view>
+</view>
+
+<view class='mainInfo'>
+  <info-item info='{{item}}' wx:for='{{infoList}}' wx:key='{{item.title}}'></info-item>
+</view>
+<nav-bottom selectedIndex='4'></nav-bottom>

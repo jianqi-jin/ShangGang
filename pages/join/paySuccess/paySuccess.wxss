@@ -1,0 +1,151 @@
+/* pages/join/paySuccess/paySuccess.wxss */
+
+.back {
+  height: 246rpx;
+  width: 100%;
+  background: var(--themeBackC);
+  padding-top: 134rpx;
+  position: relative;
+}
+
+.contentBox {
+  margin: auto;
+  margin-top: -40rpx;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contentBox .topBox {
+  margin-bottom: 40rpx;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(193, 166, 143, 1);
+  line-height: 48rpx;
+}
+
+.contentBox .bottomBox {
+  display: flex;
+  flex-direction: row;
+  font-size: 42rpx;
+  font-family: PingFang-SC-Heavy;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 1);
+  line-height: 52rpx;
+  text-shadow: 1rpx 2rpx 0px rgba(105, 50, 3, 0.5);
+}
+
+.backLineBox {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+  top: 293rpx;
+}
+
+.backLine {
+  background: #000;
+  opacity: 0.1;
+  width: 702rpx;
+  height: 30rpx;
+  border-radius: 50rpx;
+  margin: auto;
+}
+
+.backBox {
+  width: 654rpx;
+  height: 436rpx;
+  background: #fff;
+  margin: -11rpx auto -11rpx auto;
+}
+
+.cardPrice {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.cardPrice0 {
+  font-size: 32rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(51, 51, 51, 1);
+}
+
+.cardPrice1 {
+  font-size: 58rpx;
+  font-family: HelveticaInserat-Roman-SemiB;
+  font-weight: bold;
+  color: rgba(51, 51, 51, 1);
+}
+
+.backBoxTop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 173rpx;
+  position: relative;
+}
+
+.backBoxTopTop {
+  height: 45rpx;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 1), #ddd);
+}
+
+.backBottom {
+  border-top: 2rpx dashed #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 70rpx 57rpx;
+}
+
+.backBottomItem {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.backBottomItem view:first-child {
+  font-size: 26rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(102, 102, 102, 1);
+  line-height: 56rpx;
+}
+
+.backBottomItem view:last-child {
+  font-size: 26rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+  line-height: 56rpx;
+  margin-left: 28rpx;
+}
+
+.footBox {
+  position: fixed;
+  bottom: 225rpx;
+  width: 100%;
+}
+
+.btnSpecialBlock {
+  width: auto;
+  margin: 0 46rpx;
+  background: #fff;
+}
+
+.footBox .info {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(204, 204, 204, 1);
+  line-height: 48rpx;
+  margin-top: 25rpx;
+  text-align: center;
+}

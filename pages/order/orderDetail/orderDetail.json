@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "订单详情",
+  "usingComponents": {
+    "info-item": "/components/infoItem/infoItem",
+    "address-item": "/components/addressItem/index"
+  }
+}

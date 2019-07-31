@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "个人中心",
+  "usingComponents": {
+    "theme-view": "/components/themeView/themeView",
+    "nav-bottom": "/components/navBottom/index",
+    "info-item": "/components/infoItem/infoItem"
+  }
+}

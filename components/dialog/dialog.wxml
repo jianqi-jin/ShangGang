@@ -1,0 +1,16 @@
+<!--components/dialog/dialog.wxml-->
+
+<view class='mask'></view>
+
+<view class='dialogBox'>
+
+
+  <slot />
+
+</view>
+
+<view class='close' bindtap='close'>
+  <view class='icon'>
+    <image src=''></image>
+  </view>
+</view>

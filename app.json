@@ -1,0 +1,29 @@
+{
+  "pages": [
+    "pages/home/home",
+    "pages/doctor/doctorDetail/doctorDetail",
+    "pages/doctor/orderDetail/orderDetail",
+    "pages/chat/textChat/textChat",
+    "pages/chat/videoChat/videoChat",
+    "pages/clinicPos/clinicPos",
+    "pages/recommend/recommend",
+    "pages/caseLib/caseLib",
+    "pages/join/message/message",
+    "pages/join/gifts/gifts",
+    "pages/join/paySuccess/paySuccess",
+    "pages/order/orderList/orderList",
+    "pages/order/orderDetail/orderDetail",
+    "pages/address/address",
+    "pages/address/editaddress/editaddress",
+    "pages/user/user",
+    "pages/logs/logs",
+    "pages/caseLib/caseDetail/caseDetail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "sitemapLocation": "sitemap.json"
+}

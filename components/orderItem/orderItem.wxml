@@ -1,0 +1,19 @@
+<!--components/orderItem/orderItem.wxml-->
+<theme-view>
+  <view class='orderItem'>
+    <view class='orderBoxTop' bindtap='onTap' data-item='{{orderInfo}}'>
+      <view class='orderBoxTopLeft'>
+        <view class='orderBoxTopTitle'>{{orderInfo.title}}</view>
+        <view class='orderBoxTopContent titleFont'>{{orderInfo.info}}</view>
+      </view>
+      <view class='orderBoxTopRight'>
+        <view class='orderBoxStatus'>{{orderInfo.status}}</view>
+        <view class='orderBoxPrice'>￥{{orderInfo.price}}</view>
+      </view>
+    </view>
+    <view class='orderBoxBottom'>
+      <view class='btnCancel' bindtap='onBtnClick'>取消订单</view>
+      <view class='btnPrimary'>立即支付</view>
+    </view>
+  </view>
+</theme-view>

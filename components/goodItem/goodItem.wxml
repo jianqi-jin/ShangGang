@@ -1,0 +1,50 @@
+<!--components/goodItem/goodItem.wxml-->
+<!-- type:line 在单行里面展示 Start -->
+<view wx:if='{{goodInfo.type == "line"}}' class='lineItem'>
+  <view class='lineLeft' bindtap='navToDetail'>
+    <image class='lineImg' mode='aspectFill' src='/res/icon/banner@3x.png'></image>
+  </view>
+  <view class='lineRight'>
+    <view class='lineTextBox' bindtap='navToDetail'>
+      <view class='titleFont'>招牌帕尼尼汉堡</view>
+      <view class='infoFont'>月销153</view>
+    </view>
+    <view class='linePriceBox'>
+      <view class='priceBox' bindtap='navToDetail'>
+        <view class='priceNumHead'>￥</view>
+        <view class='priceNum'>15.6</view>
+        <view class='priceInfo'>元/份</view>
+      </view>
+
+      <view class='reduce'>
+        <reduce-add bindonAction='onNumChange' number='{{number}}' />
+      </view>
+
+    </view>
+  </view>
+</view>
+<!-- type:line 在单行里面展示 End -->
+
+
+
+
+
+<!-- type:box 在块里面展示 Start -->
+
+
+<view wx:else class='boxItem'>
+
+  <view class='boxImgBox'>
+    <image src='/res/icon/banner@3x.png' mode='aspectFill' class='boxImg'></image>
+  </view>
+  <view class='boxInfo'>
+    <view class='titleFont'>招牌帕尼尼汉堡asdadwadasdsssssssssss</view>
+    <view class='priceBox'>
+      <view class='priceNumHead'>￥</view>
+      <view class='priceNum BoxPrice'>15.6</view>
+      <view class='priceInfo'>元/份</view>
+    </view>
+  </view>
+  <reduce-add bindonAction='onNumChange' number='{{number}}' class='boxReduceAdd' />
+</view>
+<!-- type:box 在块里面展示 End -->

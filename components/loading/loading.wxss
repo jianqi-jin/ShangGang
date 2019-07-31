@@ -1,0 +1,14 @@
+/* components/loading.wxss */
+.icon{
+  height: 100rpx;
+  width: 100rpx;
+  display: block;
+  margin: auto;
+}
+.mainBox{
+  position: relative;
+  padding-top:200rpx;
+  top: 0;
+  height: 500rpx;
+  width: 100%;
+}

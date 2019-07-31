@@ -1,0 +1,12 @@
+<!--pages/clinicPos/clinicPos.wxml-->
+
+
+
+<theme-view>
+
+
+
+
+  <nav-bottom selectedIndex='1'></nav-bottom>
+
+</theme-view>

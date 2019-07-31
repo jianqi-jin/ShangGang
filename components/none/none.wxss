@@ -1,0 +1,13 @@
+/* components/none/none.wxss */
+.none_image{
+  width: 200rpx;
+  margin: 300rpx auto 0 auto;
+  display: block;
+}
+.none_view{
+  text-align: center;
+  font-size: 46rpx;
+  color: #ddd;
+  font-weight: 100;
+  margin-top: 40rpx;
+}

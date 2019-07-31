@@ -1,0 +1,3 @@
+<!--components/none/none.wxml-->
+<image class='none_image' mode='widthFix' src='./res/img/none.png'></image>
+<view class='none_view'>什么都没有哟~</view>

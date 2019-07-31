@@ -1,0 +1,75 @@
+/* pages/order/orderDetail/orderDetail.wxss */
+
+.statusBar {
+  height: 130rpx;
+  background: #973f2b;
+  line-height: 130rpx;
+  padding-left: 26rpx;
+  font-size: 42rpx;
+  font-family: PingFang-SC-Heavy;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 1);
+}
+
+/* addressBar start */
+
+.addressBar {
+  padding: 50rpx 30rpx;
+}
+
+.addTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.addBottom {
+  margin-top: 23rpx;
+  font-size: 26rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  line-height: 36rpx;
+}
+
+/* addressBar end */
+
+.mainBox {
+  background: #fff;
+  padding: 36rpx 25rpx;
+}
+
+.mainTitle {
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(102, 102, 102, 1);
+  padding-bottom: 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.infoBox {
+  margin-top: 20rpx;
+}
+
+.footer {
+  background: #fff;
+  height: 98rpx;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn {
+  width: 154rpx;
+  height: 58rpx;
+  border: 2rpx solid rgba(151, 63, 43, 1);
+  box-shadow: 0px 0px 20rpx 0px rgba(153, 153, 153, 0.1);
+  border-radius: 100px;
+  text-align: center;
+  line-height: 58rpx;
+  margin: 0 17rpx;
+}

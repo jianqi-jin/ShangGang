@@ -1,0 +1,8 @@
+<!--components/reduceAdd/reduceAdd.wxml-->
+<theme-view>
+  <view class="{{number>0?'shu_right':'shu_right_z'}}">
+    <view wx:if='{{number>0}}' bindtap='onAction' data-type='reduce' class="reduce"></view>
+    <view wx:if='{{number>0}}' class="number">{{number}}</view>
+    <view bindtap='onAction' data-type='add' class="add">+</view>
+  </view>
+</theme-view>

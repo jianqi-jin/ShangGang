@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "theme-view": "/components/themeView/themeView",
+    "good-item": "/components/goodItem/goodItem"
+  }
+}

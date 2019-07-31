@@ -1,0 +1,82 @@
+<!--pages/recommend/recommend.wxml-->
+<view class='grayPage window'>
+  <!-- 头部图片 -->
+    <view class='header'>
+      <image src='{{advertImg}}' style='height:{{coverHeight}}' class='headerImg'></image>
+    </view>
+    <view class='label'>
+      <view  data-val='0' bindtap='switchHinge' style='{{hinge=="0"?"border-bottom:2px solid"+color:""}}; color:{{hinge=="0"?color:""}};' >推荐</view>
+      <view  data-val='1' bindtap='switchHinge' style='{{hinge=="1"?"border-bottom:2px solid"+color:""}}; color:{{hinge=="1"?color:""}};' >排行</view>
+    </view>
+    
+    <view wx:for="{{list}}" wx:key="{{index}}" wx:if="{{index == hinge}}">
+      <!-- 列表  -->
+      <view wx:for="{{item.data}}" 
+      wx:for-item="itemName" 
+      wx:for-index="idx"
+      data-type='1'
+      wx:key="{{itemName.id}}" 
+      class='postLis'>
+        <!-- 左侧头像 -->
+        <view class='headImg'><image src='{{userImg}}'></image></view>
+        <!-- 右侧信息栏 -->
+        <view class="center"> 
+          <!-- 顶部 -->
+          <view class='title cC'>
+            <text>{{userName}}</text>
+            <text class='c9'>下载量:{{itemName.xz_num}}</text>
+          </view>
+          <view class='describe'>{{itemName.tgy}}</view>
+          <!-- 图片组 -->
+          <view class='imaLis' wx:if="{{itemName.type == 1 && itemName.tp_list.length > 1 }}">
+            <view class="weui-grids">
+              <block 
+                wx:for="{{itemName.tp_list}}" 
+                wx:key="*this" 
+                wx:for-item="img" 
+                >
+                <view class='weui-grid ninthPalace'    
+                data-idx="{{index}}" 
+                data-list="{{itemName.tp_list}}" 
+                bindtap="see">
+                  <image mode="aspectFill" class="square" src="{{img}}" />
+                </view> 
+              </block>
+            </view>
+          </view>
+          <!-- 单张图 -->
+          <view class='single' wx:if="{{itemName.type == 1 && itemName.tp_list.length == 1}}">
+            <image mode='widthFix' 
+            src='{{itemName.tp_list[0]}}' 
+            data-idx="{{index}}" 
+            data-list="{{itemName.tp_list}}" 
+            bindtap="see"></image>
+            <!-- <image mode='widthFix' class='code' src='{{itemName.qrimg}}'></image> -->
+          </view>
+          <!-- 视频 -->
+          <view class='media' wx:if="{{itemName.type == 0}}">
+            <video src='{{itemName.sp}}'></video>
+          </view>
+          <!-- 底部 -->
+          <view class='footr'>
+            <view class='left'>
+              <image wx:for="{{itemName.avatar}}" wx:if="{{index < 3}}" wx:key="{{index}}" src='{{item ? item: ""}}' class='portrait'></image>
+              <text>等{{itemName.fx_num}}人已分享</text>
+            </view>
+            <view class='right'>
+              <view class='preserve' style='border:1px solid {{color}}; color:{{color}};'  bindtap='storage' data-form='{{itemName.type}}' data-type='{{hinge}}' data-idx='{{idx}}'>一键保存</view>
+              <button class='share'  style='background: {{color}};' open-type="share" data-type='{{hinge}}' data-idx='{{idx}}' >一键分享</button>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+  <floatButton>
+    <view class='iconCenter' style='background-color: {{color}};'>
+      <text class='iconfont icon-saoyisao size20'></text>
+    </view>
+  </floatButton>
+  <nav-bottom selected-index='1'></nav-bottom>
+</view>
+<canvas  canvas-id="shareCanvas" style="width:600px;height:960px;position: fixed;top:999999rpx;left: 0"></canvas>

@@ -1,0 +1,41 @@
+<!--components/chooseBox/chooseBox.wxml-->
+
+<view class='chooseMask' bindtap='onAction' data-type='close' catchtouchmove='move'>
+
+</view>
+
+<theme-view>
+  <view class='chooseBox' catchtouchmove='move'>
+    <view class='chooseBoxTop'>请选择要换的桌位</view>
+    <view class='chooseBoxMiddle' catchtouchmove='move'>
+      <view class='middleLeft' catchtouchmove='move'>
+        <info-item wx:for='{{infoLeftList}}' wx:key='index' info='{{item}}' />
+        <scroll-view style="height: 100%" scroll-y='true' class='leftScroll'></scroll-view>
+      </view>
+      <view class='middleRight' catchtouchmove='move'>
+        <scroll-view style="height: 100%" scroll-y='true' class='rightScroll'>
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+          <info-item info='{{info}}' />
+        </scroll-view>
+      </view>
+    </view>
+    <view class='chooseBoxBottom'>
+      <view bindtap='onAction' data-type='close'>取消</view>
+    </view>
+
+  </view>
+</theme-view>

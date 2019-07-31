@@ -1,0 +1,225 @@
+/* pages/doctor/doctorDetail/doctorDetail.wxss */
+
+page {
+  background: #fff;
+  overflow: hidden;
+}
+
+.topBox {
+  height: 373rpx;
+  background: #9e4934;
+  border-radius: 0 0 36rpx 36rpx;
+  position: relative;
+  z-index: -2;
+}
+
+.backBox {
+  position: absolute;
+  background: #fff;
+  top: 144rpx;
+  left: -1000px;
+  right: -1000px;
+  margin: auto;
+  width: 2000rpx;
+  height: 2000rpx;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -45rpx;
+}
+
+.userBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* user CSS */
+
+.statusBox {
+  border-radius: 100rpx;
+  border: 2rpx solid rgba(64, 152, 252, 1);
+  text-align: center;
+  font-size: 20rpx;
+  color: rgba(64, 152, 252, 1);
+  height: 34rpx;
+  line-height: 34rpx;
+  margin-top: 12rpx;
+  width: 84rpx;
+  background: #fff;
+}
+
+.doctorName {
+  font-size: 32rpx;
+  font-family: PingFang-SC-Heavy;
+  font-weight: 800;
+  color: rgba(28, 28, 28, 1);
+  margin-top: 20rpx;
+}
+
+.doctorinfo {
+  margin: 16rpx 0 16rpx 0;
+  font-size: 24rpx;
+  color: #ccc;
+  display: flex;
+  flex-direction: row;
+}
+
+.numBox {
+  color: #973f2b;
+  font-weight: 800;
+}
+
+/* user CSS End*/
+
+.avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border: 1px solid #ccc;
+  margin-top: 70rpx;
+  border-radius: 100rpx;
+}
+
+/* infoItem */
+
+.infoItem {
+  background: #fff;
+  margin-top: 17rpx;
+  border-radius: 36rpx;
+  padding: 50rpx 25rpx;
+}
+
+.infoTitle {
+  margin-bottom: 45rpx;
+  font-size: 40rpx;
+  font-family: PingFang-SC-Heavy;
+  font-weight: 800;
+  color: rgba(28, 28, 28, 1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.titleLeft {
+  width: 12rpx;
+  height: 36rpx;
+  background: rgba(151, 63, 43, 1);
+  border-radius: 6rpx;
+  margin-right: 10rpx;
+}
+
+.content {
+  font-size: 26rpx;
+  color: #666;
+  line-height: 48rpx;
+}
+
+/* infoItem End */
+
+/* navBottom start */
+
+.navBottom {
+  height: 106rpx;
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.navBtn:first-child {
+  flex-grow: 1;
+}
+
+.navBtn:last-child {
+  flex-grow: 2;
+  color: #fff;
+}
+
+.navBtn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.navBtn:first-child {
+  background: #fff;
+}
+
+.navBtn:last-child {
+  background: #973f2b;
+}
+
+.navRight view:last-child {
+  font-size: 46rpx;
+  color: #973f2b;
+  font-weight: 800;
+}
+
+.navPop {
+  font-size: 16rpx;
+  background: #ab8354;
+  color: #fff;
+  width: 69rpx;
+  height: 25rpx;
+  border-radius: 13rpx 13rpx 13rpx 0px;
+  margin: -50rpx 0 0 -7rpx;
+  text-align: center;
+  line-height: 25rpx;
+}
+
+.navMiddle {
+  width: 2rpx;
+  height: 37rpx;
+  background: #fff;
+}
+
+.navLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.navRight {
+  flex-grow: 1;
+  text-align: center;
+}
+
+/* navBottom End */
+
+
+/* dialog */
+
+.input{
+  border-bottom: 1rpx solid #F5F5F5;
+  height: 100rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.inputValue{
+  margin-left: 27rpx;
+}
+.info{
+  margin: 22rpx 0 77rpx 0;
+  font-size: 20rpx;
+  color: #973F2B;
+}
+.subBtn{
+  background: #973F2B;
+  color: #fff;
+}
+/* dialog End*/

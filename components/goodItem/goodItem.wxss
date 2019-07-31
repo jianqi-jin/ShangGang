@@ -1,0 +1,95 @@
+/* components/goodItem/goodItem.wxss */
+
+.priceNumHead {
+  font-size: 24rpx;
+  color: var(--themeC);
+}
+
+.priceNum {
+  color: var(--themeC);
+  font-size: 38rpx;
+  font-weight: 800;
+  margin-right: 10rpx;
+}
+.boxReduceAdd{
+  position: absolute;
+  top: 183rpx;
+  right: 14rpx;
+}
+.infoFont {
+  font-size: 20rpx;
+  color: rgba(153, 153, 153, 1);
+  margin-top: 16rpx;
+}
+
+.priceInfo {
+  font-size: 22rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.linePriceBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.titleFont {
+  font-size: 28rpx;
+  font-weight: 800;
+  color: rgba(51, 51, 51, 1);
+}
+.priceBox {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.BoxPrice {
+  font-size: 28rpx;
+}
+
+.lineItem {
+  display: flex;
+  flex-direction: row;
+  padding: 23rpx;
+  background: #fff;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.lineImg {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 5rpx;
+}
+
+.lineRight {
+  flex-grow: 1;
+  margin-left: 16rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.boxInfo {
+  padding: 20rpx 15rpx 28rpx 15rpx;
+}
+
+.boxImg {
+  display: block;
+  width: 325rpx;
+  height: 203rpx;
+  border-radius: 10rpx;
+  overflow: hidden;
+}
+
+.boxItem {
+  display: inline-block;
+  position: relative;
+  width: 325rpx;
+  height: 316rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  background: #fff;
+  box-shadow: 0rpx 0px 10rpx 0px rgba(153, 153, 153, 0.2);
+  border-radius: 10rpx;
+}

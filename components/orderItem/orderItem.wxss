@@ -1,0 +1,69 @@
+/* components/orderItem/orderItem.wxss */
+
+.orderItem {
+  padding: 37rpx 24rpx;
+  background: #fff;
+  margin-bottom: 2rpx;
+}
+
+.orderBoxTop {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.orderBoxTopRight {
+  text-align: right;
+}
+
+.orderBoxBottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 47rpx;
+}
+
+.orderBoxTopTitle {
+  font-size: 26rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(102, 102, 102, 1);
+}
+
+.orderBoxStatus {
+  font-size: 26rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(102, 102, 102, 1);
+}
+
+.orderBoxPrice {
+  margin-top: 25rpx;
+}
+
+.orderBoxTopContent {
+  margin-top: 35rpx;
+}
+
+.btnCancel {
+  text-align: center;
+  line-height: 55rpx;
+  width: 160rpx;
+  height: 55rpx;
+  background: rgba(252, 206, 156, 0);
+  border: 2rpx solid rgba(238, 238, 238, 1);
+  border-radius: 5rpx;
+  margin-left: 18rpx;
+}
+
+.btnPrimary {
+  margin-left: 18rpx;
+  text-align: center;
+  line-height: 55rpx;
+  width: 160rpx;
+  height: 55rpx;
+  background: var(--themeBackC);
+  border-radius: 5rpx;
+}
+
+

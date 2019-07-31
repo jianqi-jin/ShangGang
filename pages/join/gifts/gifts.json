@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "address-item": "/components/addressItem/index",
+    "theme-view": "/components/themeView/themeView"
+  }
+}

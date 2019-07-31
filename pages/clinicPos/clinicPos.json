@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "诊所",
+  "usingComponents": {
+    "theme-view": "/components/themeView/themeView",
+    "nav-bottom": "/components/navBottom/index"
+  }
+}

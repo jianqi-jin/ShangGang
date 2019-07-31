@@ -1,0 +1,61 @@
+/* pages/caseLib/caseLib.wxss */
+
+.navTitle {
+  background: #fff;
+  padding: 33rpx 0rpx 0 20rpx;
+}
+
+.caseTitle {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 80rpx;
+}
+
+.caseItem {
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 10rpx 25rpx;
+}
+
+.userImg {
+  width: 52rpx;
+  height: 52rpx;
+}
+
+.titleLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: cneter;
+}
+
+.titleRight {
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.caseImgBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.imgItem {
+  width: 336rpx;
+  height: 336rpx;
+  border-radius: 10rpx;
+  background: #ccc;
+}
+
+.caseContent {
+  display: flex;
+  flex-direction: column;
+  padding: 27rpx 0;
+}
+
+.caseInfo {
+  margin-top: 27rpx;
+  font-size: 24rpx;
+  color: rgba(204, 204, 204, 1);
+}

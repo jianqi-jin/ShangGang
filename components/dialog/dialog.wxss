@@ -1,0 +1,35 @@
+/* components/dialog/dialog.wxss */
+
+.dialogBox {
+  border-radius: 10rpx;
+  z-index: 1;
+  background: #fff;
+  position: fixed;
+  top: 190rpx;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 500rpx;
+  padding: 66rpx 42rpx;
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+  width: 86rpx;
+  height: 86rpx;
+  border-radius: 50%;
+  background: #fff;
+  margin-top: 100rpx;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
