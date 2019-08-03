@@ -20,7 +20,8 @@
   font-weight: 500;
   line-height: 24rpx;
 }
-.typeClass view{
+
+.typeClass view {
   padding: 0rpx 10rpx;
   display: inline;
 }
@@ -155,4 +156,14 @@
   width: 100%;
   background: #000;
   opacity: 0.5;
+}
+
+.btnAddAddress {
+  width: auto;
+  margin: 0;
+  background: #973f2b;
+  height: 98rpx;
+  text-align: center;
+  color: #fff;
+  line-height: 98rpx;
 }

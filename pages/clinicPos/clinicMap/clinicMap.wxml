@@ -1,0 +1,2 @@
+<!--pages/clinicPos/clinicMap/clinicMap.wxml-->
+<map class='map'></map>

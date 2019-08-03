@@ -1,7 +1,7 @@
 <!--pages/home/home.wxml-->
 <theme-view>
   <!-- searchBar -->
-  <search-bar></search-bar>
+  <search-bar bindonAction='onSearchBarClick'/>
 
   <!-- searchBar End-->
 

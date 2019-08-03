@@ -1,2 +1,87 @@
 <!--pages/caseLib/caseDetail/caseDetail.wxml-->
-<text>pages/caseLib/caseDetail/caseDetail.wxml</text>
+
+<view class='topBox'>
+  <view class='backBox'></view>
+  <view class='userBox'>
+    <view class='userName'>蜗牛的壳子</view>
+    <view class='userImg'>
+      <image src=''></image>
+    </view>
+  </view>
+</view>
+
+
+<view class='imgBox'>
+  <view class='imgTitle'>过去的Ta</view>
+  <view class='imgList'>
+    <image src=''></image>
+    <image src=''></image>
+    <image src=''></image>
+  </view>
+</view>
+
+
+<view class='mainBox'>
+  <view class='mainTitle'>治疗过程</view>
+
+
+  <!-- mainItem Start -->
+
+  <view class='mainItem'>
+    <view class='itemTitle'>
+      <view class='icon'>
+        <image src='/res/icon/icon-time@3x.png'></image>
+      </view>
+      <view class='date'>2019年5月2日</view>
+      <view class='fontInfo'>第三篇日记</view>
+    </view>
+    <view class='itemContent'>
+      <view class='contentLeft'></view>
+      <view class='contentRight'>
+        <view class='contentBox'>
+          <view class='contentTitle'>荨麻疹继续治疗的20天</view>
+          <view class='contentText'>医疗，靠的是口碑而不是广告，医疗，靠的是疗效而 不是玩笑，医者，靠的是技术而不是宣传。
+          </view>
+          <view class='contentImgBox'>
+            <!-- 在此处需要判断图片数量确定照片大小 -->
+            <view class='contentImg'>
+              <image src=''></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- mainItem End -->
+
+  <!-- mainItem Start -->
+
+  <view class='mainItem'>
+    <view class='itemTitle'>
+      <view class='icon'>
+        <image src='/res/icon/icon-time@3x.png'></image>
+      </view>
+      <view class='date'>2019年5月2日</view>
+      <view class='fontInfo'>第三篇日记</view>
+    </view>
+    <view class='itemContent'>
+      <view class='contentLeft'></view>
+      <view class='contentRight'>
+        <view class='contentBox'>
+          <view class='contentTitle'>荨麻疹继续治疗的20天</view>
+          <view class='contentText'>医疗，靠的是口碑而不是广告，医疗，靠的是疗效而 不是玩笑，医者，靠的是技术而不是宣传。
+          </view>
+          <view class='contentImgBox'>
+            <!-- 在此处需要判断图片数量确定照片大小 -->
+            <view class='contentImg'>
+              <image src=''></image>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- mainItem End -->
+
+
+</view>

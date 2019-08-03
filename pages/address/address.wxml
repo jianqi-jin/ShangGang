@@ -44,8 +44,8 @@
   </view>
 </view>
 
-<view class='btnSpecialBlock' bindtap='navToEdit' data-type='newAddress'>
-  <theme-view type="themeBack">添加收货地址</theme-view>
+<view class='btnAddAddress' bindtap='navToEdit' data-type='newAddress'>
+  加收货地址
 </view>
 
 

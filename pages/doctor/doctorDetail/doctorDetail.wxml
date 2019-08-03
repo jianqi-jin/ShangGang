@@ -1,8 +1,11 @@
 <!--pages/doctor/doctorDetail/doctorDetail.wxml-->
 <theme-view>
   <view class='topBox'>
+    <image mode='widthFix' class='backImg' src='/res/icon/doc-det-bg@3x.png'></image>
+    <view class='backBox'>
 
-    <view class='backBox'></view>
+
+    </view>
 
 
     <view class='userBox'>
@@ -47,37 +50,43 @@
 
 
 
-<!-- navBottom 底部-->
-<view class='navBottom'>
-  <view class='navBtn' bindtap='btnItemClick' data-item='{{0}}'>
-    <view class='navLeft'>
-      <view class='icon'>
-        <image src=''></image>
+  <!-- navBottom 底部-->
+  <view class='navBottom'>
+    <view class='navBtn' bindtap='btnItemClick' data-item='{{0}}'>
+      <view class='navLeft'>
       </view>
-    </view>
-    <view class='navRight'>
-      <view class=''>图文问诊</view>
-      <view class=''>￥15</view>
-    </view>
-    <view class='navPop'>抵扣15</view>
-  </view>
+      <view class='navRight'>
+        <view class=''>
 
-  
-  <view class='navBtn'>
-    <view class='navLeft'>
-      <view class='icon'>
-        <image src=''></image>
+          <view class='icon'>
+            <image src='/res/icon/doc-icon-img@3x.png'></image>
+          </view>
+          图文问诊</view>
+        <view class='asdwf'>
+
+          ￥15</view>
       </view>
+      <view class='navPop'>抵扣15</view>
     </view>
-    <view class='navRight' bindtap='btnItemClick' data-item='{{1}}'>
-      <view class=''>视频问诊</view>
-      <view class=''>￥15</view>
+
+
+    <view class='navBtn'>
+      <view class='navLeft'>
+      </view>
+      <view class='navRight' bindtap='btnItemClick' data-item='{{1}}'>
+        <view class=''>
+
+          <view class='icon'>
+            <image src='/res/icon/home-icon-video@3x.png'></image>
+          </view>
+          视频问诊</view>
+        <view class='asdwf'>￥15</view>
+      </view>
+      <view class='navPop'>抵扣15</view>
     </view>
-    <view class='navPop'>抵扣15</view>
+
   </view>
-  
-</view>
-<!-- navBottom 底部 End-->
+  <!-- navBottom 底部 End-->
 
 
 </theme-view>

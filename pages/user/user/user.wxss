@@ -4,7 +4,11 @@
   width: 100%;
   height: 425rpx;
   position: relative;
-  z-index: 0;
+}
+
+.backImg {
+  position: absolute;
+  top: 0;
 }
 
 .backBox {
@@ -52,7 +56,8 @@
 .userImg {
   width: 116rpx;
   height: 116rpx;
-  border: 1px solid #ccc;
+  border-radius: 50%;
+  box-shadow: 0 0 20rpx 0 #ccc;
 }
 
 .joinBar {
@@ -69,6 +74,7 @@
   align-items: center;
   height: 78rpx;
   border-radius: 12rpx 12rpx 2rpx 2rpx;
+  z-index: 0;
 }
 
 .joinLeft {
@@ -84,13 +90,12 @@
   height: 40rpx;
 }
 
-.btnItem .icon{
+.btnItem .icon {
   width: 45rpx;
   height: 45rpx;
 }
 
-
-.joinBar .icon{
+.joinBar .icon {
   margin-right: 11rpx;
 }
 
@@ -112,6 +117,7 @@
   width: 100%;
   overflow: hidden;
   margin-top: -130rpx;
+  position: relative;
   z-index: 1;
 }
 
@@ -131,11 +137,13 @@
   align-items: center;
   width: 165rpx;
 }
-.btnList{
+
+.btnList {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
 }
+
 .title {
   margin-top: 20rpx;
   font-size: 24rpx;

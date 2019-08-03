@@ -1,0 +1,88 @@
+<!--pages/money/money.wxml-->
+<view class='backBox'>
+<image src='{{bgImg}}'  mode='aspectFill'></image>
+<navigator url='/pages/djmx/djmx' open-type='navigate' class='jdgz'>解冻规则</navigator>
+  <view class='textBox'>
+    <view class='moneyBox'>
+      <view>￥</view>
+      <view>{{dj_money}}</view>
+    </view>
+    <view class='info'>总资产（元）</view>
+  </view>
+</view>
+
+
+<view class='mainBox'>
+  <view class='navBox'>
+  </view>
+
+  <view class='listBox'>
+    <none wx:if='{{bonus_log.length < 1}}' />
+    <view class='itemBox' wx:for='{{bonus_log}}' wx:key='index'>
+      <view class='itemTop'>
+      
+        <view class='itemLeft'>
+          <view class='userImg'><image src='{{item.xdr_avatar}}'></image></view>
+          <view class='leftText'>
+            <view>{{item.xdr_nickname}}</view>
+            <view>{{item.create_time}}</view>
+          </view>
+        </view>
+        <view class='itemRight'>
+        </view>
+      </view>
+
+
+      <view class='itemBottom'>
+        <view class='itemBottomItem'>
+          <view class='bottomItemBox'>
+            <view class='bottonItemTitle'>推荐人</view>
+            <view class='bottonItemValue'>{{item.tjr_nickname}}[{{item.tjr_level}}]</view>
+          </view>
+          <view class='bottomItemBox'>
+            <view class='bottonItemTitle'>{{item.fx_type}}消费奖励</view>
+            <view class='bottonItemValue' style='color:rgba(130,76,31,1)!important;'>????</view>
+          </view>
+        </view>
+
+        
+        <view class='itemBottomItem'>
+          <view class='bottomItemBox'>
+            <view class='bottonItemTitle'>消费金额</view>
+            <view class='bottonItemValue'>????</view>
+          </view>
+          <view class='bottomItemBox'>
+            <view class='bottonItemTitle'>下单时间</view>
+            <view class='bottonItemValue'>{{item.create_time}}</view>
+          </view>
+        </view>
+
+        
+        <view class='itemBottomItem'>
+          <view class='bottomItemBox'>
+            <view class='bottonItemTitle'>订单号</view>
+            <view class='bottonItemValue'>{{item.order_sn}}</view>
+          </view>
+          <view class='bottomItemBox'>
+            <view class='bottonItemTitle'>分红比例</view>
+            <view class='bottonItemValue'>{{item.num}}%</view>
+          </view>
+        </view>
+
+         <view class='itemBottomItem'>
+          <view class='bottomItemBox'>
+            <view class='bottonItemTitle'>清空冻结金额剩余时间</view>
+            <view class='bottonItemValue'>{{item.dongjie_time}}天</view>
+          </view>
+          <view class='bottomItemBox'>
+            <view class='bottonItemTitle'></view>
+            <view class='bottonItemValue'></view>
+          </view>
+        </view>
+      
+      </view>
+      
+    </view>
+  </view>
+  
+</view>

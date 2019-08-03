@@ -1,0 +1,125 @@
+/* pages/user/bindCard/bindCard.wxss */
+
+/* pages/address/editaddress/editaddress.wxss */
+.inputItem{
+  border-bottom: 2rpx solid #f2f2f2;
+  display: flex;
+  flex-direction: row;
+  height: 90rpx;
+  background: #fff;
+  align-items: center;
+}
+.fontTitle{
+  width: 166rpx;
+  text-align: left;
+  line-height: 90rpx;
+  margin-left: 25rpx;
+}
+.input{
+  flex-grow: 1;
+}
+input{
+  height: 100%;
+}
+.radioSex{
+  padding-left: 123rpx;
+  line-height: 90rpx;
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+}
+.radioLabel{
+  line-height: 90rpx;
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+}
+.radio-group{
+  display: flex;
+  flex-direction: row;
+}
+
+.radioIcon{
+  margin-top: 10rpx;
+  width: 44rpx;
+  height: 44rpx;
+}
+
+.radio{
+  display: flex;
+  margin-right: 73rpx;
+  flex-direction: row;
+  align-items: center;
+}
+.radioText{
+  margin-left: 20rpx;
+}
+
+
+radio{
+  display: none;
+}
+
+
+.inputItem view:last-child{
+  margin-right: 20rpx;
+}
+
+.inputItem:last-child{
+  margin-top: 34rpx;
+}
+
+.inputItem .text{
+  padding-left: 123rpx;
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+  line-height:90rpx;
+}
+
+.switchBox{
+  display: flex;
+  flex-direction: row-reverse;
+  flex-grow: 1;
+}
+switch{
+  margin-right: 36rpx;
+  margin-top: 16rpx;
+}
+
+.btnSpecialBlock{
+  margin: 56rpx 31rpx;
+  width: auto;
+  background: #fff;
+}
+
+.picker{
+  height: 90rpx;
+}
+button{
+  padding: 0;
+}
+
+.sdwd{
+  margin-top: 20rpx;
+}
+
+.getVcode{
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(130,76,31,1);
+
+}
+
+.cardImg image{
+  width: 100%;
+  height: 100%;
+}
+.cardImg{
+  width: 300rpx;
+  height: 100%;
+}

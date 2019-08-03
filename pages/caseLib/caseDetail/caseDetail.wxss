@@ -1,1 +1,134 @@
 /* pages/caseLib/caseDetail/caseDetail.wxss */
+
+.topBox {
+  height: 276rpx;
+  background: #dfd4cc;
+  position: relative;
+}
+
+.userBox {
+  position: absolute;
+  top: 70rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+.userName {
+  font-size: 38rpx;
+  font-weight: 800;
+  color: rgba(28, 28, 28, 1);
+}
+
+.userImg {
+  width: 160rpx;
+  height: 160rpx;
+  background: #ccc;
+  border-radius: 50%;
+  margin-top: 45rpx;
+}
+
+page {
+  background: #fff;
+}
+
+.imgBox {
+  margin-top: 82rpx;
+  padding: 0 25rpx 60rpx 25rpx;
+  font-size: 30rpx;
+}
+
+.imgList {
+  display: flex;
+  flex-direction: row;
+  margin-top: 32rpx;
+}
+
+.imgList image {
+  flex-grow: 1;
+  background: #ccc;
+  height: 220rpx;
+  margin-right: 16rpx;
+  border-radius: 10rpx;
+}
+
+.imgList image:last-child {
+  margin-right: 0;
+}
+
+.mainBox {
+  padding: 0 25rpx 0 25rpx;
+}
+
+.mainItem {
+  margin-bottom: 23rpx;
+}
+
+.itemTitle {
+  display: flex;
+  flex-direction: row;
+  font-size: 24rpx;
+  align-items: center;
+}
+
+.itemTitle .icon {
+  width: 35rpx;
+  height: 35rpx;
+}
+
+.date {
+  margin: 0 25rpx 0 16rpx;
+  color: rgba(151, 63, 43, 1);
+}
+
+.fontInfo {
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.itemContent {
+  margin-top: 27rpx;
+  margin-left: 15rpx;
+  display: flex;
+  flex-direction: row;
+  border-left: 2rpx solid #eee;
+  padding-left: 26rpx;
+  position: relative;
+}
+
+.itemContent::after {
+  content: '';
+  position: absolute;
+  left: -8rpx;
+  top: -6rpx;
+  width: 12rpx;
+  height: 12rpx;
+  background: #eee;
+  border-radius: 50%;
+}
+
+.contentRight {
+  background: rgba(255, 255, 255, 1);
+  box-shadow: 0px 0px 20rpx 0px rgba(153, 153, 153, 0.1);
+  border-radius: 10rpx;
+  padding: 40rpx 30rpx 30rpx 30rpx;
+}
+
+.contentTitle {
+  margin-bottom: 23rpx;
+}
+
+.contentText {
+  font-size: 26rpx;
+  color: rgba(102, 102, 102, 1);
+  margin-bottom: 36rpx;
+}
+
+.contentImgBox {
+  height: 612rpx;
+  width: 612rpx;
+  border-radius: 10rpx;
+  background: #ccc;
+}

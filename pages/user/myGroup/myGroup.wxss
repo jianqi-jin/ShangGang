@@ -1,0 +1,137 @@
+/* pages/user/myGroup/myGroup.wxss */
+
+.userBox{
+  margin:58rpx auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nameBox{
+  display: flex;
+  flex-direction: row;
+  margin-top: 18rpx;
+
+}
+.nameBox view:last-child{
+  margin-left: 11rpx;
+  width:118rpx;
+  height:34rpx;
+  background:rgba(255,192,17,1);
+  border-radius:17rpx;
+  font-size:20rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 34rpx;
+}
+
+.nameBox view:first-child{
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+}
+
+.back{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  height: 412rpx;
+  background: #30261B;
+  background:rgba(242,237,232,1);
+}
+.back image{
+  width: 100%;
+  height: 100%;
+}
+
+.btnSSS{
+  width:230rpx;
+  height:60rpx;
+  background:rgba(255,192,17,0);
+  border-radius:30rpx;
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  text-align: center;
+  line-height: 60rpx;
+  margin-top:18rpx;
+}
+
+.infoBox{
+  padding: 6rpx 24rpx 42rpx 0;
+  background: #fff;
+}
+.infoItem{
+  display: flex;
+  flex-direction: row;
+  margin-top: 36rpx;
+
+}
+.infoItem view:last-child{
+  margin-left: 32rpx;
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+}
+.infoItem view:first-child{
+  margin-left: 24rpx;
+  width: 120rpx;
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+}
+.oooooBox{
+  margin-top: 16rpx;
+  background: #ffff;
+  padding-bottom: 47rpx;
+}
+.oBoxMain{
+  display: flex;
+  flex-direction: row;
+  margin: 26rpx;
+}
+.tableItem{
+  flex-grow: 1;
+}
+.tableTop{
+  background:rgba(130,76,31,1);
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  width:173rpx;
+  height:57rpx;
+  border: 1rpx sold #fff;
+  text-align: center;
+  line-height: 57rpx;
+}
+.oBoxTitle{
+  margin: 42rpx 0 0 23rpx;
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+}
+.oBoxTitle:first-child{
+  margin-top: 0;
+  padding-top: 42rpx;
+}
+.tableBottom{
+  background:#F2EDE8;
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(130,76,31,1);
+  width:173rpx;
+  height:57rpx;
+  border: 1rpx sold #fff;
+  text-align: center;
+  line-height: 57rpx;
+}

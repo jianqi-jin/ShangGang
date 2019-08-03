@@ -28,6 +28,7 @@ Component({
           img: '/res/icon/nav-icon-rec@3x.png',
           selectedImg: '/res/icon/nav-icon-rec@3x.png',
           title: '推荐',
+          bigFlag: true,
           havT: true
         }, {
 
@@ -38,7 +39,7 @@ Component({
           havT: true
         }, {
 
-          url: '/pages/user/user',
+          url: '/pages/user/user/user',
           img: '/res/icon/nav-icon-user@3x.png',
           selectedImg: '/res/icon/nav-icon-user-pre@3x.png',
           title: '我的',

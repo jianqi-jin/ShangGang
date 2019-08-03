@@ -1,11 +1,8 @@
 
 <!--components/navTitle/navTitle.wxml-->
 <theme-view>
-
-
-
 <view class='navTitleBox' style='justify-content: {{navTitleInfo.type == "center" ? "space-around":"flex-start"}};'>
-<view wx:for='{{navTitleInfo.navList}}' class='navItem{{navTitleInfo.currentNavIndex == item.id ? " active": ""}}' style='{{navTitleInfo.type == "center" ? "flex-grow:1;":""}}' wx:key='index' bindtap='onTap' data-item='{{item}}'>{{item.title}}</view>
+<view wx:for='{{navTitleInfo.navList}}' class='navItem{{navTitleInfo.currentNavIndex == item.id ? " active": ""}}' style='{{navTitleInfo.type == "center" ? "flex-grow:1;":"margin-left:40rpx;"}}' wx:key='index' bindtap='onTap' data-item='{{item}}'>{{item.title}}</view>
 
 </view>
 

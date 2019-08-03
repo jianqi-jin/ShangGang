@@ -1,0 +1,147 @@
+/* pages/money/money.wxss */
+
+.backBox {
+  position: relative;
+  width: 100%;
+  height: 265rpx;
+}
+
+.backBox image {
+  z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.textBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.moneyBox {
+  display: flex;
+  flex-direction: row;
+  color: #fff;
+  align-items: flex-end;
+}
+
+.backBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.moneyBox view:first-child {
+  font-size: 24rpx;
+}
+
+.moneyBox view:last-child {
+  font-family: PingFang-SC-Heavy;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 1);
+  margin-left: 10rpx;
+  font-size: 46rpx;
+}
+
+.textBox .info {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 1);
+  opacity: 0.31;
+  margin-top: 20rpx;
+}
+
+.mainBox {
+  background: rgba(255, 255, 255, 1);
+  border-radius: 10rpx;
+  width: 100%;
+  height: 107rpx;
+}
+
+.navBox {
+  width: 100%;
+  height: 107rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navItem {
+  font-size: 32rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+}
+
+.navActive {
+  font-weight: 800;
+  color: rgba(130, 76, 31, 1);
+}
+
+.userImg {
+  width: 72rpx;
+  height: 72rpx;
+}
+
+.userImg image {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+}
+
+.itemBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: #fff;
+  border-bottom: 2rpx solid #f2f2f2;
+  padding: 40rpx 25rpx 40rpx 25rpx;
+}
+
+.itemLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.itemLeft .leftText {
+  margin-left: 20rpx;
+}
+
+.itemLeft .leftText view:first-child {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(51, 51, 51, 1);
+}
+
+.itemLeft .leftText view:last-child {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  margin-top: 8rpx;
+}
+
+.itemRight view:first-child {
+  font-size: 28rpx;
+  font-family: PingFang-SC-Heavy;
+  font-weight: 800;
+  color: rgba(130, 76, 31, 1);
+}
+
+.itemRight view:last-child {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Medium;
+  font-weight: 500;
+  color: rgba(153, 153, 153, 1);
+  margin-top: 8rpx;
+}
+
+.listBox {
+  margin-top: 20rpx;
+}

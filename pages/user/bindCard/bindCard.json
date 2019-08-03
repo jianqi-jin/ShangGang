@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "theme-view": "/components/themeView/themeView"
+  },
+  "navigationBarTitleText": "添加银行卡"
+}

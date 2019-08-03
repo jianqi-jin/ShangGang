@@ -1,0 +1,73 @@
+/* pages/user/service/wzDetail/wzDetail.wxss */
+
+.topBox {
+  height: 211rpx;
+  background: #fff;
+}
+
+.userBox {
+  display: flex;
+  flex-direction: row;
+  padding: 36rpx 42rpx;
+}
+
+.userImg {
+  width: 128rpx;
+  height: 128rpx;
+  background: #ccc;
+  border-radius: 50%;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-left: 45rpx;
+}
+
+.userText {
+  display: flex;
+  flex-direction: row;
+  color: #999;
+}
+
+.userName {
+  font-size: 36rpx;
+  font-weight: 800;
+  color: rgba(28, 28, 28, 1);
+}
+
+.userText view {
+  color: #973f2b;
+}
+
+.mainBox {
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.infoBox {
+  margin-top: 20rpx;
+}
+
+/* main Start*/
+
+.mainTitle {
+  padding: 33rpx 25rpx;
+  font-size: 26rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.mainContent {
+  padding: 0 24rpx;
+  font-size: 26rpx;
+}
+
+.mainBtn {
+  padding: 33rpx 24rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* main End*/

@@ -148,9 +148,15 @@ page {
   justify-content: center;
 }
 
+.backImg{
+  position: absolute;
+  top: 0;
+  z-index: -2;
+}
 .icon {
   width: 30rpx;
   height: 30rpx;
+  margin-right: 23rpx;
 }
 
 .navBtn:first-child {

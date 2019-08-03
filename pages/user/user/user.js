@@ -1,4 +1,6 @@
 // pages/user/user.js
+const util = require('../../../utils/util.js')
+const api = require('../../../utils/api.js')
 Page({
 
   /**
@@ -29,15 +31,19 @@ Page({
     serviceBtnList: [{
         title: '我的问诊',
         icon: '/res/icon/order-06@3x.png',
-        url: ''
+        url: '/pages/user/service/service?type=0'
       },
       {
         title: '我的药单',
         icon: '/res/icon/order-07@3x.png',
-        url: ''
+        url: '/pages/user/service/service?type=1'
       }
     ],
     infoList: [{
+      iconImg: '/res/icon/icon-tg@3x.png',
+        title: '推广中心',
+        iconArr: '/res/icon/doc-icon-left@3x.png'
+    }, {
         iconImg: '/res/icon/icon-add@3x.png',
         title: '收货地址',
         iconArr: '/res/icon/doc-icon-left@3x.png'
@@ -55,6 +61,30 @@ Page({
    */
   onLoad: function(options) {
 
+  },
+  infoItemClick(e) {
+    let item = e.currentTarget.dataset.item;
+    console.log(item)
+    switch (item.title) {
+      case '收货地址':{
+    util.navigateTo({
+      url: '/pages/address/address'
+    })
+        break;
+      }
+      case '联系客服':{
+        wx.makePhoneCall({
+          phoneNumber: '1775555555',
+        })
+        break;
+      }
+      case '推广中心':{
+    util.navigateTo({
+      url: '/pages/user/referCenter/referCenter'
+    })
+        break;
+      }
+    }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

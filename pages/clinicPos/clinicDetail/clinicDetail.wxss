@@ -1,0 +1,72 @@
+/* pages/clinicPos/clinicDetail/clinicDetail.wxss */
+
+.topBox {
+  height: 408rpx;
+  position: relative;
+  background: #806e62;
+  z-index: -1;
+}
+
+.clinicImg {
+  position: absolute;
+  top: 276rpx;
+  right: 24rpx;
+  border-radius: 50%;
+  z-index: 2;
+  background: #ccc;
+  height: 132rpx;
+  width: 132rpx;
+}
+
+.mainBox {
+  overflow: hidden;
+  margin-top: -66rpx;
+  border-radius: 46rpx 0 0 0;
+  background: #f5f5f5;
+  padding: 50rpx 25rpx;
+}
+
+.mainTitle {
+  font-size: 32rpx;
+  font-weight: 800;
+  color: rgba(28, 28, 28, 1);
+  margin-bottom: 36rpx;
+}
+
+.mainInfo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  color: #666;
+}
+
+.icon {
+  width: 30rpx;
+  height: 30rpx;
+  margin-right: 15rpx;
+}
+
+.btnList {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 34rpx 0;
+}
+
+.btn {
+  width: 64rpx;
+  height: 64rpx;
+  border-radius: 100px;
+  margin-right: 27rpx;
+}
+
+.infoBox {
+  background: #fff;
+  border-radius: 46rpx 0 0 0;
+  padding: 60rpx 30rpx;
+}
+
+.infoTitle {
+  font-size: 36rpx;
+  color: rgba(28, 28, 28, 1);
+}

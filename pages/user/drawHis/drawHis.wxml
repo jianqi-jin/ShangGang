@@ -1,0 +1,14 @@
+<!--pages/user/drawHis/drawHis.wxml-->
+<view class='ssitem' wx:for="{{drawHisList}}" wx:key='index'>
+
+  <view class='leftBox'>
+    <view class='leftTop'>提现</view>
+    <view class='leftBottom'>{{item.create_time}}</view>
+  </view>
+  <view class='rightBox'>
+    <view class='rightTop'>{{item.money}}</view>
+    <view class='rightBottom'>{{status[item.status]}}</view>
+  </view>
+</view>
+
+<none wx:if='{{drawHisList.length < 1}}' />

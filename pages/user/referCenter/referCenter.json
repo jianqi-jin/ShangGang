@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "info-item": "/components/infoItem/infoItem",
+    "theme-view": "/components/themeView/themeView"
+  }
+}

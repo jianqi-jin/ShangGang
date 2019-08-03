@@ -43,6 +43,12 @@ Page({
   onLoad: function(options) {
 
   },
+  onSearchBarClick(e){
+    let type = e.detail.type;
+    if(type == 'click'){
+      util.navigateTo({url: '/pages/search/search'})
+    }
+  },
   doctorItemClick(e) {
     let item = e.currentTarget.dataset.item;
     util.navigateTo({

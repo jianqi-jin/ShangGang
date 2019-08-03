@@ -1,0 +1,20 @@
+<!--components/ydList/ydList.wxml-->
+
+<view class='ydBox'>
+
+  <view class='ydItem' bindtap='itemClick' data-item=''>
+    <view class='ydTitle'>
+      <view>荨麻疹圣愈汤</view>
+      <view>[未支付]</view>
+    </view>
+    <view class='ydContent'>
+      <view>【功效】驱逐淫邪，发汗解表，选妃平川</view>
+      <view>【功效】驱逐淫邪，发汗解表，选妃平川</view>
+      <view></view>
+    </view>
+    <view class='ydBottom'>
+      <view>医生：李颖 2019-03-03</view>
+      <view>去支付</view>
+    </view>
+  </view>
+</view>

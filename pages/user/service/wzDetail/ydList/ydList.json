@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "用药建议记录",
+  "usingComponents": {
+    "yd-list": "/components/ydList/ydList"
+  }
+}

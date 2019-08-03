@@ -1,0 +1,68 @@
+/* pages/user/myGroup/groupInfo/index.wxss */
+
+
+
+.navBox{
+  width: 100%;
+  height: 107rpx;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: flex-end;
+  border-bottom: 1rpx solid #f6f6f6;
+}
+
+.navItem{
+  font-size:32rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+  height:70rpx;
+}
+.navActive{
+  font-weight:800;
+}
+.itemBox{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding:40rpx 25rpx;
+  background: #fff;
+  margin-top: 4rpx;
+}
+.userImg{
+  width: 64rpx;
+  height: 64rpx;
+}
+.itemLeft{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.specialFont{
+  color: #FFC011;
+  display: inline;
+}
+.leftRight{
+  height:90rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  margin-left: 17rpx;
+}
+
+.itemRight{
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}

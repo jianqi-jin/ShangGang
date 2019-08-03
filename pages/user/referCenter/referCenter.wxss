@@ -1,0 +1,181 @@
+/* pages/user/referCenter/referCenter.wxss */
+page{
+  padding: 0;
+}
+.userBox{
+  margin:58rpx auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.nameBox{
+  display: flex;
+  flex-direction: row;
+  margin-top: 18rpx;
+
+}
+.nameBox view:last-child{
+  margin-left: 11rpx;
+  width:118rpx;
+  height:34rpx;
+  background:rgba(255,192,17,1);
+  border-radius:17rpx;
+  font-size:20rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  line-height: 34rpx;
+}
+
+.nameBox view:first-child{
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+}
+
+.back{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  height: 412rpx;
+}
+.back image{
+  width: 100%;
+  height: 100%;
+}
+.cardBox{
+  width:702rpx;
+  background:rgba(255,255,255,1);
+  box-shadow:0px 0px 10rpx 0px rgba(204,204,204,0.5);
+  border-radius:10rpx;
+  margin: auto;
+}
+.cardTop{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.cardTop view{
+  margin-top: 20rpx;
+}
+.cardTop .top{
+  font-size:56rpx;
+  font-family:PingFang-SC-Heavy;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+}
+
+.cardTop view:first-child{
+  font-size:26rpx;
+font-family:PingFang-SC-Medium;
+font-weight:500;
+color:rgba(153,153,153,1);
+}
+
+.cardTop view:last-child{
+  width:156rpx;
+  height:46rpx;
+  border-radius:23rpx;
+
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(255,255,255,1);
+
+  text-align: center;
+  line-height: 46rpx;
+}
+
+.cardTop .num{
+  font-size:56rpx;
+  font-family:PingFang-SC-Heavy;
+  font-weight:800;
+  color:rgba(51,51,51,1);
+  margin: 0;
+}
+.cardBottom{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25rpx 0rpx 45rpx 0rpx;
+}
+.cardBotmItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+.cardBotmItem view{
+  margin-top: 12rpx;
+}
+.cardBotmItem view:first-child{
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(130,76,31,1);
+}
+.cardBotmItem view:last-child{
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+}
+.cardBottom .cardBotmItem:first-child{
+  border-right: 1rpx solid #f6f6f6;
+}
+.otBox{
+  background: #fff;
+  padding: 296rpx 0 60rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.otItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.otItem view{
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  margin-top: 20rpx;
+}
+.otItem theme-view{
+  margin-top:20rpx;
+}
+
+.otItem view:last-child{
+  background:rgba(130,76,31,0);
+  border:2rpx solid rgba(130, 76, 31, 1);
+  border-radius:18rpx;
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(130,76,31,1);
+  width:82rpx;
+  height:36rpx;
+  text-align: center;
+  line-height: 36rpx;
+}
+
+
+.otherBox{
+  margin-top: 16rpx;
+
+}
+
+.oootBox{
+  position: absolute;
+  top: 412rpx;
+  width: 100%;
+  z-index: -1;
+}

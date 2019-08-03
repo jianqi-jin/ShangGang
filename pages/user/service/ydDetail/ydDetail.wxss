@@ -1,0 +1,88 @@
+/* pages/user/service/ydDetail/ydDetail.wxss */
+
+.nameBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  position: absolute;
+  top: 68rpx;
+}
+
+.nameItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 24rpx;
+  font-family: PingFang-SC-Regular;
+  font-weight: 400;
+  color: rgba(192, 217, 255, 1);
+  opacity: 0.5;
+}
+
+.value {
+  font-size: 32rpx;
+  font-family: PingFang-SC-Heavy;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 1);
+}
+
+.topBox {
+  height: 166rpx;
+  background: #993f2b;
+}
+
+.btn {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: #973f2b;
+  line-height: 98rpx;
+  height: 98rpx;
+  color: #fff;
+  font-size:34rpx;
+}
+
+.icon {
+  width: 25rpx;
+  height: 25rpx;
+  margin-right: 15rpx;
+}
+
+.infoBox .boxTitle {
+  background: #fff;
+  padding: 32rpx 24rpx;
+  margin-bottom: 2rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 26rpx;
+  color: rgba(102, 102, 102, 1);
+}
+
+.boxContent {
+  background: #fff;
+  padding: 30rpx;
+}
+
+.middleBox {
+  margin-bottom: 20rpx;
+}
+
+.middleBox .boxTitle {
+  background: #fff;
+  padding: 32rpx 24rpx 0 24rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  font-size: 26rpx;
+  color: rgba(102, 102, 102, 1);
+}
+
+.infoBox {
+  margin-bottom: 20rpx;
+}

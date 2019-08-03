@@ -1,0 +1,57 @@
+<!--pages/user/referCenter/referCenter.wxml-->
+
+<view class='back'>
+  <image mode='aspectFill' src='{{bgImg}}'></image>
+</view>
+
+
+<view class='userBox'>
+  <view class='userImg'>
+    <image src='{{userInfo.info.avatar}}'></image>
+  </view>
+  <view class='nameBox'>
+    <view class='userName'>{{userInfo.info.nickname}}</view>
+    <view class='userLevel'>{{userInfo.info.levelname}}</view>
+  </view>
+</view>
+
+<view class='cardBox'>
+  <view class='cardTop'>
+    <view>累计收益 （元）</view>
+    <view class='num'>{{userInfo.money.leiji_money}}</view>
+    <view>
+      <navigator open-type='navigate' url='/pages/user/incomeInfo/incomeInfo'>
+        <theme-view type="themeBack">收益明细</theme-view>
+      </navigator>
+    </view>
+  </view>
+  <view class='cardBottom'>
+    <view class='cardBotmItem'>
+      <view>{{userInfo.team.today_order_count}}</view>
+      <view>今日单量</view>
+    </view>
+    <view class='cardBotmItem'>
+      <view>{{userInfo.team.today_user_count}}</view>
+      <view>团队规模</view>
+    </view>
+  </view>
+</view>
+
+
+<view class='oootBox'>
+
+
+  <view class='otBox'>
+
+    <navigator open-type='navigate' url='{{item.url}}' class='otItem' wx:for='{{otList}}' wx:key="index">
+      <view>{{item.title}}</view>
+      <view class='22num'>￥{{item.num}}</view>
+      <theme-view type="themeBorder">{{item.btnTitle}}</theme-view>
+    </navigator>
+  </view>
+
+
+  <view class='otherBox'>
+    <info-item data-index='{{index}}' bindtap='navTo' wx:for="{{otherInfoList}}" wx:key="index" info="{{item}}"></info-item>
+  </view>
+</view>

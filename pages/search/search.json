@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "搜索医师",
+  "usingComponents": {
+    "doctor-item": "/components/doctorItem/doctorItem",
+    "search-bar": "/components/searchBar/searchBar"
+  }
+}

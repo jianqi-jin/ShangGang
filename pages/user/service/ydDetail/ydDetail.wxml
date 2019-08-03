@@ -1,0 +1,63 @@
+<!--pages/user/service/ydDetail/ydDetail.wxml-->
+
+<view class='topBox'>
+
+</view>
+
+
+<view class='nameBox'>
+  <view class='nameItem'>
+    <view class='title'>姓名</view>
+    <view class='value'>安春雨</view>
+  </view>
+  <view class='nameItem'>
+    <view class='title'>性别</view>
+    <view class='value'>女</view>
+  </view>
+  <view class='nameItem'>
+    <view class='title'>年龄</view>
+    <view class='value'>26岁</view>
+  </view>
+</view>
+
+<view class='infoBar'></view>
+
+<view class='middleBox'>
+  <!-- boxTitle 通用 标题-->
+  <view class='boxTitle'>
+    <view class='icon'>
+      <image src='/res/icon/icon-zd-jg@3x.png'></image>
+    </view>
+    <view>诊断结果</view>
+  </view>
+
+  <view class='boxContent'>荨麻疹</view>
+</view>
+
+
+<view class='infoBox'>
+  <view class='boxTitle'>
+    <view class='icon'>
+      <image src='/res/icon/icon-dz-yy@3x.png'></image>
+    </view>
+    <view>用药说明</view>
+  </view>
+  <view class='boxContent'>
+    <rich-text></rich-text>
+  </view>
+</view>
+
+
+<view class='infoBox'>
+  <view class='boxTitle'>
+    <view class='icon'>
+      <image src='/res/icon/icon-dz-yy@3x.png'></image>
+    </view>
+    <view>补充说明</view>
+  </view>
+  <view class='boxContent'>
+    <rich-text></rich-text>
+  </view>
+</view>
+
+<view class='btn' bindtap='payFuc'>去支付</view>

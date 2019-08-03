@@ -1,0 +1,44 @@
+/* pages/join/message/message.wxss */
+.title{
+  font-size:36rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(130,76,31,1);
+  text-align: center;
+  margin-top: 60rpx;
+}
+image{
+  width: 100%;
+}
+.contentItem{
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:#666666;
+  line-height:48rpx;
+  margin-top: 41rpx;
+  padding: 25rpx;
+}
+
+.contentTitle{
+  color: #824C1F;
+}
+.btnSpecialBlock{
+  width: auto;
+  margin: 10rpx 22rpx;
+  background: #fff;
+}
+.footBtn{
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  width: 100%;
+  box-shadow: 1rpx 1rpx 1rpx #ccc;
+}
+.back{
+  background: #fff;
+  height: 100%;
+  position: fixed;
+  border-top: 1rpx solid #ccc;
+}
+

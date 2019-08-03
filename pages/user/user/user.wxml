@@ -6,14 +6,16 @@
 <theme-view>
 </theme-view>
 <view class='topBox'>
+
+<image class='backImg' src='/res/icon/user-bg@3x.png' mode='widthFix'></image>
   <view class='backBox'></view>
   <view class='userBox'>
     <view class='userLeft'>
       <view class='userName'>用户的昵称</view>
-      <view class='userMoney'>
+      <navigator open-type='navigate' url='/pages/user/money/money' class='userMoney'>
         余额
         <view>￥0.00</view>
-      </view>
+      </navigator>
     </view>
     <view class='userRight'>
       <view class='userImg'>
@@ -21,16 +23,16 @@
       </view>
     </view>
   </view>
-  <view class='joinBar'>
-    <view class='joinLeft'>
-      <view class='icon'>
-        <image src='/res/icon/vip-icon@3x.png'></image>
-      </view>
-      <view>加入合伙人</view>
+</view>
+<view class='joinBar'>
+  <view class='joinLeft'>
+    <view class='icon'>
+      <image src='/res/icon/vip-icon@3x.png'></image>
     </view>
-    <view class='joinRight'>
-      <navigator open-type='navigate' url='/pages/join/message/message' class='joinBtn'>立即加入</navigator>
-    </view>
+    <view>加入合伙人</view>
+  </view>
+  <view class='joinRight'>
+    <navigator open-type='navigate' url='/pages/join/message/message' class='joinBtn'>立即加入</navigator>
   </view>
 </view>
 
@@ -61,6 +63,6 @@
 </view>
 
 <view class='mainInfo'>
-  <info-item info='{{item}}' wx:for='{{infoList}}' wx:key='{{item.title}}'></info-item>
+  <info-item info='{{item}}' bindtap='infoItemClick' data-item='{{item}}' wx:for='{{infoList}}' wx:key='{{item.title}}'></info-item>
 </view>
 <nav-bottom selectedIndex='4'></nav-bottom>

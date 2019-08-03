@@ -1,11 +1,39 @@
 <!--pages/clinicPos/clinicPos.wxml-->
-
-
-
 <theme-view>
+  <!-- clinicItem Start -->
 
+  <navigator open-type='navigate' url='/pages/clinicPos/clinicDetail/clinicDetail' class='clinicItem'>
+    <view class='img'>
+      <image mode='' src=''></image>
+    </view>
+    <view class='content'>
+      <view class='top'>
+        <view class='titleName'>商刚皮肤诊所(太古店)</view>
+        <view class='titleLong'>1.3km</view>
+      </view>
+      <view class='bottom'>哈尔滨道外太古十四道街236号</view>
+    </view>
+  </navigator>
 
+  <!-- clinicItem End -->
 
+  
+  <!-- clinicItem Start -->
+
+  <navigator open-type='navigate' url='/pages/clinicPos/clinicDetail/clinicDetail' class='clinicItem'>
+    <view class='img'>
+      <image mode='' src=''></image>
+    </view>
+    <view class='content'>
+      <view class='top'>
+        <view class='titleName'>商刚皮肤诊所(太古店)</view>
+        <view class='titleLong'>1.3km</view>
+      </view>
+      <view class='bottom'>哈尔滨道外太古十四道街236号</view>
+    </view>
+  </navigator>
+
+  <!-- clinicItem End -->
 
   <nav-bottom selectedIndex='1'></nav-bottom>
 

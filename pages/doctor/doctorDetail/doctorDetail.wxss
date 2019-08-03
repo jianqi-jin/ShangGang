@@ -8,7 +8,11 @@
   overflow: hidden;
   z-index: -2;
 }
-
+.backImg{
+  position: absolute;
+  top: 0;
+  z-index: -2;
+}
 .backBox {
   position: absolute;
   background: #fff;
@@ -143,6 +147,7 @@
 .icon {
   width: 30rpx;
   height: 30rpx;
+  margin-right: 15rpx;
 }
 
 .navBtn:first-child {
@@ -153,8 +158,15 @@
   background: #ab8354;
 }
 
-.navRight view:last-child {
+.asdwf {
   font-size: 26rpx;
+  padding-left: 50rpx;
+}
+
+.navRight view:first-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 .navPop {

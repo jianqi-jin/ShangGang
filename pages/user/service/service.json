@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "我的问诊",
+  "usingComponents": {
+    "nav-title": "/components/navTitle/navTitle",
+    "yd-list": "/components/ydList/ydList"
+  }
+}

@@ -1,1 +1,40 @@
 /* pages/clinicPos/clinicPos.wxss */
+
+.clinicItem {
+  margin-bottom: 20rpx;
+  background: #fff;
+}
+
+.img {
+  height: 343rpx;
+  width: 100%;
+  background: #ccc;
+}
+
+.content {
+  height: 136rpx;
+  padding: 30rpx 25rpx 0 25rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.titleName {
+  font-size: 32rpx;
+}
+
+.titleLong {
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}
+
+.bottom {
+  margin-top: 22rpx;
+  font-size: 24rpx;
+  color: rgba(153, 153, 153, 1);
+}

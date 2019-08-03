@@ -77,6 +77,6 @@
       <text class='iconfont icon-saoyisao size20'></text>
     </view>
   </floatButton>
-  <nav-bottom selected-index='1'></nav-bottom>
+  <nav-bottom selected-index='2'></nav-bottom>
 </view>
 <canvas  canvas-id="shareCanvas" style="width:600px;height:960px;position: fixed;top:999999rpx;left: 0"></canvas>

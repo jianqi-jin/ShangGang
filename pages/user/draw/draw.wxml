@@ -1,0 +1,51 @@
+<!--pages/user/draw/draw.wxml-->
+<form bindsubmit='submitFun'>
+  <view class='fucBox'>
+    <view class='fucTitle'>
+      <view class='titleLeft'>可提现金额￥{{ktx_money}}</view>
+      <view class='titleRight' bindtap='qbTxFun'>全部提现</view>
+    </view>
+    <view class='fucContent'>
+      <view class='input'>
+        <view>￥</view>
+        <input name='money' value='{{inputVal}}' type='digit'></input>
+      </view>
+    </view>
+    <view class='info'>提现金额不低于1元，当日提现次数不超过10次</view>
+
+    <navigator open-type='navigate' wx:if='{{!bankCard.number ? true : false}}' url='/pages/user/bindCard/bindCard' class='ooooooooo'>
+      <view class='cardTitle'>添加银行卡</view>
+      <view class='icon'>
+        <image src='/res/icon/icon_right_click.png'></image>
+      </view>
+    </navigator>
+
+
+
+    <navigator open-type='navigate' wx:else url='/pages/user/chooseCard/chooseCard' class='ooooooooo'>
+      <view class='cardLeft'>
+        <view class='cardImg'>
+          <image mode='aspectFit' src="{{bankCard.image}}"></image>
+        </view>
+        <view class='cardTitle'>尾号{{bankCard.number}}</view>
+      </view>
+      <view class='icon'>
+        <image src='/res/icon/icon_right_click.png'></image>
+      </view>
+    </navigator>
+
+
+    <button form-type='submit' class='Fuccccccbtn'><theme-view type="themeBack">确认提现</theme-view></button>
+  </view>
+
+  <view class='dialogMask' wx:if='{{dialogFlag}}'></view>
+
+  <view class='dialogBack' wx:if='{{dialogFlag}}'>
+    <view class='dialogBox'>
+      <view class='dialogTop'>提现申请已发出，财务人员正在审理，资金1-5个工作日到账</view>
+      <navigator open-type='navigateBack' delta='1' class='dialogBottom'>我知道了</navigator>
+    </view>
+  </view>
+
+
+</form>

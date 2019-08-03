@@ -25,7 +25,6 @@
   width: 86rpx;
   height: 86rpx;
   border-radius: 50%;
-  background: #fff;
   margin-top: 100rpx;
   position: fixed;
   left: 0;

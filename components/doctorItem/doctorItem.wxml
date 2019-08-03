@@ -16,14 +16,14 @@
   <view class='btnBox'>
     <view class='btn'>
       <view class='icon'>
-        <image src=''></image>
+        <image src='/res/icon/home-icon-message@3x.png'></image>
       </view>
       <view class=''>图文问诊</view>
       <view class='price'>￥35</view>
     </view>
     <view class='btn'>
       <view class='icon'>
-        <image src=''></image>
+        <image src='/res/icon/home-icon-video@3x.png'></image>
       </view>
       <view class=''>视频问诊</view>
       <view class='price'>￥45</view>

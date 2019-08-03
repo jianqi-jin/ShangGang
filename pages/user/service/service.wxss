@@ -1,0 +1,102 @@
+/* pages/user/service/service.wxss */
+
+.navTitle {
+  padding-top: 34rpx;
+  background: #fff;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.itemLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.userInfo {
+  margin-left: 25rpx;
+}
+
+.userName {
+  font-size: 30rpx;
+  font-family: PingFang-SC-Heavy;
+  font-weight: 800;
+  color: rgba(28, 28, 28, 1);
+}
+
+.userImg {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 50%;
+  background: #ccc;
+}
+
+.userContent {
+  color: rgba(153, 153, 153, 1);
+  margin: 10rpx 0 10rpx 0;
+}
+
+.userDate {
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.itemRight {
+  color: #999;
+}
+
+.item {
+  background: #fff;
+  padding: 40rpx 30rpx;
+  margin-top: 2rpx;
+}
+
+.mainBox {
+  margin-top: 20rpx;
+}
+
+.ydItem {
+  margin-top: 20rpx;
+}
+
+.ydTitle {
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  padding: 33rpx 24rpx;
+}
+
+.ydTitle view:last-child {
+  color: #ab8354;
+  margin-left: 10rpx;
+}
+
+.ydContent {
+  background: #fff;
+  margin-top: 2rpx;
+  padding: 23rpx 16rpx;
+}
+
+.ydBottom {
+  background: #fff;
+  padding: 33rpx 24rpx;
+  font-size: 24rpx;
+  color: rgba(102, 102, 102, 1);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.ydBottom view:last-child {
+  width: 106rpx;
+  height: 43rpx;
+  border: 2rpx solid rgba(233, 51, 60, 1);
+  border-radius: 22rpx;
+  text-align: center;
+  line-height: 43rpx;
+}

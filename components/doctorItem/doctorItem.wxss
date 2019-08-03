@@ -16,11 +16,10 @@
   border-radius: 50%;
 }
 
-
-
 .doctorRight {
   margin-left: 24rpx;
 }
+
 .statusBox {
   border-radius: 100rpx;
   border: 2rpx solid rgba(64, 152, 252, 1);
@@ -30,7 +29,22 @@
   height: 34rpx;
   line-height: 34rpx;
   margin-top: 12rpx;
+  position: relative;
+  --color: rgba(64, 152, 252, 1);
+  padding-left: 10rpx;
 }
+
+.statusBox::after {
+  content: '';
+  position: absolute;
+  left: 10rpx;
+  top: 12rpx;
+  width: 8rpx;
+  height: 8rpx;
+  border-radius: 50%;
+  background: var(--color);
+}
+
 .doctorName {
   font-size: 32rpx;
   font-family: PingFang-SC-Heavy;
@@ -72,6 +86,7 @@
 .icon {
   width: 25rpx;
   height: 25rpx;
+  margin-right: 10rpx;
 }
 
 .price {

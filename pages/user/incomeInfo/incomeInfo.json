@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "theme-view":"/components/themeView/themeView",
+    "none": "/components/none/none",
+    "loading": "/components/loading/loading"
+  }
+}

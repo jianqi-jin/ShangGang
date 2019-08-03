@@ -1,0 +1,39 @@
+/* pages/user/drawHis/drawHis.wxss */
+.ssitem{
+  border-bottom: 1rpx solid #f6f6f6;
+  background: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30rpx 23rpx;
+}
+.leftTop{
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+}
+
+.leftBottom{
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+}
+.rightTop{
+  font-size:28rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(130,76,31,1);
+}
+.rightBottom{
+  font-size:24rpx;
+  font-family:PingFang-SC-Medium;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+}
+.rightBox{
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-end;
+}

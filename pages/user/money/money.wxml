@@ -1,0 +1,42 @@
+<!--pages/money/money.wxml-->
+
+<view class='backBox'>
+  <image src='{{bgImg}}' mode='aspectFill'></image>
+  <view class='textBox'>
+    <view class='moneyBox'>
+      <view>￥</view>
+      <view>{{userInfo.yue}}</view>
+    </view>
+    <view class='info'>总资产（元）</view>
+  </view>
+</view>
+
+
+<view class='mainBox'>
+  <view class='navBox'>
+    <view data-id='{{item.id}}' bindtap='changeNav' wx:for='{{navList}}' wx:key='index'>
+      <theme-view class='navItem' wx:if="{{item.id == showId}}" type="themeFont">{{item.title}}</theme-view>
+      <view wx:else class='navItem'>{{item.title}}</view>
+    </view>
+  </view>
+  <loading wx:if='{{loadingFlag}}' />
+  <view wx:else class='listBox'>
+    <view class='itemBox' wx:for='{{cardList}}' wx:key='index'>
+      <view class='itemLeft'>
+        <view wx:if='{{showId == 0 ? true : false}}' class='userImg'>
+          <image src='{{item.avatar}}'></image>
+        </view>
+        <view class='leftText'>
+          <view>{{item.nickname ? item.nickname:"储值金额"}}</view>
+          <view>{{item.pay_time?item.pay_time:item.create_time}}</view>
+        </view>
+      </view>
+      <view class='itemRight'>
+        <view>{{item.money}}</view>
+        <view>已到账</view>
+      </view>
+    </view>
+  </view>
+  <none wx:if='{{(!loadingFlag)&&(!cardLsit.length || cardLsit.length < 1)}}' />
+
+</view>
