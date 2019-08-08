@@ -1,0 +1,16 @@
+<!--pages/chat/textChat/components/inputBox/inputBox.wxml-->
+
+<!-- 抽象组件 chatInput-->
+<view class='chatInput'>
+  <view class='chatTopBar'>
+    <view class='chatInputBox'>
+      <input bindblur='onInputBlur' bindfocus='onInputFocus' type='text' placeholder='请输入想要咨询的内容'></input>
+    </view>
+
+    <view class='chatSendBtn'>发送</view>
+
+  </view>
+
+</view>
+
+<!-- 抽象组件 chatInput End-->

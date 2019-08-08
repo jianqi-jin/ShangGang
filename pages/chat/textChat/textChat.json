@@ -1,4 +1,6 @@
 {
   "navigationBarTitleText": "图文问诊",
-  "usingComponents": {}
+  "usingComponents": {
+    "input-box": "./components/inputBox/inputBox"
+  }
 }

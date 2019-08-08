@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 17,
+			"current": 18,
 			"list": [
 				{
 					"id": -1,
@@ -164,6 +164,13 @@
 					"id": -1,
 					"name": "wzDetail",
 					"pathName": "pages/user/service/wzDetail/wzDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "textChat",
+					"pathName": "pages/chat/textChat/textChat",
 					"scene": null
 				}
 			]
