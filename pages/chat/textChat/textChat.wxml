@@ -1,8 +1,20 @@
 <!--pages/chat/textChat/textChat.wxml-->
 
+<view class="chatMain">
+
+  <!-- 此处scrollview 需要使用view包裹，scroll使用绝对定位。小程序scrollview不支持flex -->
+  <view class="chatScrollView">
+    <scroll-view scroll-with-animation scroll-top='{{scrollTop}}' class="chatScroll" scroll-y>
+      <view class="msgList">
+        <message-item wx:for='{{mesInfoList}}' wx:key='{{item.id}}' msgInfo='{{item}}' />
+        <message-item wx:for='{{mesInfoList}}' wx:key='{{item.id}}' msgInfo='{{item}}' />
 
 
+      </view>
 
+    </scroll-view>
+  </view>
 
+  <input-box class='inputBox' bindonAction='onAction' />
 
-<input-box bindonAction='' />
+</view>

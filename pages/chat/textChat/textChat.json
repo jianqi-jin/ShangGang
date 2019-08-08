@@ -1,6 +1,7 @@
 {
   "navigationBarTitleText": "图文问诊",
   "usingComponents": {
+    "message-item": "./components/messageItem/messageItem",
     "input-box": "./components/inputBox/inputBox"
   }
 }

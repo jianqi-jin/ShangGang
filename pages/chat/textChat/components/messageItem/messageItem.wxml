@@ -1,2 +1,13 @@
 <!--pages/chat/textChat/components/messageItem/messageItem.wxml-->
-<text>pages/chat/textChat/components/messageItem/messageItem.wxml</text>
+
+
+<view>
+  <view class="messageItem {{msgInfo.type == 0? 'messageItemMe':''}}">
+    <view class="userImgBox">
+      <image mode="aspectFit" src="/res/icon/nav-icon-user-pre@3x.png"></image>
+    </view>
+    <view class="msgBox {{msgInfo.type == 0? 'msgMe':''}}">
+      医生现在能给在线开一些药么 因为现在痒的厉害
+    </view>
+  </view>
+</view>

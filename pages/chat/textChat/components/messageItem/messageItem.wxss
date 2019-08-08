@@ -1,1 +1,38 @@
 /* pages/chat/textChat/components/messageItem/messageItem.wxss */
+
+.messageItem {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-top: 70rpx;
+  padding: 0 30rpx;
+}
+
+.messageItemMe {
+  flex-direction: row-reverse;
+}
+
+.userImgBox {
+  width: 84rpx;
+  height: 84rpx;
+}
+
+.userImgBox image {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.msgBox {
+  margin: 0 30rpx;
+  padding: 32rpx;
+  max-width: 470rpx;
+  background: #fff;
+  border-radius: 0 40rpx 40rpx 40rpx;
+}
+
+.msgMe {
+  border-radius: 40rpx 0 40rpx 40rpx;
+  background: RGBA(151, 63, 43, 1);
+  color: #fff;
+}

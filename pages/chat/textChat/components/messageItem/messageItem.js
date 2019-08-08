@@ -4,7 +4,12 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    msgInfo: {
+      type: {
+        type: Number,
+        defalut: 0
+      }, //0自己 1别人
+    }
   },
 
   /**

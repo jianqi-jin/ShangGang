@@ -30,9 +30,16 @@ const navigateTo = ({
   })
 }
 
-
+const userCancel = () => wx.showToast({
+  title: '用户取消',
+  icon: 'none',
+  image: '',
+  duration: 800,
+  mask: true
+})
 
 module.exports = {
   formatTime: formatTime,
-  navigateTo
+  navigateTo,
+  userCancel
 }

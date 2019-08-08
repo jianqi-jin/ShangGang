@@ -3,14 +3,20 @@
 <!-- 抽象组件 chatInput-->
 <view class='chatInput'>
   <view class='chatTopBar'>
-    <view class='chatInputBox'>
-      <input bindblur='onInputBlur' bindfocus='onInputFocus' type='text' placeholder='请输入想要咨询的内容'></input>
+    <view class="inputLeftBox">
+      <view class='chatInputBox'>
+        <textarea adjust-position='{{false}}' auto-height bindfocus="onFocus" bindblur="onBlur" class="textArea" type='text' placeholder='请输入想要咨询的内容'></textarea>
+      </view>
+      <view bindtap="onChooseImgClick" class="imgImgBox">
+        <image class="imgImgBtn" src="/res/icon/icon-dh-img@3x.png"></image>
+      </view>
     </view>
-
-    <view class='chatSendBtn'>发送</view>
-
+    <view class='chatSendBtn' hover-class="hoverBackColor" bindtap="onSendClick">发送</view>
   </view>
-
 </view>
+
+<!-- 键盘弹起顶开此view Star -->
+<view style="height:{{chatInputBottom}}px;"></view>
+<!-- 键盘弹起顶开此view End -->
 
 <!-- 抽象组件 chatInput End-->

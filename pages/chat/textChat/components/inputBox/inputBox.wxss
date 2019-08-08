@@ -1,27 +1,54 @@
 /* pages/chat/textChat/textChat.wxss */
 
 .chatInput {
-  position: fixed;
   background: #fff;
   width: 100%;
-  height: 512rpx;
-  bottom: -400rpx;
+  padding: 16rpx 0;
+}
+
+.textArea {
+  width: 100%;
+  flex-grow: 1;
+  max-height: 200rpx;
+  overflow: hidden;
+  padding: 20rpx 0;
+}
+
+.inputLeftBox {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-grow: 1;
+  border-radius: 40rpx;
+  background: #f8f8f8;
+  padding: 0 15rpx;
+}
+
+.imgImgBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 50rpx;
+  height: 74rpx;
+  padding-bottom: 17rpx;
+  margin-right: 28rpx;
+}
+
+.imgImgBtn {
+  width: 50rpx;
+  height: 50rpx;
 }
 
 .chatTopBar {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   margin: 0 20rpx;
-  height: 112rpx;
 }
 
 .chatInputBox {
-  border-radius: 100px;
-  background: #f8f8f8;
-  height: 80rpx;
   flex-grow: 1;
-  flex-direction: row;
+  flex-direction: column;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -29,16 +56,21 @@
 
 .chatSendBtn {
   width: 126rpx;
-  height: 80rpx;
+  height: 74rpx;
   background: rgba(151, 63, 43, 1);
   border-radius: 40rpx;
   color: #fff;
   font-size: 32rpx;
   text-align: center;
-  line-height: 80rpx;
+  line-height: 74rpx;
   margin-left: 20rpx;
 }
 
 input {
   margin-left: 30rpx;
+}
+
+
+.hoverBackColor{
+  background: rgba(151, 63, 43, 0.767)
 }

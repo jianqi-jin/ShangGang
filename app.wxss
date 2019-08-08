@@ -1,4 +1,5 @@
 /**app.wxss**/
+
 .container {
   height: 100%;
   display: flex;
@@ -7,15 +8,19 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
+}
 
-page{
+page {
   background: #f5f5f5;
   font-size: 28rpx;
   padding-bottom: 120rpx;
 }
 
-image{
+image {
   width: 100%;
   height: 100%;
+}
+
+.hoverBackColor {
+  background: rgba(151, 63, 43, 0.767);
 }
