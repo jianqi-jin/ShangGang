@@ -1,4 +1,4 @@
-<view class='infoItem' style='{{info.style.length>0?info.style:""}}!important'>
+<view class='infoItem' hover-class="infoHover" style='{{info.style.length>0?info.style:""}}!important'>
   <view class='title'>
     <image wx:if="{{info.iconImg.length > 0}}" src='{{info.iconImg}}'></image>
     <view class='titleText' style='margin-left:{{info.iconImg.length > 0?"20rpx":"0"}};color:{{info.titleColor.length > 0 ? info.titleColor:""}};{{info.titleStyle}}'>{{info.title}}</view>

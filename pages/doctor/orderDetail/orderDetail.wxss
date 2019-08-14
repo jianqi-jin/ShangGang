@@ -227,5 +227,6 @@ page {
 .subBtn{
   background: #973F2B;
   color: #fff;
+  font-size: 32rpx;
 }
 /* dialog End*/

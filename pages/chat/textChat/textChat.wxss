@@ -25,4 +25,5 @@
 }
 
 .inputBox {
+  font-size: 32rpx;
 }

@@ -21,6 +21,10 @@ image {
   height: 100%;
 }
 
-.hoverBackColor {
+.hoverThemeColor {
   background: rgba(151, 63, 43, 0.767);
+}
+
+.hoverWhiteColor {
+  background: #f5f5f5;
 }

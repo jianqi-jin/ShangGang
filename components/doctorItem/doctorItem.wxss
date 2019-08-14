@@ -92,3 +92,7 @@
 .price {
   color: #973f2b;
 }
+
+.doctorBoxHoverBack{
+  background: #f5f5f5;
+}

@@ -1,5 +1,5 @@
 <!--components/doctorItem/doctorItem.wxml-->
-<view class='doctorBox'>
+<view class='doctorBox' hover-class="doctorBoxHoverBack">
 
   <view class='doctorLeft'>
     <view class='avatar'>

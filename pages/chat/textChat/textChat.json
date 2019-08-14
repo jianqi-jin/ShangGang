@@ -1,5 +1,5 @@
 {
-  "navigationBarTitleText": "图文问诊",
+  "navigationBarTitleText": "问诊详情",
   "usingComponents": {
     "message-item": "./components/messageItem/messageItem",
     "input-box": "./components/inputBox/inputBox"

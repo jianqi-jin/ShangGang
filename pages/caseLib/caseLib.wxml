@@ -16,7 +16,7 @@
 
 
     <!-- caseItem -->
-    <view class='caseItem' bindtap='onItemClick' data-item=''>
+    <view class='caseItem' bindtap='onItemClick' hover-class="caseItemHoverBack" data-item=''>
       <view class='caseTitle'>
         <view class='titleLeft'>
           <view class='userImg'>
@@ -48,7 +48,7 @@
 
 
     <!-- caseItem -->
-    <view class='caseItem' bindtap='onItemClick' data-item=''>
+    <view class='caseItem' bindtap='onItemClick' hover-class="caseItemHoverBack" data-item=''>
       <view class='caseTitle'>
         <view class='titleLeft'>
           <view class='userImg'>

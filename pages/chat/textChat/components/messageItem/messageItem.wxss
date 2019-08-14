@@ -29,6 +29,7 @@
   max-width: 470rpx;
   background: #fff;
   border-radius: 0 40rpx 40rpx 40rpx;
+  font-size: 32rpx;
 }
 
 .msgMe {

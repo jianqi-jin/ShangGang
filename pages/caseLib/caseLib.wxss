@@ -1,10 +1,15 @@
 /* pages/caseLib/caseLib.wxss */
 
 .navTitle {
+  position: fixed;
+  top: 0;
   background: #fff;
-  padding: 33rpx 0rpx 0 20rpx;
+  padding-top: 33rpx;
+  width: 100%;
 }
-
+.mainBox{
+  margin-top: 85rpx;
+}
 .caseTitle {
   display: flex;
   flex-direction: row;
@@ -58,4 +63,7 @@
   margin-top: 27rpx;
   font-size: 24rpx;
   color: rgba(204, 204, 204, 1);
+}
+.caseItemHoverBack{
+  background: #f5f5f5;
 }
