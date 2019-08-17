@@ -1,0 +1,88 @@
+/* pages/pages/user/user.wxss */
+.topBox {
+  height: 373rpx;
+  background: #9e4934;
+  position: relative;
+  overflow: hidden;
+  z-index: -2;
+}
+.backImg{
+  position: absolute;
+  top: 0;
+  z-index: -2;
+}
+.backBox {
+  position: absolute;
+  background: #fff;
+  top: 144rpx;
+  left: -1000px;
+  right: -1000px;
+  margin: auto;
+  width: 2000rpx;
+  height: 2000rpx;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: -45rpx;
+}
+
+.userBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* user CSS */
+
+.statusBox {
+  border-radius: 100rpx;
+  border: 2rpx solid rgba(64, 152, 252, 1);
+  text-align: center;
+  font-size: 20rpx;
+  color: rgba(64, 152, 252, 1);
+  height: 34rpx;
+  line-height: 34rpx;
+  margin-top: 12rpx;
+  width: 84rpx;
+  background: #fff;
+}
+
+.doctorName {
+  font-size: 32rpx;
+  font-family: PingFang-SC-Heavy;
+  font-weight: 800;
+  color: rgba(28, 28, 28, 1);
+  margin-top: 20rpx;
+}
+
+.doctorinfo {
+  margin: 16rpx 0 16rpx 0;
+  font-size: 24rpx;
+  color: #ccc;
+  display: flex;
+  flex-direction: row;
+}
+
+.numBox {
+  color: #973f2b;
+  font-weight: 800;
+}
+
+/* user CSS End*/
+
+.avatar {
+  width: 160rpx;
+  height: 160rpx;
+  border: 1px solid #ccc;
+  margin-top: 70rpx;
+  border-radius: 100rpx;
+}
+
+.infoBox{
+  margin-top: 20rpx;
+}

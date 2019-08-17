@@ -1,0 +1,8 @@
+<!--pages/pages/home/home.wxml-->
+
+
+
+
+
+
+<nav-bottom selectedIndex='{{0}}' />

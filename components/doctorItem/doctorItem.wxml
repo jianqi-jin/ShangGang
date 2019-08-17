@@ -3,30 +3,30 @@
 
   <view class='doctorLeft'>
     <view class='avatar'>
-      <image src='{{info.avatar}}'></image>
+      <image src='{{info.doc_avatar}}'></image>
     </view>
     <view class='statusBox'>
-      {{info.status}}
+      {{status[info.doc_status]}}
     </view>
   </view>
   <view class='doctorRight'>
-  <view class='doctorName'>{{info.name}}</view>
-  <view class='doctorinfo'>已服务<view class='numBox'>{{info.num}}</view>人</view>
-  <view class='infoBox'>{{info.info}}</view>
+  <view class='doctorName'>{{info.doc_name}}</view>
+  <view class='doctorinfo'>已服务<view class='numBox'>{{info.doc_fw_num}}</view>人</view>
+  <view class='infoBox'>{{info.doc_speciality}}</view>
   <view class='btnBox'>
     <view class='btn'>
       <view class='icon'>
         <image src='/res/icon/home-icon-message@3x.png'></image>
       </view>
       <view class=''>图文问诊</view>
-      <view class='price'>￥35</view>
+      <view class='price'>￥{{info.doc_twwz}}</view>
     </view>
     <view class='btn'>
       <view class='icon'>
         <image src='/res/icon/home-icon-video@3x.png'></image>
       </view>
       <view class=''>视频问诊</view>
-      <view class='price'>￥45</view>
+      <view class='price'>￥{{info.doc_spwz}}</view>
     </view>
   </view>
   </view>

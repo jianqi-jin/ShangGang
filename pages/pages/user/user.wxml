@@ -1,0 +1,36 @@
+<!--pages/pages/user/user.wxml-->
+
+
+
+<view class='topBox'>
+  <image mode='widthFix' class='backImg' src='/res/icon/doc-det-bg@3x.png'></image>
+  <view class='backBox'>
+
+
+  </view>
+
+
+  <view class='userBox'>
+    <view class='avatar'>
+      <image src=''></image>
+    </view>
+    <view class='userInfo'>
+      <view class='statusBox'>空闲</view>
+      <view class='doctorName'>李贤慧</view>
+      <view class='doctorinfo'>
+        已服务
+        <view class='numBox'>185648</view>
+        人
+      </view>
+    </view>
+  </view>
+</view>
+
+
+<view class='infoBox'>
+  <info-item bindtap='infoClick' data-item='{{item}}' wx:for='{{infoList}}' info='{{item}}' wx:key='{{item.id}}' />
+</view>
+
+
+
+<nav-bottom selectedIndex='{{1}}' />

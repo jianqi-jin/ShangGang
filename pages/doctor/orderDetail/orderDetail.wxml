@@ -10,7 +10,7 @@
         <image src=''></image>
       </view>
       <view class='userInfo'>
-        <view class='statusBox'>空闲</view>
+        <view class='statusBox'>status[doc_status]</view>
         <view class='doctorName'>李贤慧</view>
         <view class='doctorinfo'>
           已服务

@@ -13,11 +13,11 @@
         <image src=''></image>
       </view>
       <view class='userInfo'>
-        <view class='statusBox'>空闲</view>
-        <view class='doctorName'>李贤慧</view>
+        <view class='statusBox'>{{status[doc_status]}}</view>
+        <view class='doctorName'>{{doc_name}}</view>
         <view class='doctorinfo'>
           已服务
-          <view class='numBox'>185648</view>
+          <view class='numBox'>{{doc_fw_num}}</view>
           人
         </view>
       </view>
@@ -33,8 +33,7 @@
       <view class='titleRight'>擅长</view>
     </view>
 
-    <view class='content'>中西医结合治疗银屑病、黄褐斑、白癜风、脱发、痤疮、皮炎 湿疹、荨麻疹。对病毒性疾病中西医结合治疗银屑病、黄褐斑、 白癜风、脱发、痤疮、皮炎湿疹、荨麻疹。对病毒性疾病有着 多年治疗研发经验中西医结合治疗银屑病、黄褐斑、白癜风、 发、痤疮、皮炎湿疹、荨麻疹。对病毒性疾病
-    </view>
+    <view class='content'>{{doc_speciality}}</view>
   </view>
 
 
@@ -44,8 +43,14 @@
       <view class='titleRight'>医生简介</view>
     </view>
 
-    <view class='content'>中西医结合治疗银屑病、黄褐斑、白癜风、脱发、痤疮、皮炎 湿疹、荨麻疹。对病毒性疾病中西医结合治疗银屑病、黄褐斑、 白癜风、脱发、痤疮、皮炎湿疹、荨麻疹。对病毒性疾病有着 多年治疗研发经验中西医结合治疗银屑病、黄褐斑、白癜风、 发、痤疮、皮炎湿疹、荨麻疹。对病毒性疾病
+    <view class='content'>{{doc_synopsis}}</view>
+  </view>
+  <view class='infoItem'>
+    <view class='infoTitle'>
+      <view class='titleLeft'></view>
+      <view class='titleRight'>问诊详情</view>
     </view>
+    <rich-text class='content' nodes='{{doc_tw}}'></rich-text>
   </view>
 
 
