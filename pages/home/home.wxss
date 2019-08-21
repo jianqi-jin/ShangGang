@@ -1,19 +1,28 @@
 /* pages/home/home.wxss */
 
+/* swiper Start */
+.swiper {
+  z-index: 0;
+  background: #ccc;
+  height: 350rpx;
+  width: 100%;
+}
+/* swiper End */
+
 .testView {
   background: var(--themeBackC);
   width: 100%;
   height: 30rpx;
 }
-
-swiper {
-  background: #ccc;
-  height: 350rpx;
+.topBox {
+  position: relative;
   width: 100%;
 }
-
 .doctorListBox {
   border-radius: 36rpx 36rpx 0 0;
   overflow: hidden;
-  margin-top: -26rpx;
+  margin-top: -36rpx;
+  position: relative;
+  z-index: 1;
+  width: 100%;
 }

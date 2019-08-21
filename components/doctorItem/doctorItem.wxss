@@ -10,7 +10,6 @@
 }
 
 .avatar {
-  border: 1px solid #ccc;
   height: 84rpx;
   width: 84rpx;
   border-radius: 50%;

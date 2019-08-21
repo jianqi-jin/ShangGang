@@ -2,8 +2,8 @@
 .ninthPalace{
   padding: 0rpx;
   margin: 0rpx 8rpx 8rpx 0rpx;
-  width: calc(25% - 8rpx);
-  padding-bottom:calc(25% - 8rpx);
+  width: calc(33.333% - 8rpx);
+  padding-bottom:calc(33.333% - 8rpx);
   position: relative;
 }
 .ninthPalace image{
@@ -49,7 +49,7 @@
   margin:10rpx 0rpx 40rpx 0rpx;
 }
 .postLis .imaLis{
-  width: 100%;
+  width: calc(100% - 110rpx);
 }
 .postLis .single{
   width: 64.2%;

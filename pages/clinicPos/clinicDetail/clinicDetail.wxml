@@ -1,30 +1,35 @@
 <!--pages/clinicPos/clinicDetail/clinicDetail.wxml-->
 <view class='topBox'>
-
+  <swiper autoplay>
+    <swiper-item wx:for='{{clinic_banner}}'>
+      <image mode='widthFix' src='{{item}}'></image>
+    </swiper-item>
+  </swiper>
 </view>
+
 <view class='clinicImg'>
-  <image src=''></image>
+  <image src='{{clinic_logo}}'></image>
 </view>
 
 <view class='mainBox'>
-  <view class='mainTitle'>商刚皮肤诊所(太古店)</view>
+  <view class='mainTitle'>{{clinic_name}}</view>
   <view class='mainInfo'>
     <view class='icon'>
-      <image src='/res/icon/icon-add-white@3x.png'></image>
+      <image src='{{clinic_fm_img}}'></image>
     </view>
-    营业时间：9:00 - 21:00
+    营业时间：{{clinic_open_time}}
   </view>
   <view class='mainInfo'>
     <view class='icon'>
       <image src='/res/icon/icon-add@3x.png'></image>
     </view>
-    诊所地址：哈尔滨道外太古十四道街236号
+    {{clinic_address}}
   </view>
 
   <view class='btnList'>
-    <navigator open-type='navigate' url='/pages/clinicPos/clinicMap/clinicMap' class='btn'>
+    <view class='btn' bindtap='openLocation'>
       <image src='/res/icon/icon-gps@3x.png'></image>
-    </navigator>
+    </view>
     <view class='btn' bindtap='call'>
       <image src='/res/icon/icon-phone@3x.png'></image>
     </view>
@@ -33,10 +38,5 @@
 
 <view class='infoBox'>
   <view class='infoTitle'>诊所详情</view>
-  <image src=''>image</image>
-  <image src=''>image</image>
-  <image src=''>image</image>
-  <image src=''>image</image>
-  <image src=''>image</image>
-  <image src=''></image>
+  <rich-text nodes='{{clinic_twxq}}'></rich-text>
 </view>

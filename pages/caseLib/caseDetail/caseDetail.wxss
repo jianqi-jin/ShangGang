@@ -8,12 +8,16 @@
 
 .userBox {
   position: absolute;
-  top: 70rpx;
+  top: 40rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   text-align: center;
+}
+.backBox {
+  width: 100%;
+  height: 100%;
 }
 
 .userName {
@@ -23,11 +27,22 @@
 }
 
 .userImg {
-  width: 160rpx;
-  height: 160rpx;
-  background: #ccc;
+  width: 190rpx;
+  height: 190rpx;
   border-radius: 50%;
   margin-top: 45rpx;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.5);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10rpx 0 #ccc;
+}
+.userImg image {
+  width: 160rpx;
+  height: 160rpx;
+  border-radius: 50%;
 }
 
 page {
@@ -43,14 +58,21 @@ page {
 .imgList {
   display: flex;
   flex-direction: row;
+  height: 220rpx;
   margin-top: 32rpx;
+  overflow: hidden;
+  border-radius: 10rpx;
 }
 
-.imgList image {
+.topImg image {
+  width: 100%;
+  height: 100%;
+}
+.topImg {
   flex-grow: 1;
-  background: #ccc;
-  height: 220rpx;
   margin-right: 16rpx;
+  height: 220rpx;
+  overflow: hidden;
   border-radius: 10rpx;
 }
 
@@ -99,7 +121,7 @@ page {
 }
 
 .itemContent::after {
-  content: '';
+  content: "";
   position: absolute;
   left: -8rpx;
   top: -6rpx;
@@ -129,6 +151,19 @@ page {
 .contentImgBox {
   height: 612rpx;
   width: 612rpx;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+  flex-wrap: wrap;
+  overflow: hidden;
+}
+.contentImg {
   border-radius: 10rpx;
   background: #ccc;
+  margin: 7rpx;
+  overflow: hidden;
+}
+.contentImg image {
+  width: 100%;
+  height: 100%;
 }

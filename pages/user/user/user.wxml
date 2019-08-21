@@ -11,8 +11,9 @@
   <view class='backBox'></view>
   <view class='userBox'>
     <view class='userLeft'>
-      <view class='userName'>用户的昵称</view>
-      <navigator open-type='navigate' url='/pages/user/money/money' class='userMoney'>
+      <view class='userName'>{{token?'用户的昵称':'未登录'}}</view>
+      <button class="loginBtn" wx:if='{{!token}}' open-type="getUserInfo" bindgetuserinfo='loginClick'>点击登录</button>
+      <navigator wx:else open-type='navigate' url='/pages/user/money/money' class='userMoney'>
         余额
         <view>￥0.00</view>
       </navigator>

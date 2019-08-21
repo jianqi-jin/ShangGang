@@ -80,9 +80,9 @@
 .avatar {
   width: 160rpx;
   height: 160rpx;
-  border: 1px solid #ccc;
   margin-top: 70rpx;
   border-radius: 100rpx;
+  overflow: hidden;
 }
 
 /* infoItem */

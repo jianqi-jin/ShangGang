@@ -10,7 +10,7 @@
 
     <view class='userBox'>
       <view class='avatar'>
-        <image src=''></image>
+        <image src='{{doc_avatar}}'></image>
       </view>
       <view class='userInfo'>
         <view class='statusBox'>{{status[doc_status]}}</view>
@@ -23,9 +23,6 @@
       </view>
     </view>
   </view>
-
-
-
 
   <view class='infoItem'>
     <view class='infoTitle'>
@@ -69,9 +66,9 @@
           图文问诊</view>
         <view class='asdwf'>
 
-          ￥15</view>
+          ￥{{doc_twwz}}</view>
       </view>
-      <view class='navPop'>抵扣15</view>
+      <view class='navPop'>抵扣{{doc_ye}}</view>
     </view>
 
 
@@ -85,9 +82,9 @@
             <image src='/res/icon/home-icon-video@3x.png'></image>
           </view>
           视频问诊</view>
-        <view class='asdwf'>￥15</view>
+        <view class='asdwf'>￥{{doc_spwz}}</view>
       </view>
-      <view class='navPop'>抵扣15</view>
+      <view class='navPop'>抵扣{{doc_ye}}</view>
     </view>
 
   </view>

@@ -7,14 +7,14 @@
 
     <view class='userBox'>
       <view class='avatar'>
-        <image src=''></image>
+        <image src='{{doc_avatar}}'></image>
       </view>
       <view class='userInfo'>
-        <view class='statusBox'>status[doc_status]</view>
-        <view class='doctorName'>李贤慧</view>
+        <view class='statusBox'>{{status[doc_status]}}</view>
+        <view class='doctorName'>{{doc_name}}</view>
         <view class='doctorinfo'>
           已服务
-          <view class='numBox'>185648</view>
+          <view class='numBox'>{{doc_fw_num}}</view>
           人
         </view>
       </view>
@@ -30,8 +30,7 @@
       <view class='titleRight'>服务说明</view>
     </view>
 
-    <view class='content'>中西医结合治疗银屑病、黄褐斑、白癜风、脱发、痤疮、皮炎 湿疹、荨麻疹。对病毒性疾病中西医结合治疗银屑病、黄褐斑、 白癜风、脱发、痤疮、皮炎湿疹、荨麻疹。对病毒性疾病有着 多年治疗研发经验中西医结合治疗银屑病、黄褐斑、白癜风、 发、痤疮、皮炎湿疹、荨麻疹。对病毒性疾病
-    </view>
+    <rich-text nodes='{{doc_twfw||doc_spfw}}'></rich-text>
   </view>
 
 
@@ -46,9 +45,9 @@
         合计：
       </view>
       <view class='navRight'>
-        <view class=''>12</view>
+        <view class=''>{{doc_twwz||doc_spwz}}</view>
       </view>
-      <view class='navPop'>抵扣15</view>
+      <view class='navPop'>抵扣{{doc_ye}}</view>
     </view>
 
 
@@ -67,7 +66,7 @@
   <!-- navBottom 底部 End-->
 
   <dialog wx:if='{{dialogShowFlag}}' bindonAction='onDialogAction'>
-    <view class='title'>填写个人信息</view>
+    <view class='dialogTitle'>填写个人信息</view>
     <form>
       <view class='input'>
         <view class='inputTitle'>姓名</view>
@@ -78,6 +77,10 @@
       <view class='input'>
         <view class='inputTitle'>性别</view>
         <view class='inputValue'>
+        <radio-group class='radioGroup'>
+          <radio value='0'>男</radio>
+          <radio value='1'>女</radio>
+        </radio-group>
         </view>
       </view>
       <view class='input'>

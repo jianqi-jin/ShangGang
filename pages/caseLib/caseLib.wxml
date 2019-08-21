@@ -16,69 +16,34 @@
 
 
     <!-- caseItem -->
-    <view class='caseItem' bindtap='onItemClick' hover-class="caseItemHoverBack" data-item=''>
+    <view class='caseItem' wx:for='{{caseList}}' wx:key='{{item.alk_id}}' bindtap='onItemClick' hover-class="caseItemHoverBack" data-item='{{item}}'>
       <view class='caseTitle'>
         <view class='titleLeft'>
           <view class='userImg'>
-            <image src=''></image>
+            <image src='{{item.photo}}'></image>
           </view>
-          <view class='userName'>蜗牛的壳子</view>
+          <view class='userName'>{{item.alk_name}}</view>
         </view>
         <view class='titleRight'>
-          上传时间：2019-06-03
+          上传时间：{{item.add_time}}
         </view>
       </view>
       <view class='caseImgBox'>
         <view class='imgItem'>
-          <image src=''></image>
+          <image src='{{item.before_img}}'></image>
           <view class='before'></view>
         </view>
         <view class='imgItem'>
-          <image src=''></image>
+          <image src='{{item.after_img}}'></image>
           <view class='after'></view>
         </view>
       </view>
       <view class='caseContent'>
-        <view class='caseText'>医疗，靠的是口碑而不是广告，医疗，靠的是疗效而不是 玩笑，医者，靠的是技术而不是宣传。
-        </view>
-        <view class='caseInfo'>4503人已看</view>
+        <view class='caseText'>{{item.alk_wz}}</view>
+        <view class='caseInfo'>{{item.watch_num}}人已看</view>
       </view>
     </view>
     <!-- caseItem End -->
-
-
-    <!-- caseItem -->
-    <view class='caseItem' bindtap='onItemClick' hover-class="caseItemHoverBack" data-item=''>
-      <view class='caseTitle'>
-        <view class='titleLeft'>
-          <view class='userImg'>
-            <image src=''></image>
-          </view>
-          <view class='userName'>蜗牛的壳子</view>
-        </view>
-        <view class='titleRight'>
-          上传时间：2019-06-03
-        </view>
-      </view>
-      <view class='caseImgBox'>
-        <view class='imgItem'>
-          <image src=''></image>
-          <view class='before'></view>
-        </view>
-        <view class='imgItem'>
-          <image src=''></image>
-          <view class='after'></view>
-        </view>
-      </view>
-      <view class='caseContent'>
-        <view class='caseText'>医疗，靠的是口碑而不是广告，医疗，靠的是疗效而不是 玩笑，医者，靠的是技术而不是宣传。
-        </view>
-        <view class='caseInfo'>4503人已看</view>
-      </view>
-    </view>
-    <!-- caseItem End -->
-
-
   </view>
 
 

@@ -1,6 +1,6 @@
 <!--pages/search/search.wxml-->
 <!-- searchBar -->
-<search-bar bindonAction='onSearchBarClick' />
+<search-bar bindonAction='onSearchAction' />
 
 <!-- searchBar End-->
 

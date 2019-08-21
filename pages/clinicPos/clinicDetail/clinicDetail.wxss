@@ -4,7 +4,11 @@
   height: 408rpx;
   position: relative;
   background: #806e62;
-  z-index: -1;
+  z-index: 0;
+}
+swiper{
+  height: 100%;
+  width: 100%;
 }
 
 .clinicImg {
@@ -16,6 +20,7 @@
   background: #ccc;
   height: 132rpx;
   width: 132rpx;
+  overflow: hidden;
 }
 
 .mainBox {
@@ -24,6 +29,8 @@
   border-radius: 46rpx 0 0 0;
   background: #f5f5f5;
   padding: 50rpx 25rpx;
+  z-index: 1;
+  position: relative;
 }
 
 .mainTitle {

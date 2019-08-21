@@ -5,15 +5,15 @@
   <view class='inputItem'>
     <view class='fontTitle'>联系人</view>
     <view class='input'>
-      <input name='realname' placeholder='姓名' value='{{addressInfo.realname}}'></input>
+      <input name='address_realname' placeholder='姓名' value='{{addressInfo.address_realname}}'></input>
     </view>
   </view>
 
-  <view class='inputItem radioSex'>
+  <!-- <view class='inputItem radioSex'>
 
 
     <radio-group name='sex' class="radio-group" data-obj='radioSex' bindchange="radioChange">
-      <label class="radio" wx:for="{{radioSex}}">
+      <label class="radio" wx:for="{{radioSex}}" wx:key="{{item.name}}">
         <radio value="{{item.name}}" checked="{{item.checked}}" />
         <image class='radioIcon' src='{{item.checked ? "../res/img/icon-sel-pre.png": "../res/img/icon-sel-normal.png"}}'></image>
         <view class='radioText'>{{item.value}}</view>
@@ -21,13 +21,13 @@
     </radio-group>
 
 
-  </view>
+  </view> -->
 
 
   <view class='inputItem'>
     <view class='fontTitle'>电话</view>
     <view class='input'>
-      <input name='mobile' value='{{addressInfo.mobile}}' placeholder='手机号码'></input>
+      <input name='address_mobile' type='number' value='{{addressInfo.address_mobile}}' placeholder='手机号码'></input>
     </view>
   </view>
 
@@ -52,15 +52,15 @@
   </view>
 
   <view class='inputItem'>
-    <input class='text' name='address' value='{{addressInfo.address}}' placeholder='例：紫金相府A栋1705'></input>
+    <input class='text' name='address_add' value='{{addressInfo.address_add}}' placeholder='例：紫金相府A栋1705'></input>
   </view>
 
-  <view class='inputItem'>
+  <!-- <view class='inputItem'>
     <view class='fontTitle'>标签</view>
     <view class='input radioLabel'>
 
       <radio-group name='type' class="radio-group" data-obj='radioLabel' bindchange="radioChange">
-        <label class="radio" wx:for="{{radioLabel}}">
+        <label class="radio" wx:for="{{radioLabel}}" wx:key="{{item.name}}">
           <radio value="{{item.name}}" checked="{{item.checked}}" />
           <image class='radioIcon' src='{{item.checked ? "../res/img/icon-sel-pre.png": "../res/img/icon-sel-normal.png"}}'></image>
           <view class='radioText'>{{item.value}}</view>
@@ -68,7 +68,7 @@
       </radio-group>
 
     </view>
-  </view>
+  </view> -->
 
 
   <view class='inputItem'>
@@ -80,7 +80,7 @@
 
 
   <button class='btnSpecialBlock' loading='{{subLoading}}' form-type='submit'>
-    <theme-view type="themeBack">保存</theme-view>
+    保存
   </button>
 
 </form>
