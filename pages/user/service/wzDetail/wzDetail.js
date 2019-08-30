@@ -1,5 +1,8 @@
 // pages/user/service/wzDetail/wzDetail.js
 const util = require('../../../../utils/util.js')
+const {
+  getWzDetail
+} = require('../../../../utils/api.js')
 Page({
 
   /**
@@ -23,12 +26,28 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.setData({
+      ...options
+    })
+    this.getWzDetail()
   },
-  infoItemClick(e){
+  getWzDetail() {
+    getWzDetail({
+      order_id: this.data.order_id
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        ...this.data,
+        ...res.data.code
+      })
+    })
+  },
+  infoItemClick(e) {
     let item = e.currentTarget.dataset.item;
     let url = item.url;
-    util.navigateTo({url})
+    util.navigateTo({
+      url
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

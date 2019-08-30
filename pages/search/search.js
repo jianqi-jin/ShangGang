@@ -1,6 +1,8 @@
 // pages/search/search.js
 const util = require('../../utils/util.js')
-const {getDoctorList} = require('../../utils/api.js')
+const {
+  getDoctorList
+} = require('../../utils/api.js')
 Page({
 
   /**
@@ -14,9 +16,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-    getDoctorList().then(res =>{
+    getDoctorList().then(res => {
       console.log(res)
-      if(res.data.status == 0){
+      if (res.data.status == 0) {
         let data = res.data.code;
         this.setData({
           doctorList: data.data
@@ -24,13 +26,18 @@ Page({
       }
     })
   },
-  onSearchAction(e){
-    console.log(e)
+  onSearchAction(e) {
+    let item = e.detail;
+    if (item.type == 'change') {
+      this.setData({
+        inputText: item.data
+      })
+    }
   },
   doctorItemClick(e) {
     let item = e.currentTarget.dataset.item;
     util.navigateTo({
-      url: '/pages/doctor/doctorDetail/doctorDetail?doctorId='+item.doc_id
+      url: '/pages/doctor/doctorDetail/doctorDetail?doctorId=' + item.doc_id
     })
   },
   /**

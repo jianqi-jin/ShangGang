@@ -1,4 +1,5 @@
 {
   "navigationBarTitleText": "视频问诊",
-  "usingComponents": {}
+  "usingComponents": {},
+  "disableScroll": true
 }

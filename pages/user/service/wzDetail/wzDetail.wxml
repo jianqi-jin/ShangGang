@@ -3,13 +3,13 @@
 
   <view class='userBox'>
     <view class='userImg'>
-      <image src=''></image>
+      <image src='{{doc_avatar}}'></image>
     </view>
     <view class='userInfo'>
-      <view class='userName'>李颖</view>
+      <view class='userName'>{{doc_name}}</view>
       <view class='userText'>
         已服务
-        <view>2363</view>
+        <view>{{doc_fw_num}}</view>
         人</view>
     </view>
   </view>
@@ -18,7 +18,7 @@
 <view class='mainBox'>
   <view class='mainItem'>
     <view class='mainTitle'>擅长</view>
-    <view class='mainContent'>中西医结合治疗银屑病、黄褐斑、白癜风、脱发、痤疮、皮炎 湿疹、中西医结合治疗银屑病、黄褐斑、白癜风、脱发、痤疮 、皮炎湿疹、中</view>
+    <view class='mainContent'>{{doc_speciality}}</view>
     <view class='mainBtn'>展开
       <view class='icon'>
         <image src=''></image>
@@ -27,7 +27,7 @@
   </view>
   <view class='mainItem'>
     <view class='mainTitle'>医生简介</view>
-    <view class='mainContent'>四川皮肤病学学科主任，教授，华西医院主任医师。曾留学日 本东京大学，并作为研究院获日本皮肤学科领域颁发的研究者 证书。四川皮肤</view>
+    <view class='mainContent'>{{doc_synopsis}}</view>
     <view class='mainBtn'>展开
       <view class='icon'>
         <image src=''></image>

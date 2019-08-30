@@ -1,0 +1,22 @@
+<!--pages/order/paySuccess/paySuccess.wxml-->
+
+<view class='topBox'>
+  <image class='imgBox' src='/res/icon/pay-icon-suc@3x.png'></image>
+
+  <view class='money'>
+    <view>￥</view>
+    <view>{{price}}</view>
+  </view>
+
+
+  <view class='infoBox'>
+    <view>支付成功</view>
+    <view>遵医嘱用药，祝您健康</view>
+  </view>
+</view>
+
+
+<view class='bottomBox'>
+  <view class='btnTheme' bindtap='navHome'>返回首页</view>
+  <view class='btn' bindtap='navOrder'>查看订单</view>
+</view>

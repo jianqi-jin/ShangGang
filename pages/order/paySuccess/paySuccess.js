@@ -1,8 +1,4 @@
-// pages/user/service/ydDetail/ydDetail.js
-const util = require('../../../../utils/util.js')
-const {
-  getYdDetail
-} = require('../../../../utils/api.js')
+// pages/order/paySuccess/paySuccess.js
 Page({
 
   /**
@@ -19,19 +15,16 @@ Page({
     this.setData({
       ...options
     })
-    getYdDetail({
-      order_id: this.data.orderId,
-      order_cftype_status: this.data.order_cftype_status
-    }).then(res => {
-      console.log(res)
-      this.setData({
-        ...res.data.code
-      })
+  },
+  navOrder() {
+    wx.redirectTo({
+      url: '/pages/order/orderDetail/orderDetail?orderId=' + this.data.orderId,
     })
   },
-  payFuc() {
-    util.navigateTo({
-      url: '/pages/order/orderPayDetail/orderPayDetail?orderId=' + this.data.orderId
+  navHome() {
+
+    wx.redirectTo({
+      url: '/pages/home/home',
     })
   },
   /**

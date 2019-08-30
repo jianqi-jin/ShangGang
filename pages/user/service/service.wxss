@@ -34,6 +34,7 @@
   height: 72rpx;
   border-radius: 50%;
   background: #ccc;
+  overflow: hidden;
 }
 
 .userContent {

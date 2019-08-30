@@ -8,7 +8,7 @@
 <view class='nameBox'>
   <view class='nameItem'>
     <view class='title'>姓名</view>
-    <view class='value'>安春雨</view>
+    <view class='value'>{{archives_name}}</view>
   </view>
   <view class='nameItem'>
     <view class='title'>性别</view>
@@ -16,7 +16,7 @@
   </view>
   <view class='nameItem'>
     <view class='title'>年龄</view>
-    <view class='value'>26岁</view>
+    <view class='value'>{{archives_age}}岁</view>
   </view>
 </view>
 
@@ -31,7 +31,7 @@
     <view>诊断结果</view>
   </view>
 
-  <view class='boxContent'>荨麻疹</view>
+  <view class='boxContent'>{{case_result}}</view>
 </view>
 
 
@@ -43,7 +43,8 @@
     <view>用药说明</view>
   </view>
   <view class='boxContent'>
-    <rich-text></rich-text>
+    <view class='contentTitle'>{{drugtc_name}}</view>
+    <rich-text nodes='{{drugtcj_form}}'></rich-text>
   </view>
 </view>
 
@@ -56,7 +57,8 @@
     <view>补充说明</view>
   </view>
   <view class='boxContent'>
-    <rich-text></rich-text>
+  <view class='contentTitle'>{{doc_name}}</view>
+    <rich-text nodes='{{case_yz}}'></rich-text>
   </view>
 </view>
 

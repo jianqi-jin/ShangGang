@@ -1,6 +1,8 @@
 // pages/user/user.js
 const util = require('../../../utils/util.js')
-const { auth } = require('../../../utils/api.js')
+const {
+  auth
+} = require('../../../utils/api.js')
 Page({
 
   /**
@@ -29,37 +31,37 @@ Page({
       url: '/pages/order/orderList/orderList'
     }],
     serviceBtnList: [{
-      title: '我的问诊',
-      icon: '/res/icon/order-06@3x.png',
-      url: '/pages/user/service/service?type=0'
-    },
-    {
-      title: '我的药单',
-      icon: '/res/icon/order-07@3x.png',
-      url: '/pages/user/service/service?type=1'
-    }
+        title: '我的问诊',
+        icon: '/res/icon/order-06@3x.png',
+        url: '/pages/user/service/service?type=0'
+      },
+      {
+        title: '我的药单',
+        icon: '/res/icon/order-07@3x.png',
+        url: '/pages/user/service/service?type=1'
+      }
     ],
     infoList: [{
-      iconImg: '/res/icon/icon-tg@3x.png',
-      title: '推广中心',
-      iconArr: '/res/icon/doc-icon-left@3x.png'
-    }, {
-      iconImg: '/res/icon/icon-add@3x.png',
-      title: '收货地址',
-      iconArr: '/res/icon/doc-icon-left@3x.png'
-    },
-    {
-      iconImg: '/res/icon/icon-ser@3x.png',
-      title: '联系客服',
-      iconArr: '/res/icon/doc-icon-left@3x.png'
-    }
+        iconImg: '/res/icon/icon-tg@3x.png',
+        title: '推广中心',
+        iconArr: '/res/icon/doc-icon-left@3x.png'
+      }, {
+        iconImg: '/res/icon/icon-add@3x.png',
+        title: '收货地址',
+        iconArr: '/res/icon/doc-icon-left@3x.png'
+      },
+      {
+        iconImg: '/res/icon/icon-ser@3x.png',
+        title: '联系客服',
+        iconArr: '/res/icon/doc-icon-left@3x.png'
+      }
     ]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     this.setData({
       token: wx.getStorageSync('token')
     })
@@ -69,10 +71,11 @@ Page({
     auth({
       wx_url: userInfo.avatarUrl,
       wx_name: userInfo.nickName,
+      accid: wx.getStorageSync('accid')
     }).then(res => {
       if (res.data.status == 0) {
         let data = res.data.code;
-        console.log(data)
+        wx.setStorageSync('userInfo', userInfo)
         this.setData({
           token: data.token
         })
@@ -84,72 +87,75 @@ Page({
     let item = e.currentTarget.dataset.item;
     console.log(item)
     switch (item.title) {
-      case '收货地址': {
-        util.navigateTo({
-          url: '/pages/address/address'
-        })
-        break;
-      }
-      case '联系客服': {
-        wx.makePhoneCall({
-          phoneNumber: '1775555555',
-        })
-        break;
-      }
-      case '推广中心': {
-        util.navigateTo({
-          url: '/pages/user/referCenter/referCenter'
-        })
-        break;
-      }
+      case '收货地址':
+        {
+          util.navigateTo({
+            url: '/pages/address/address'
+          })
+          break;
+        }
+      case '联系客服':
+        {
+          wx.makePhoneCall({
+            phoneNumber: '1775555555',
+          })
+          break;
+        }
+      case '推广中心':
+        {
+          util.navigateTo({
+            url: '/pages/user/referCenter/referCenter'
+          })
+          break;
+        }
     }
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

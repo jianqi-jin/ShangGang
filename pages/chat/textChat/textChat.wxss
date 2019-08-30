@@ -9,6 +9,7 @@
 .chatScrollView {
   flex-grow: 1;
   position: relative;
+  padding-top: 30rpx;
 }
 
 .chatScroll {

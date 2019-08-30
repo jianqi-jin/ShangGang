@@ -4,28 +4,28 @@
   <nav-title navTitleInfo='{{navTitleInfo}}' bindonAction='onNavChange' />
 </view>
 <!-- nav-title End -->
-<yd-list wx:if='{{type == 1}}'/>
+<yd-list wx:if='{{type == 1}}' />
 
 
 <view class='mainBox' wx:else>
   <!-- item Start-->
-  <view class='item' bindtap='itemClick' data-item=''>
+  <view class='item' bindtap='itemClick' wx:for='{{serviceList}}' wx:key='{{item.order_id}}' data-item='{{item}}'>
     <view class='itemLeft'>
       <view class='userImg'>
-        <image src=''></image>
+        <image src='{{item.doc_avatar}}'></image>
       </view>
       <view class='userInfo'>
-        <view class='userName'>李颖</view>
+        <view class='userName'>{{item.doc_name}}</view>
         <view class='userContent'>最近问诊时间</view>
-        <view class='userDate'>2019-03-03 12:02:03</view>
+        <view class='userDate'>{{item.order_createtime}}</view>
       </view>
     </view>
-    <view class='itemRight'>已咨询</view>
+    <view class='itemRight'>{{navTitleInfo.currentNavIndex==0?zxType[item.zx_type]: jtType[item.zx_type]}}</view>
   </view>
   <!-- item End-->
 
   <!-- item Start-->
-  <view class='item' bindtap='itemClick' data-item=''>
+  <!-- <view class='item' bindtap='itemClick' data-item=''>
     <view class='itemLeft'>
       <view class='userImg'>
         <image src=''></image>
@@ -37,13 +37,10 @@
       </view>
     </view>
     <view class='itemRight'>已咨询</view>
-  </view>
+  </view> -->
   <!-- item End-->
 
 
 
 
 </view>
-
-
-

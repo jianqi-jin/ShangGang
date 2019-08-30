@@ -1,1 +1,105 @@
 /* pages/chat/videoChat/videoChat.wxss */
+
+.pusher {
+  height: 270rpx;
+  width: 171rpx;
+  position: absolute;
+  right: 30rpx;
+  top: 132rpx;
+  z-index: 2;
+}
+
+.player {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.hangup {
+  position: absolute;
+  bottom: 40rpx;
+  left: 50%;
+  margin-left: -66rpx;
+  height: 132rpx;
+  width: 132rpx;
+}
+
+.coverView {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.titleBox {
+  height: 117rpx;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 30rpx;
+}
+
+.titleLeft {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.name {
+  margin-left: 20rpx;
+  flex-grow: 1;
+}
+
+.img {
+  width: 72rpx;
+  height: 72rpx;
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+.titleRight {
+  margin-right: 26rpx;
+}
+
+.camera {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.cameraCover {
+  background: rgba(0, 0, 0, 0.5)
+}
+
+.btnLine {
+  position: absolute;
+  bottom: 220rpx;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.coverView {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+}
+
+.coverImage {
+  width: 40rpx;
+  height: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.btnText {
+  font-size: 20rpx;
+}

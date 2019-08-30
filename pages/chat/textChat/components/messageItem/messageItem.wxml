@@ -1,13 +1,32 @@
-<!--pages/chat/textChat/components/messageItem/messageItem.wxml-->
-
-
+<!-- pages/chat/textChat/components/messageItem/messageItem.wxml -->
 <view>
-  <view class="messageItem {{msgInfo.type == 0? 'messageItemMe':''}}">
+  <view wx:if='{{msgInfo.type == -1}}' class='osMsg'>
+    {{msgInfo.msg}}
+  </view>
+  <view wx:else class="messageItem {{msgInfo.type == 0? 'messageItemMe':''}}">
     <view class="userImgBox">
-      <image mode="aspectFit" src="/res/icon/nav-icon-user-pre@3x.png"></image>
+      <image mode="aspectFill" src="{{msgInfo.avatar}}"></image>
     </view>
-    <view class="msgBox {{msgInfo.type == 0? 'msgMe':''}}">
-      医生现在能给在线开一些药么 因为现在痒的厉害
+    <view class="msgBox {{msgInfo.type == 0? 'msgMe':''}} {{msgInfo.imgSrc.length>0?'msgImg':''}}">
+      <view wx:if='{{!msgInfo.custom.order.order_id}}'>
+        {{msgInfo.msg}}
+      </view>
+      <image bindtap='previewImg' data-img='{{msgInfo.imgSrc}}' style="width:{{msgInfo.w}}rpx;height:{{msgInfo.h}}rpx;" wx:if='{{msgInfo.imgSrc}}' src="{{msgInfo.imgSrc}}"></image>
+
+      <view class='ydDetail' wx:if='{{msgInfo.custom.order.order_id}}' bindtap='clickMedOrder' data-item='{{msgInfo.custom}}'>
+        <view class='title'>
+          <view>用药建议</view>
+          <image src='/res/icon/icon-dh-right@3x.png' class='icon'></image>
+        </view>
+        <view class='content'>
+          <image class='ydImg' src='/res/icon/icon-dh-yy@3x.png'></image>
+          <view class='infoBox'>
+            <view class='name'>{{msgInfo.custom.order.archives_name}}(就诊人)</view>
+            <view class='info'>{{msgInfo.custom.order.time}}</view>
+            <view class='info'>医生:{{msgInfo.custom.order.doc_name}}</view>
+          </view>
+        </view>
+      </view>
     </view>
   </view>
 </view>

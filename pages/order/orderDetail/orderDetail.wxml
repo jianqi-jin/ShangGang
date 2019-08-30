@@ -1,23 +1,22 @@
 <!--pages/order/orderDetail/orderDetail.wxml-->
-
-<view class='statusBar'>待付款</view>
+<!-- 已经确定的订单，，可以修改地址 -->
+<view class='statusBar'>{{order_status}}</view>
 <!-- <address-item class='addressBar'></address-item> -->
 <view class='addressBar'>
   <view class='addTop'>
-    <view class=''>收货人：安春雨</view>
-    <view class=''>13623623369</view>
+    <view class=''>收货人：{{dz_name}}</view>
+    <view class=''>{{dz_mobile}}</view>
   </view>
-  <view class='addBottom'>黑龙江省 哈尔滨市 南岗区 中宣街20-6号科技大厦5单元302
-室安春雨收</view>
+  <view class='addBottom'>{{dz_province}}{{dz_city}}{{dz_area}}{{dz_add}}</view>
 </view>
 
 
 <view class='mainBox'>
   <view class='mainTitle'>诊断药单</view>
 
-  <view class='name'>荨麻生鱼汤</view>
+  <view class='name'>{{drugtc_name}}</view>
 
-  <rich-text>rich-text 富文本</rich-text>
+  <rich-text class='rich' nodes='{{drugtcj_form}}'></rich-text>
 
 </view>
 

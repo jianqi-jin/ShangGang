@@ -375,7 +375,7 @@ Page({
     api.getShare(app.globalData.openid).then(res => {
       console.log(res)
       this_.setData({
-        shareInfo: res.data,
+        shareInfo: res.data.code,
       })
     })
     // util.request(util.apiUrl + `app/ewei_shopv2_api.php?i=${util.posId}&r=senke.tuijian.get_share&openid=${wx.getStorageSync('openid')}`, 'POST', {}).then((res) => { 

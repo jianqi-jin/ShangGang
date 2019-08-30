@@ -1,10 +1,8 @@
-<!--pages/doctor/doctorDetail/doctorDetail.wxml-->
+<!-- pages/doctor/doctorDetail/doctorDetail.wxml -->
 <theme-view>
   <view class='topBox'>
     <image mode='widthFix' class='backImg' src='/res/icon/doc-det-bg@3x.png'></image>
     <view class='backBox'></view>
-
-
     <view class='userBox'>
       <view class='avatar'>
         <image src='{{doc_avatar}}'></image>
@@ -20,37 +18,22 @@
       </view>
     </view>
   </view>
-
-
-
-
   <view class='infoItem'>
     <view class='infoTitle'>
       <view class='titleLeft'></view>
       <view class='titleRight'>服务说明</view>
     </view>
-
     <rich-text nodes='{{doc_twfw||doc_spfw}}'></rich-text>
   </view>
-
-
-
-
-
-
-  <!-- navBottom 底部-->
+  <!-- navBottom 底部 -->
   <view class='navBottom'>
     <view class='navBtn'>
-      <view class='navLeft'>
-        合计：
-      </view>
+      <view class='navLeft'>合计：</view>
       <view class='navRight'>
-        <view class=''>{{doc_twwz||doc_spwz}}</view>
+        <view class=''>{{mf_type == 1? '免费':(doc_twwz||doc_spwz)}}</view>
       </view>
       <view class='navPop'>抵扣{{doc_ye}}</view>
     </view>
-
-
     <view class='navBtn' bindtap='showDialog'>
       <view class='navLeft'>
         <view class='icon'>
@@ -59,42 +42,36 @@
         <view>{{typeText[type]}}</view>
       </view>
       <view class='navMiddle'></view>
-      <view class='navRight'>立即支付</view>
+      <view class='navRight'>{{mf_type == 1? '立即进入':'立即支付'}}</view>
     </view>
-
   </view>
-  <!-- navBottom 底部 End-->
-
+  <!-- navBottom 底部 End -->
   <dialog wx:if='{{dialogShowFlag}}' bindonAction='onDialogAction'>
     <view class='dialogTitle'>填写个人信息</view>
-    <form>
+    <form bindsubmit='formSubmit'>
       <view class='input'>
         <view class='inputTitle'>姓名</view>
         <view class='inputValue'>
-          <input type='text' placeholder='请填写真实姓名'></input>
+          <input type='text' name='archives_name' placeholder='请填写真实姓名'></input>
         </view>
       </view>
       <view class='input'>
         <view class='inputTitle'>性别</view>
         <view class='inputValue'>
-        <radio-group class='radioGroup'>
-          <radio value='0'>男</radio>
-          <radio value='1'>女</radio>
-        </radio-group>
+          <radio-group name='archives_sex' class='radioGroup'>
+            <radio value='0'>男</radio>
+            <radio value='1'>女</radio>
+          </radio-group>
         </view>
       </view>
       <view class='input'>
         <view class='inputTitle'>年龄</view>
         <view class='inputValue'>
-          <input type='text' placeholder='请填写年龄'></input>
+          <input name='archives_age' type='text' placeholder='请填写年龄'></input>
         </view>
       </view>
-
       <view class='info'>为保证医患沟通完善，请完善个人真实信息</view>
-
-
-
-      <button class='subBtn' bindtap='payBtnClick'>提交并支付</button>
+      <button form-type='submit' class='subBtn'>提交并支付</button>
     </form>
   </dialog>
 </theme-view>

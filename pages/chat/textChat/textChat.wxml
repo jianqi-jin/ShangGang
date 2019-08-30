@@ -4,12 +4,9 @@
 
   <!-- 此处scrollview 需要使用view包裹，scroll使用绝对定位。小程序scrollview不支持flex -->
   <view class="chatScrollView">
-    <scroll-view scroll-with-animation scroll-top='{{scrollTop}}' class="chatScroll" scroll-y>
+    <scroll-view scroll-into-view='{{toView}}' bindscrolltoupper='onScrollToTop' scroll-with-animation='{{scrollAnimation}}' scroll-top='{{scrollTop}}' class="chatScroll" scroll-y>
       <view class="msgList">
-        <message-item wx:for='{{mesInfoList}}' wx:key='{{item.id}}' msgInfo='{{item}}' />
-        <message-item wx:for='{{mesInfoList}}' wx:key='{{item.id}}' msgInfo='{{item}}' />
-
-
+        <message-item id="msg{{item.id}}" bindonAction='onMsgAction' wx:for='{{mesInfoList}}' wx:key='{{item.id}}' msgInfo='{{item}}' />
       </view>
 
     </scroll-view>

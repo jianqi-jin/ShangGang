@@ -29,8 +29,12 @@ Page({
       doc_id: doctorId
     }).then(res => {
       console.log(res)
-      if(res.data.status == 0){
+      if (res.data.status == 0) {
         let data = res.data.code;
+        //缓存医生头像
+        wx.setStorageSync('docAvatar', res.data.code.doc_avatar)
+        wx.setStorageSync('docName', res.data.code.doc_name)
+        wx.setStorageSync('docIm', res.data.code.doc_im)
         this.setData({
           ...this.data,
           ...data
@@ -39,9 +43,12 @@ Page({
     })
   },
   btnItemClick(e) {
-    let item = e.currentTarget.dataset.item;
+    let item = e.currentTarget.dataset.item; //图文或者视频
+    let {
+      zc_type
+    } = this.data;
     util.navigateTo({
-      url: '/pages/doctor/orderDetail/orderDetail?type=' + item+'&doctorId='+this.data.doc_id
+      url: '/pages/doctor/orderDetail/orderDetail?type=' + item + '&doctorId=' + this.data.doc_id + '&zc_type=' + zc_type
     })
 
   },

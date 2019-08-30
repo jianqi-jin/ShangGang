@@ -1,5 +1,7 @@
 // pages/home/home.js
-const {getDoctorList} = require('../../utils/api.js')
+const {
+  getDoctorList
+} = require('../../utils/api.js')
 const util = require('../../utils/util.js')
 Page({
 
@@ -15,15 +17,16 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    getApp().onTest()
     // wx.redirectTo({
     //   url: '/pages/pages/home/home'
     // })
     getDoctorList().then(res => {
-      if(res.data.status == 0){
+      if (res.data.status == 0) {
         let data = res.data.code;
         let bannerObj = data.banner;
         let bannerArr = []
-        for(const key in bannerObj){
+        for (const key in bannerObj) {
           bannerArr.push(bannerObj[key])
         }
         this.setData({
@@ -44,7 +47,7 @@ Page({
   doctorItemClick(e) {
     let item = e.currentTarget.dataset.item;
     util.navigateTo({
-      url: '/pages/doctor/doctorDetail/doctorDetail?doctorId='+item.doc_id
+      url: '/pages/doctor/doctorDetail/doctorDetail?doctorId=' + item.doc_id
     })
   },
   /**

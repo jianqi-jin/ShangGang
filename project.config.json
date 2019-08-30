@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 23,
+			"current": 32,
 			"list": [
 				{
 					"id": -1,
@@ -207,6 +207,69 @@
 					"id": -1,
 					"name": "editaddress",
 					"pathName": "pages/doctor/orderDetail/orderDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "onmsg",
+					"pathName": "pages/chat/textChat/textChat",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "video",
+					"pathName": "pages/chat/videoChat/videoChat",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orderPayDetail",
+					"pathName": "pages/order/orderPayDetail/orderPayDetail",
+					"query": "id=96",
+					"scene": null
+				},
+				{
+					"id": 27,
+					"name": "orderPayDetail",
+					"pathName": "pages/user/service/ydDetail/ydDetail",
+					"query": "orderId=96&order_cftype_status=1",
+					"scene": null
+				},
+				{
+					"id": 28,
+					"name": "paySuccess",
+					"pathName": "pages/order/paySuccess/paySuccess",
+					"query": "orderId=96&price=0.03",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "orderList",
+					"pathName": "pages/order/orderList/orderList",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 30,
+					"name": "service",
+					"pathName": "pages/user/service/service",
+					"query": "type=0",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "textChat",
+					"pathName": "pages/chat/textChat/textChat",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "videoChat",
+					"pathName": "pages/chat/videoChat/videoChat",
 					"scene": null
 				}
 			]

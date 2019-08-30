@@ -38,7 +38,9 @@
     "pages/logs/logs",
     "pages/pages/home/home",
     "pages/pages/user/user",
-    "pages/pages/user/refer/refer"
+    "pages/pages/user/refer/refer",
+    "pages/order/orderPayDetail/orderPayDetail",
+    "pages/order/paySuccess/paySuccess"
   ],
   "window": {
     "backgroundTextStyle": "light",

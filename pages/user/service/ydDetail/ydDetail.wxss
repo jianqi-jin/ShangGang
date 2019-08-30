@@ -44,7 +44,7 @@
   line-height: 98rpx;
   height: 98rpx;
   color: #fff;
-  font-size:34rpx;
+  font-size: 34rpx;
 }
 
 .icon {
@@ -85,4 +85,12 @@
 
 .infoBox {
   margin-bottom: 20rpx;
+}
+
+rich-text {
+  color: #666;
+}
+
+.contentTitle {
+  padding-bottom: 35rpx;
 }

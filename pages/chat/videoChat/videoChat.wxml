@@ -1,2 +1,52 @@
 <!--pages/chat/videoChat/videoChat.wxml-->
-<text>pages/chat/videoChat/videoChat.wxml</text>
+<camera device-position='front' class='camera' wx:if='{{cameraFlag}}'>
+  <cover-view class='coverView cameraCover'>
+
+    <cover-view class='titleBox'>
+      <cover-view class='titleLeft'>
+        <cover-image class='img' src='{{docAvatar}}'></cover-image>
+        <cover-view class='name'>{{docName}}</cover-view>
+      </cover-view>
+      <cover-view class='titleRight'>
+        {{timeStr}}
+      </cover-view>
+    </cover-view>
+    <cover-image class='hangup' bindtap='hangupVideo' src='/res/icon/icon-video-over@3x.png'></cover-image>
+  </cover-view>
+</camera>
+
+<view class='live' wx:else>
+  <live-pusher class='pusher' autopush id="pusher" bindnetstatus='stateChange' bindstatechange='stateChange' binderror='stateChange' mode='RTC' url='{{pushSrc}}' mode="RTC" />
+  <live-player class='player' id='livePlayer' autoplay src='{{playSrc}}'>
+
+    <cover-view class='coverView'>
+
+      <cover-view class='titleBox'>
+        <cover-view class='titleLeft'>
+          <cover-image class='img' src='{{docAvatar}}'></cover-image>
+          <cover-view class='name'>{{docName}}</cover-view>
+        </cover-view>
+        <cover-view class='titleRight'>
+          {{timeStr}}
+        </cover-view>
+      </cover-view>
+      <cover-view class='btnLine'>
+        <cover-view bindtap='btnClick' data-index='{{0}}' class='coverView'>
+          <cover-image class='coverImage' src='/res/icon/icon-voice-none@3x.png'></cover-image>
+          <cover-view class='btnText'>静音</cover-view>
+        </cover-view>
+        <cover-view bindtap='btnClick' data-index='{{1}}' class='coverView'>
+          <cover-image class='coverImage' src='/res/icon/icon-profile-img@3x.png'></cover-image>
+          <cover-view class='btnText'>上传病例</cover-view>
+        </cover-view>
+        <cover-view bindtap='btnClick' data-index='{{2}}' class='coverView'>
+          <cover-image class='coverImage' src='/res/icon/icon-ex-carmer@3x.png'></cover-image>
+          <cover-view class='btnText'>转换摄像头</cover-view>
+        </cover-view>
+      </cover-view>
+
+      <cover-image class='hangup' bindtap='hangupVideo' src='/res/icon/icon-video-over@3x.png'></cover-image>
+    </cover-view>
+
+  </live-player>
+</view>

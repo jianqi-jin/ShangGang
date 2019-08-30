@@ -6,29 +6,29 @@
 
 <view class='mainBox'>
   <!-- orderItem Start-->
-  <view class='orderItem'>
+  <view class='orderItem' wx:for='{{orderList}}' wx:key='{{item.ordersn}}'>
     <view class='orderTitle'>
-      <view class='titleLeft'>2019.03.03 12.23.03</view>
-      <view class='titleRight'>待付款</view>
+      <view class='titleLeft'>{{item.order_createtime}}</view>
+      <view class='titleRight'>{{item.order_status}}</view>
     </view>
-    <view class='orderContent' bindtap='onItemClick' data-item=''>
-      <view class='contentTop'>荨麻疹生鱼汤</view>
+    <view class='orderContent' bindtap='onItemClick' data-item='{{item}}'>
+      <view class='contentTop'>{{item.drugtc_name}}</view>
       <view class='contentBottom'>
         <view class='title'>病情分析：</view>
-        <view class='value'>荨麻疹</view>
+        <view class='value'>{{item.case_result}}</view>
         <view class='splic'></view>
         <view class='title'>诊断医生：</view>
-        <view class='value'>李丽</view>
+        <view class='value'>{{item.doc_name}}</view>
       </view>
     </view>
     <view class='orderBtnBar'>
       <view class='btnLeft'>
         <view class='totle'>总价</view>
-        <view class='price'>￥106.36</view>
+        <view class='price'>￥{{item.cf_ye_money}}</view>
       </view>
       <view class='btnRight'>
         <view class='btnList'>
-          <view class='btnItem'>立即支付</view>
+          <view class='btnItem'>{{item.order_status}}</view>
         </view>
       </view>
     </view>
@@ -36,7 +36,7 @@
   <!-- orderItem End-->
 
   <!-- orderItem Start-->
-  <view class='orderItem'>
+  <!-- <view class='orderItem'>
     <view class='orderTitle'>
       <view class='titleLeft'>2019.03.03 12.23.03</view>
       <view class='titleRight'>待付款</view>
@@ -62,6 +62,6 @@
         </view>
       </view>
     </view>
-  </view>
+  </view> -->
   <!-- orderItem End-->
 </view>

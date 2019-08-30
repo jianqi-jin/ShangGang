@@ -1,6 +1,8 @@
 // pages//order/orderList/orderList.js
 const util = require('../../../utils/util.js')
-const api = require('../../../utils/api.js')
+const {
+  getOrderList
+} = require('../../../utils/api.js')
 Page({
 
   /**
@@ -33,16 +35,36 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
+    this.getOrderList()
 
   },
-  onItemClick(e){
-    util.navigateTo({url: '/pages/order/orderDetail/orderDetail'})
+  onItemClick(e) {
+    let {
+      item
+    } = e.currentTarget.dataset;
+    util.navigateTo({
+      url: '/pages/order/orderDetail/orderDetail?orderId=' + item.order_id
+    })
+  },
+  getOrderList() {
+    let {
+      currentNavIndex
+    } = this.data.navTitleInfo;
+    getOrderList({
+      zt_type: currentNavIndex
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        orderList: res.data.code.list || []
+      })
+    })
   },
   onNavChange(e) {
     let id = e.detail.id;
     this.setData({
       ['navTitleInfo.currentNavIndex']: id
     })
+    this.getOrderList()
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

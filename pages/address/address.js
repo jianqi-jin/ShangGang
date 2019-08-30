@@ -22,7 +22,7 @@ Page({
         type: options.type
       })
 
-      wx.setNavigationBarTitle({
+      wx.setNavigationBarTitle({//type == 2
         title: '选择收货地址'
       })
     } else {

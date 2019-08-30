@@ -5,7 +5,7 @@
   <view class='chatTopBar'>
     <view class="inputLeftBox">
       <view class='chatInputBox'>
-        <textarea adjust-position='{{false}}' auto-height bindfocus="onFocus" bindblur="onBlur" class="textArea" type='text' placeholder='请输入想要咨询的内容'></textarea>
+        <textarea bindinput='onChange' value='{{inputText}}' adjust-position='{{false}}' auto-height bindfocus="onFocus" bindblur="onBlur" class="textArea" type='text' placeholder='请输入想要咨询的内容'></textarea>
       </view>
       <view bindtap="onChooseImgClick" class="imgImgBox">
         <image class="imgImgBtn" src="/res/icon/icon-dh-img@3x.png"></image>

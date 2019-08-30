@@ -1,13 +1,8 @@
-<!--pages/doctor/doctorDetail/doctorDetail.wxml-->
+<!-- pages/doctor/doctorDetail/doctorDetail.wxml -->
 <theme-view>
   <view class='topBox'>
     <image mode='widthFix' class='backImg' src='/res/icon/doc-det-bg@3x.png'></image>
-    <view class='backBox'>
-
-
-    </view>
-
-
+    <view class='backBox'></view>
     <view class='userBox'>
       <view class='avatar'>
         <image src='{{doc_avatar}}'></image>
@@ -23,23 +18,18 @@
       </view>
     </view>
   </view>
-
   <view class='infoItem'>
     <view class='infoTitle'>
       <view class='titleLeft'></view>
       <view class='titleRight'>擅长</view>
     </view>
-
     <view class='content'>{{doc_speciality}}</view>
   </view>
-
-
   <view class='infoItem'>
     <view class='infoTitle'>
       <view class='titleLeft'></view>
       <view class='titleRight'>医生简介</view>
     </view>
-
     <view class='content'>{{doc_synopsis}}</view>
   </view>
   <view class='infoItem'>
@@ -49,46 +39,34 @@
     </view>
     <rich-text class='content' nodes='{{doc_tw}}'></rich-text>
   </view>
-
-
-
-  <!-- navBottom 底部-->
+  <!-- navBottom 底部 -->
   <view class='navBottom'>
     <view class='navBtn' bindtap='btnItemClick' data-item='{{0}}'>
-      <view class='navLeft'>
-      </view>
+      <view class='navLeft'></view>
       <view class='navRight'>
         <view class=''>
-
           <view class='icon'>
             <image src='/res/icon/doc-icon-img@3x.png'></image>
           </view>
-          图文问诊</view>
-        <view class='asdwf'>
-
-          ￥{{doc_twwz}}</view>
+          图文问诊
+        </view>
+        <view class='asdwf'>{{'￥'+doc_twwz}}</view>
       </view>
       <view class='navPop'>抵扣{{doc_ye}}</view>
     </view>
-
-
     <view class='navBtn'>
-      <view class='navLeft'>
-      </view>
+      <view class='navLeft'></view>
       <view class='navRight' bindtap='btnItemClick' data-item='{{1}}'>
         <view class=''>
-
           <view class='icon'>
             <image src='/res/icon/home-icon-video@3x.png'></image>
           </view>
-          视频问诊</view>
-        <view class='asdwf'>￥{{doc_spwz}}</view>
+          视频问诊
+        </view>
+        <view class='asdwf'>{{('￥'+doc_spwz)}}</view>
       </view>
       <view class='navPop'>抵扣{{doc_ye}}</view>
     </view>
-
   </view>
-  <!-- navBottom 底部 End-->
-
-
+  <!-- navBottom 底部 End -->
 </theme-view>

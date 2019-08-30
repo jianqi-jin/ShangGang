@@ -1,0 +1,41 @@
+<!--pages/order/orderDetail/orderDetail.wxml-->
+<!-- 未支付的订单，，可以修改地址 -->
+<view class='statusBar'>快递配送</view>
+<!-- <address-item class='addressBar'></address-item> -->
+<view class='addressBar' bindtap='chooseAddress'>
+  <view class='addressLeft'>
+    <view class='addTop'>
+      <view class=''>收货人：{{addressInfo.address_realname}}</view>
+      <view class=''>{{addressInfo.address_mobile}}</view>
+    </view>
+    <view class='addBottom'>{{addressInfo.address_province}}{{addressInfo.address_city}}{{addressInfo.address_area}}{{addressInfo.address_add}}
+    </view>
+  </view>
+  <view class='addressRight'>
+    <image class='icon' src='/res/icon/doc-icon-left@3x.png'></image>
+  </view>
+</view>
+
+
+<view class='mainBox'>
+  <view class='mainTitle'>诊断药单</view>
+
+  <view class='name'>{{drugtc_name}}</view>
+  <rich-text nodes='{{drugtcj_form}}'></rich-text>
+
+</view>
+
+
+<view class='infoBox'>
+
+  <info-item info='{{item}}' wx:for='{{infoList}}' wx:key='{{item.title}}' />
+</view>
+
+
+<view class='footer'>
+<view class='footTitle'>
+  <view class='titleTitle'>药费合计</view>
+  <view class='titleValue'>￥{{sj_money}}</view>
+</view>
+  <view class='btn' bindtap='pay'>立即支付</view>
+</view>

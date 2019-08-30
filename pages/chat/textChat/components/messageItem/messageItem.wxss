@@ -37,3 +37,64 @@
   background: RGBA(151, 63, 43, 1);
   color: #fff;
 }
+
+.msgImg {
+  padding: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0);
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 30rpx;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.ydDetail {
+  width: 316rpx;
+}
+
+.icon {
+  width: 20rpx;
+  height: 20rpx;
+}
+
+.content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+}
+
+.infoBox>view {
+  margin-bottom: 10rpx;
+}
+
+.info {
+  color: #666;
+  font-size: 24rpx;
+}
+
+.name {
+  font-size: 24rpx;
+}
+
+.ydImg {
+  width: 96rpx;
+  height: 96rpx;
+  margin-right: 20rpx;
+}
+
+.osMsg {
+  color: #999;
+  text-align: center;
+  font-size: 24rpx;
+  margin: 20rpx 0;
+}

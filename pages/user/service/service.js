@@ -1,13 +1,16 @@
 // pages/user/service/service.js
 const util = require('../../../utils/util.js')
-const api = require('../../../utils/api.js')
+const {
+  getServiceList
+} = require('../../../utils/api.js')
 Page({
-
   /**
    * 页面的初始数据
    */
   data: {
     type: 0,
+    zxType: ['未咨询', '已咨询', '未咨询'],//图文
+    jtType: ['未接通', '已接通', '未接通'],//视频
     navTitleInfo: {
       type: 'left', //center 或者 left
       currentNavIndex: 0,
@@ -29,12 +32,26 @@ Page({
     this.setData({
       type
     })
+    this.getServiceList()
+  },
+  getServiceList() {
+    let {
+      currentNavIndex
+    } = this.data.navTitleInfo
+    getServiceList({
+      wz_type: currentNavIndex
+    }).then(res => {
+      console.log(res)
+      this.setData({
+        serviceList: res.data.code.list
+      })
+    })
   },
   itemClick(e) {
     let item = e.currentTarget.dataset.item;
     let uri = this.data.type == 0 ? 'wzDetail/wzDetail' : 'ydDetail/ydDetail'
     util.navigateTo({
-      url: '/pages/user/service/' + uri
+      url: '/pages/user/service/' + uri + '?order_id=' + item.order_id
     })
   },
   onNavChange(e) {
@@ -43,6 +60,7 @@ Page({
     this.setData({
       ['navTitleInfo.currentNavIndex']: id
     })
+    this.getServiceList()
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

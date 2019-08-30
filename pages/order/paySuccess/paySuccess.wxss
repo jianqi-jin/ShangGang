@@ -1,0 +1,68 @@
+/* pages/order/paySuccess/paySuccess.wxss */
+
+.imgBox {
+  width: 340rpx;
+  height: 340rpx;
+  margin-top: 77rpx;
+}
+
+page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  justify-content: space-between;
+  height: 100%;
+  padding: 0;
+}
+
+.infoBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #999;
+  margin-top: 45rpx;
+}
+
+.money {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  color: #973f2b;
+  justify-content: center;
+}
+
+.money view:last-child {
+  font-size: 56rpx;
+  font-weight: 800;
+}
+
+.bottomBox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 137rpx;
+}
+
+.bottomBox {
+  line-height: 92rpx;
+  text-align: center;
+}
+
+.btnTheme {
+  width: 309rpx;
+  height: 92rpx;
+  background: rgba(151, 63, 43, 1);
+  border-radius: 46rpx;
+  color: #fff;
+  margin: 0 15rpx 0 65rpx;
+}
+
+.btn {
+  width: 309rpx;
+  height: 92rpx;
+  border: 2rpx solid rgba(151, 63, 43, 1);
+  border-radius: 46rpx;
+  color: rgba(151, 63, 43, 1);
+  margin: 0 56rpx 0 15rpx;
+}

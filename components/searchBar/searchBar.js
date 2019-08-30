@@ -22,6 +22,12 @@ Component({
       this.triggerEvent('onAction', {
         type: 'click'
       })
+    },
+    onChange(e) {
+      this.triggerEvent('onAction', {
+        type: 'change',
+        data: e.detail.value
+      })
     }
   }
 })

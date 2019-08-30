@@ -1,14 +1,17 @@
 /* pages/order/orderDetail/orderDetail.wxss */
 
 .statusBar {
-  height: 130rpx;
+  height: 100rpx;
   background: #973f2b;
-  line-height: 130rpx;
+  line-height: 100rpx;
   padding-left: 26rpx;
-  font-size: 42rpx;
+  font-size: 28rpx;
   font-family: PingFang-SC-Heavy;
-  font-weight: 800;
   color: rgba(255, 255, 255, 1);
+}
+
+.name {
+  padding-bottom: 20rpx;
 }
 
 /* addressBar start */
@@ -30,6 +33,28 @@
   font-weight: 400;
   color: rgba(102, 102, 102, 1);
   line-height: 36rpx;
+}
+
+.addressBar {
+  display: flex;
+  flex-direction: row;
+}
+
+.addressLeft {
+  flex-grow: 1;
+}
+
+.addressRight {
+  width: 30rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+}
+
+.icon {
+  width: 28rpx;
+  height: 28rpx;
 }
 
 /* addressBar end */
@@ -59,26 +84,29 @@
   width: 100%;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   align-items: center;
 }
 
+.footTitle {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 22rpx;
+}
+
+.titleValue {
+  margin-left: 20rpx;
+  font-size: 34rpx;
+  color: #e9333c;
+}
+
 .btn {
-  width: 154rpx;
-  height: 58rpx;
-  border: 2rpx solid rgba(151, 63, 43, 1);
+  width: 283rpx;
+  height: 100%;
+  background: #973f2b;
   box-shadow: 0px 0px 20rpx 0px rgba(153, 153, 153, 0.1);
-  border-radius: 100px;
   text-align: center;
-  line-height: 58rpx;
-  margin: 0 17rpx;
-}
-
-.name {
-  padding-bottom: 35rpx;
-  padding-top: 25rpx;
-}
-
-.rich {
-  color: #999;
+  line-height: 98rpx;
+  color: #fff;
 }

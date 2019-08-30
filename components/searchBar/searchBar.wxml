@@ -5,7 +5,7 @@
       <image src='/res/icon/home-search@3x.png'></image>
     </view>
     <view class='inputBox'>
-      <input type='text' placeholder='搜索相关疾病、医生名称'></input>
+      <input bindinput='onChange' type='text' placeholder='搜索相关疾病、医生名称'></input>
     </view>
   </view>
 </view>

@@ -1,4 +1,7 @@
 // pages/order/orderDetail/orderDetail.js
+const {
+  getOrderSuccDetail
+} = require('../../../utils/api.js')
 Page({
 
   /**
@@ -36,9 +39,26 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.setData({
+      ...options
+    })
+    getOrderSuccDetail({
+      order_id: this.data.orderId
+    }).then(res => {
+      let {
+        order_price,
+        order_price_zk,
+        cf_ye_money
+      } = res.data.code;
+      this.setData({
+        'infoList[0].value': '￥' + order_price,
+        'infoList[1].value': '￥' + cf_ye_money,
+        'infoList[2].value': '￥' + order_price_zk,
+        'infoList[3].value': '在线支付',
+        ...res.data.code
+      })
+    })
   },
-
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

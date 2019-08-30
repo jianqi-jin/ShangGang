@@ -15,6 +15,7 @@ Component({
    */
   data: {
     chatInputBottom: 0,
+    inputText: ''
   },
 
   /**
@@ -22,14 +23,16 @@ Component({
    */
   methods: {
     onChooseImgClick() {
-      wx.chooseImage({
-        count: 1,
-        success: res => {
-          console.log(res)
-        },
-        fail: res => {
-          userCancel();
-        }
+      this.triggerEvent('onAction', {
+        type: 'chooseImg'
+      })
+
+
+
+    },
+    onChange(e) {
+      this.setData({
+        inputText: e.detail.value
       })
     },
     heightChange(e) {
@@ -39,8 +42,11 @@ Component({
       this.triggerEvent('onAction', {
         type: 'send',
         data: {
-          msg: ''
+          msg: this.data.inputText
         }
+      })
+      this.setData({
+        inputText: ''
       })
     },
     onFocus(e) {
