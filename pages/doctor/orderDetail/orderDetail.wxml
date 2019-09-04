@@ -5,7 +5,9 @@
     <view class='backBox'></view>
     <view class='userBox'>
       <view class='avatar'>
-        <image src='{{doc_avatar}}'></image>
+        <view class="imgBox">
+          <image src='{{doc_avatar}}'></image>
+        </view>
       </view>
       <view class='userInfo'>
         <view class='statusBox'>{{status[doc_status]}}</view>

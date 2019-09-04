@@ -13,6 +13,10 @@ Component({
           title: ''
         }]
       }
+    },
+    activeBorderFlag: {
+      value: false,
+      type: Boolean
     }
   },
 

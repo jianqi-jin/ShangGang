@@ -9,7 +9,7 @@
 
 </view>
 
-<view class='close' bindtap='close'>
+<view class='close' wx:if='{{closeFlag}}' bindtap='close'>
   <view class='icon'>
     <image src='/res/icon/icon-close-white@3x.png'></image>
   </view>

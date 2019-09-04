@@ -63,11 +63,15 @@ Page({
    */
   onLoad: function(options) {
     this.setData({
-      token: wx.getStorageSync('token')
+      token: wx.getStorageSync('token'),
+      ...wx.getStorageSync('userInfo')
     })
   },
   loginClick(e) {
     let userInfo = e.detail.userInfo;
+    this.setData({
+      ...userInfo
+    })
     auth({
       wx_url: userInfo.avatarUrl,
       wx_name: userInfo.nickName,

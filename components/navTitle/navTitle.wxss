@@ -22,7 +22,7 @@
   position: relative;
 }
 
-/* .active::after {
+.activeBorder::after {
   position: absolute;
   content: '';
   bottom: 0;
@@ -31,4 +31,4 @@
   height: 8rpx;
   border-radius: 4rpx;
   background: var(--themeC);
-} */
+}

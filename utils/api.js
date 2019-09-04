@@ -17,7 +17,7 @@ const request = (type, data) => new Promise((resolve, reject) => wx.request({
     if (res.data.code == "token无效") {
       wx.redirectTo({
         url: '/pages/user/user/user',
-        success(){
+        success() {
           wx.showToast({
             title: '请授权小程序',
             icon: 'none',
@@ -68,7 +68,9 @@ module.exports = {
   dubbger,
   serverUri,
   header,
-  getDoctorList: () => request('index/lb'),
+  getDoctorList: data => request('index/lb', {
+    page: 1
+  }),
   getDoctorDetail: data => request('index/ysxq', data),
   getFwInfo: data => {
     let type = ''
@@ -80,9 +82,13 @@ module.exports = {
     }
     return request(type, data)
   },
-  getCaseList: data => request('alk/alk_lb', data),
+  getCaseList: data => request('alk/alk_lb', { ...data,
+    page: 1
+  }),
   getCaseDetail: data => request('alk/alk_xq', data),
-  getClinicList: () => request('zs/zs_lb'),
+  getClinicList: data => request('zs/zs_lb', {
+    page: 1
+  }),
   getClinicDetail: data => request('zs/zs_xq', data),
   getShare: () => request('tj/fxfx'),
   shareclum: data => request('senke.tuijian.fenxiang', data),
@@ -99,7 +105,9 @@ module.exports = {
   getYdDetail: data => request('index/cfdd', data), //药单详情
   getYdOrderDetail: data => request('index/lq_yd', data), //药单订单详情
   getYdPay: data => request('index/cfzf', data), //药单支付页
-  getOrderList: data => request('my/ddgl', data), //订单列表
+  getOrderList: data => request('my/ddgl', { ...data,
+    page: 1
+  }), //订单列表
   getOrderSuccDetail: data => request('my/dd_xq', data),
   getServiceList: data => request('my/wdwz', data), //问诊列表图文/视频
   getWzDetail: data => request('my/wzxq', data) //问诊详情

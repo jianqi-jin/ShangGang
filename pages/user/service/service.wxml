@@ -1,7 +1,7 @@
 <!--pages/user/service/service.wxml-->
 <!-- nav-title Start -->
 <view class='navTitle'>
-  <nav-title navTitleInfo='{{navTitleInfo}}' bindonAction='onNavChange' />
+  <nav-title activeBorderFlag navTitleInfo='{{navTitleInfo}}' bindonAction='onNavChange' />
 </view>
 <!-- nav-title End -->
 <yd-list wx:if='{{type == 1}}' />

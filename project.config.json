@@ -40,7 +40,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 32,
+			"current": 33,
 			"list": [
 				{
 					"id": -1,
@@ -270,6 +270,13 @@
 					"id": -1,
 					"name": "videoChat",
 					"pathName": "pages/chat/videoChat/videoChat",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/doctor/doctorDetail/doctorDetail",
+					"pathName": "pages/doctor/doctorDetail/doctorDetail",
 					"scene": null
 				}
 			]

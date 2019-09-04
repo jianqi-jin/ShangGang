@@ -62,6 +62,7 @@
   height: 116rpx;
   border-radius: 50%;
   box-shadow: 0 0 20rpx 0 #ccc;
+  overflow: hidden;
 }
 
 .joinBar {
@@ -95,8 +96,8 @@
 }
 
 .btnItem .icon {
-  width: 45rpx;
-  height: 45rpx;
+  width: 50rpx;
+  height: 50rpx;
 }
 
 .joinBar .icon {

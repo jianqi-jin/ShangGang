@@ -75,10 +75,15 @@ Page({
         asc: true,
         limit: 10,
         done: (err, res) => {
+          if (!res.msgs || res.msgs.length < 1) {
+            wx.hideLoading()
+            throw '解析失败'
+          }
           res.msgs.map((val, index) => {
             if (index == 0) {
               let osTimeMsg = { //系统时间消息
                 ...val,
+                id: 'data' + res.msgs[0].time,
                 msg: new Date(parseInt(val.time)).toLocaleString().replace(/:\d{1,2}$/, ' '),
                 type: '-1'
               }
@@ -122,151 +127,56 @@ Page({
       })
       return
     }
-    let msgType = msg.from.toLowerCase() == this.data.openid; //true自己  
-    let msgObj = {}
-    if (msg.type == 'text') {
-      let custom = ''
-      try {
-        custom = JSON.parse(msg.custom)
-      } catch (e) {
-        custom = ''
-      }
-      msgObj = {
-        id: msg.idServer,
-        type: !msgType ? 1 : 0, //0自己
-        msg: msg.text,
-        avatar: !msgType ? this.data.docAvatar : this.data.avatarUrl,
-        time: msg.time,
-        msgType: 'text',
-        custom
-      }
+    let msgObj = this._changeMsg(msg); //转换msg结构体
+    // let msgType = msg.from.toLowerCase() == this.data.openid; //true自己  
+    // let msgObj = {}
+    // if (msg.type == 'text') {
+    //   let custom = ''
+    //   try {
+    //     custom = JSON.parse(msg.custom)
+    //   } catch (e) {
+    //     custom = ''
+    //   }
+    //   msgObj = {
+    //     id: msg.idServer,
+    //     type: !msgType ? 1 : 0, //0自己
+    //     msg: msg.text,
+    //     avatar: !msgType ? this.data.docAvatar : this.data.avatarUrl,
+    //     time: msg.time,
+    //     msgType: 'text',
+    //     custom
+    //   }
 
-    } else {
-      let {
-        w,
-        h
-      } = msg.file
-      if (w > 200 || h > 200) {
-        let pro = 0;
-        if (w > 200) {
-          pro = 200 / w
-          h = h * pro
-          w = 200
-        } else {
-          pro = 200 / h
-          w = w * pro
-          h = 200
-        }
-      }
-      // console.log(w, h)
-      msgObj = {
-        id: msg.idServer,
-        type: !msgType ? 1 : 0,
-        msg: msg.text,
-        avatar: !msgType ? this.data.docAvatar : this.data.avatarUrl,
-        msgType: 'image',
-        imgSrc: msg.file.url,
-        time: msg.time,
-        w,
-        h
-      }
-    }
-
-    //将msg加入
-    if (num) {
-      if (num == -1) {
-        this.setData({
-          mesInfoList: [
-            msgObj,
-            ...this.data.mesInfoList
-          ]
-        })
-      } else {
-        this.setData({
-          mesInfoList: (this.data.mesInfoList[num] = msgObj, this.data.mesInfoList)
-        })
-      }
-    } else {
-      this.setData({
-        mesInfoList: [
-          ...this.data.mesInfoList,
-          msgObj
-        ]
-      })
-    }
-
-    if (num != -1) {
-      this.scrollToBottom()
-    } else if (toView) {
-      //滚动回去
-      this.setData({
-        toView: toView
-      })
-    }
-  },
-  appendMsg(msg, num, toView) { //msg为msg结构体 num为当前位置  不存在为新数据  存在则替换数据（用于显示·发送中·）  -1为上拉加载    toView为view id
-    //封装msg对象
-    //判断是否为系统消息   type== -1
-    if (msg.type == '-1') {
-      this.setData({
-        mesInfoList: [msg, ...this.data.mesInfoList]
-      })
-
-      //滚动回去
-      this.setData({
-        toView: toView
-      })
-      return
-    }
-    let msgType = msg.from.toLowerCase() == this.data.openid; //true自己  
-    let msgObj = {}
-    if (msg.type == 'text') {
-      let custom = ''
-      try {
-        custom = JSON.parse(msg.custom)
-      } catch (e) {
-        custom = ''
-      }
-      msgObj = {
-        id: msg.idServer,
-        type: !msgType ? 1 : 0, //0自己
-        msg: msg.text,
-        avatar: !msgType ? this.data.docAvatar : this.data.avatarUrl,
-        time: msg.time,
-        msgType: 'text',
-        custom
-      }
-
-    } else {
-      let {
-        w,
-        h
-      } = msg.file
-      if (w > 200 || h > 200) {
-        let pro = 0;
-        if (w > 200) {
-          pro = 200 / w
-          h = h * pro
-          w = 200
-        } else {
-          pro = 200 / h
-          w = w * pro
-          h = 200
-        }
-      }
-      // console.log(w, h)
-      msgObj = {
-        id: msg.idServer,
-        type: !msgType ? 1 : 0,
-        msg: msg.text,
-        avatar: !msgType ? this.data.docAvatar : this.data.avatarUrl,
-        msgType: 'image',
-        imgSrc: msg.file.url,
-        time: msg.time,
-        w,
-        h
-      }
-    }
+    // } else {
+    //   let {
+    //     w,
+    //     h
+    //   } = msg.file
+    //   if (w > 200 || h > 200) {
+    //     let pro = 0;
+    //     if (w > 200) {
+    //       pro = 200 / w
+    //       h = h * pro
+    //       w = 200
+    //     } else {
+    //       pro = 200 / h
+    //       w = w * pro
+    //       h = 200
+    //     }
+    //   }
+    //   // console.log(w, h)
+    //   msgObj = {
+    //     id: msg.idServer,
+    //     type: !msgType ? 1 : 0,
+    //     msg: msg.text,
+    //     avatar: !msgType ? this.data.docAvatar : this.data.avatarUrl,
+    //     msgType: 'image',
+    //     imgSrc: msg.file.url,
+    //     time: msg.time,
+    //     w,
+    //     h
+    //   }
+    // }
 
     //将msg加入
     if (num) {
@@ -360,6 +270,7 @@ Page({
     //判断是否为系统消息   type== -1
     let _tempMsgList = []
     let toView = 'msg' + this.data.mesInfoList[0].id
+    console.log(toView)
     msgList.map((val, index) => {
       _tempMsgList.push(this._changeMsg(val))
     })
@@ -396,63 +307,6 @@ Page({
       return
     }
     this.appendMsg(msg, num)
-    // if (msg.type == 'text') {
-    //   let msgObj = {
-    //     id: 0,
-    //     type: !msgType ? 1 : 0,
-    //     msg: msg.text,
-    //     avatar: !msgType ? this.data.docAvatar : wx.getStorageSync('userInfo').avatarUrl,
-    //     msgType: 'text',
-    //     custom: {
-    //       id: 96,
-    //       docName: '李志远',
-    //       name: '温宿',
-    //       time: '2019-8-16'
-    //     }
-    //   }
-    //   console.log([
-    //     ...this.data.mesInfoList,
-    //     msgObj
-    //   ])
-    //   //将msg加入
-    //   this.setData({
-    //     mesInfoList: [
-    //       ...this.data.mesInfoList,
-    //       msgObj
-    //     ]
-    //   })
-    //   this.scrollToBottom()
-    // } else {
-    //   let {
-    //     w,
-    //     h
-    //   } = msg.file
-    //   if (w > 200 || h > 200) {
-    //     let pro = 0;
-    //     if (w > 200) {
-    //       pro = 200 / w
-    //       h = h * pro
-    //       w = 200
-    //     } else {
-    //       pro = 200 / h
-    //       w = w * pro
-    //       h = 200
-    //     }
-    //   }
-    //   console.log(w, h)
-    //   this.setData({
-    //     mesInfoList: [...this.data.mesInfoList, {
-    //       id: 0,
-    //       type: !msgType ? 1 : 0,
-    //       msg: msg.text,
-    //       avatar: !msgType ? this.data.docAvatar : wx.getStorageSync('userInfo').avatarUrl,
-    //       msgType: 'image',
-    //       imgSrc: msg.file.url,
-    //       w,
-    //       h
-    //     }]
-    //   })
-    // }
 
   },
   onMsgAction(e) {

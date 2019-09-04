@@ -3,9 +3,9 @@
 <form bindsubmit='formSubmit'>
 
   <view class='inputItem'>
-    <view class='fontTitle'>联系人</view>
+    <view class='fontTitle'>收货人</view>
     <view class='input'>
-      <input name='address_realname' placeholder='姓名' value='{{addressInfo.address_realname}}'></input>
+      <input name='address_realname' placeholder='请输入收货人姓名' value='{{addressInfo.address_realname}}'></input>
     </view>
   </view>
 
@@ -25,15 +25,15 @@
 
 
   <view class='inputItem'>
-    <view class='fontTitle'>电话</view>
+    <view class='fontTitle'>手机号码</view>
     <view class='input'>
-      <input name='address_mobile' type='number' value='{{addressInfo.address_mobile}}' placeholder='手机号码'></input>
+      <input name='address_mobile' type='number' value='{{addressInfo.address_mobile}}' placeholder='请输入手机号'></input>
     </view>
   </view>
 
 
   <view class='inputItem'>
-    <view class='fontTitle'>地址</view>
+    <view class='fontTitle'>收货地址</view>
     <view class='input'>
 
       <view class="section">
@@ -52,7 +52,7 @@
   </view>
 
   <view class='inputItem'>
-    <input class='text' name='address_add' value='{{addressInfo.address_add}}' placeholder='例：紫金相府A栋1705'></input>
+    <input class='text' name='address_add' value='{{addressInfo.address_add}}' placeholder='输入详细门牌号 例：5单元302室'></input>
   </view>
 
   <!-- <view class='inputItem'>

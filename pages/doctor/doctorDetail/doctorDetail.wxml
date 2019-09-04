@@ -5,7 +5,9 @@
     <view class='backBox'></view>
     <view class='userBox'>
       <view class='avatar'>
-        <image src='{{doc_avatar}}'></image>
+        <view class="imgBox">
+          <image src='{{doc_avatar}}'></image>
+        </view>
       </view>
       <view class='userInfo'>
         <view class='statusBox'>{{status[doc_status]}}</view>
@@ -59,7 +61,7 @@
       <view class='navRight' bindtap='btnItemClick' data-item='{{1}}'>
         <view class=''>
           <view class='icon'>
-            <image src='/res/icon/home-icon-video@3x.png'></image>
+            <image src='/res/icon/doc-icon-video@3x.png'></image>
           </view>
           视频问诊
         </view>

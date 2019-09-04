@@ -30,7 +30,7 @@
 </view>
 
 
-<dialog wx:if='{{paySuccFlag}}'>
+<dialog closeFlag='{{false}}' wx:if='{{paySuccFlag}}'>
   <view class='succBox'>
     <image mode='widthFix' class='succImg' src='/res/icon/target-img@3x.png'></image>
 
@@ -39,6 +39,6 @@
     <view>拥有代理分销特权</view>
     </view>
 
-    <navigator open-type='redirect' url='/pages/user/user' class='succBtn'>知道啦</navigator>
+    <navigator open-type='redirect' url='/pages/user/user/user' class='succBtn'>知道啦</navigator>
   </view>
 </dialog>

@@ -8,11 +8,13 @@
   overflow: hidden;
   z-index: -2;
 }
-.backImg{
+
+.backImg {
   position: absolute;
   top: 0;
   z-index: -2;
 }
+
 .backBox {
   position: absolute;
   background: #fff;
@@ -78,11 +80,33 @@
 /* user CSS End*/
 
 .avatar {
+  width: 200rpx;
+  height: 200rpx;
+  margin-top: 70rpx;
+  position: relative;
+  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(225, 225, 225, 0.1);
+  border-radius: 100rpx;
+}
+
+.imgBox {
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 100rpx;
+  background: rgba(225, 225, 225, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.avatar image {
   width: 160rpx;
   height: 160rpx;
-  margin-top: 70rpx;
   border-radius: 100rpx;
-  overflow: hidden;
 }
 
 /* infoItem */
@@ -161,6 +185,7 @@
 .asdwf {
   font-size: 26rpx;
   padding-left: 50rpx;
+  font-weight: 800;
 }
 
 .navRight view:first-child {
