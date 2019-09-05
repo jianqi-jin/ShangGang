@@ -32,13 +32,13 @@ function request(url, method = 'GET', data = {}) {
     header['X-qingzhe-Authorization'] = token;
     // header['X-qingzhe-Authorization'] = "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE1NTQ3MTU0MjYsInBsYXRmb3JtIjoiIn0.c99OwrKt1fU-e4J4O7yIkneZ96BTnNECnhf4lNX7GhQ"
   }
-  return new Promise(function (resolve, reject) {
+  return new Promise(function(resolve, reject) {
     wx.request({
       url: url,
       method: method,
       data: data,
       header: header,
-      success: function (res) {
+      success: function(res) {
         if (res.data.error == '0') {
           resolve(res.data);
           wx.hideLoading()
@@ -47,7 +47,7 @@ function request(url, method = 'GET', data = {}) {
           wx.hideLoading()
         }
       },
-      fail: function (err) {
+      fail: function(err) {
         wx.showToast({
           title: '网络加载失败',
           duration: 1000
@@ -56,6 +56,14 @@ function request(url, method = 'GET', data = {}) {
       }
     });
   });
+}
+
+const showToast = (text, iconFlag) => {
+  wx.showToast({
+    title: text,
+    icon: iconFlag ? '' : 'none',
+    duration: 800,
+  })
 }
 
 const navigateTo = data => (
@@ -67,5 +75,6 @@ module.exports = {
   request,
   apiUrl,
   isPoneAvailable: pone => (!/^[1][3,4,5,7,8][0-9]{9}$/.test(pone) ? false : true),
-  navigateTo
+  navigateTo,
+  showToast
 }

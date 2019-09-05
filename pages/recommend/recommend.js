@@ -12,7 +12,7 @@ Page({
   data: {
     AllNum: 0,
     nowMun: 0,
-    color: '#824C1F',
+    color: '#fff',
     coverHeight: "0rpx",
     codeHeight: "0rpx",
     // 顶部广告图

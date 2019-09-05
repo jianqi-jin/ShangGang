@@ -56,14 +56,14 @@
   height: 98rpx;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: calc(100%);
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
 }
 
-.btn {
+/* .btn {
   width: 154rpx;
   height: 58rpx;
   border: 2rpx solid rgba(151, 63, 43, 1);
@@ -72,6 +72,28 @@
   text-align: center;
   line-height: 58rpx;
   margin: 0 17rpx;
+} */
+
+.btnItem {
+  width: 157rpx;
+  height: 54rpx;
+  background: rgba(255, 255, 255, 1);
+  border: 2rpx solid rgba(151, 63, 43, 1);
+  border-radius: 100rpx;
+  text-align: center;
+  line-height: 54rpx;
+  color: #973f2b;
+}
+
+.btnItem:last-child {
+  margin: 0 20rpx;
+}
+
+/* orderItem End */
+
+.cancel {
+  border-color: #999;
+  color: #999;
 }
 
 .name {

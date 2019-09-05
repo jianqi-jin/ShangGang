@@ -1,11 +1,17 @@
-// pages/user/service/wzDetail/ydList/ydList.js
+// pages/user/service/wzDetail/videoList/videoList.js
+const {
+  getVideoHistory
+} = require('../../../../../utils/api.js')
+const {
+  showToast
+} = require('../../../../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    page: 0
   },
 
   /**
@@ -13,11 +19,30 @@ Page({
    */
   onLoad: function(options) {
     this.setData({
+      ...this.data,
       ...options
     })
+    this.getVideoHistory()
   },
-  getOrderList(){
-    
+  getVideoHistory() {
+    let {
+      page,
+      docId
+    } = this.data
+    getVideoHistory({
+      page,
+      doc_id: docId
+    }).then(res => {
+      if (res.data.code.list.length < 1) {
+        showToast('空空如也哟~')
+        return
+      }
+      this.setData({
+        ...res.data.code
+      })
+    }).catch(e => {
+      showToast('空空如也哟~')
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成

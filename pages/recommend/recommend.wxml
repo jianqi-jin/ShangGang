@@ -9,8 +9,9 @@
     </swiper>
   </view>
   <view class='label'>
-    <view data-val='0' bindtap='switchHinge' style='{{hinge=="0"?"border-bottom:2px solid"+color:""}}; color:{{hinge=="0"?color:""}};'>推荐</view>
-    <view data-val='1' bindtap='switchHinge' style='{{hinge=="1"?"border-bottom:2px solid"+color:""}}; color:{{hinge=="1"?color:""}};'>排行</view>
+    <view data-val='0' bindtap='switchHinge' style='{{hinge=="0"?"font-weight: 800;border-bottom:2px solid "+color:""}}; color:{{hinge=="0"?color:""}};'>推荐</view>
+  
+    <view data-val='1' bindtap='switchHinge' style='{{hinge=="1"?"font-weight: 800;border-bottom:2px solid "+color:""}}; color:{{hinge=="1"?color:""}};'>排行</view>
   </view>
 
   <view wx:for="{{list}}" wx:key="{{index}}" wx:if="{{index == hinge}}">

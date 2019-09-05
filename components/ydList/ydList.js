@@ -5,7 +5,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
-
+    ydList: {
+      type: Object,
+      value: []
+    }
   },
 
   /**
@@ -22,7 +25,7 @@ Component({
 
     itemClick(e) {
       let item = e.currentTarget.dataset.item;
-      let uri = 'ydDetail/ydDetail'
+      let uri = 'ydDetail/ydDetail?orderId=' + item.order_id
       util.navigateTo({
         url: '/pages/user/service/' + uri
       })

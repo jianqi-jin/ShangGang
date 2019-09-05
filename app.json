@@ -16,6 +16,7 @@
     "pages/user/service/ydDetail/ydDetail",
     "pages/user/service/wzDetail/wzDetail",
     "pages/user/service/wzDetail/ydList/ydList",
+    "pages/user/service/wzDetail/videoList/videoList",
     "pages/user/referCenter/referCenter",
     "pages/doctor/doctorDetail/doctorDetail",
     "pages/doctor/orderDetail/orderDetail",

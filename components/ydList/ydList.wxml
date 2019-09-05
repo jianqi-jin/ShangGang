@@ -2,18 +2,18 @@
 
 <view class='ydBox'>
 
-  <view class='ydItem' bindtap='itemClick' data-item=''>
+  <view class='ydItem' bindtap='itemClick' wx:for='{{ydList}}' data-item='{{item}}' wx:key='{{item.order_id}}'>
     <view class='ydTitle'>
-      <view>荨麻疹圣愈汤</view>
-      <view>[未支付]</view>
+      <view>{{item.drugtc_name}}</view>
+      <view>[{{item.order_status}}]</view>
     </view>
     <view class='ydContent'>
-      <view>【功效】驱逐淫邪，发汗解表，选妃平川</view>
-      <view>【功效】驱逐淫邪，发汗解表，选妃平川</view>
+      <view>【功效】{{item.drugtcj_effect}}</view>
+      <view>【功效】{{item.drugtcj_indications}}</view>
       <view></view>
     </view>
     <view class='ydBottom'>
-      <view>医生：李颖 2019-03-03</view>
+      <view>医生：{{item.doc_name}} {{item.order_createtime}}</view>
       <view>去支付</view>
     </view>
   </view>

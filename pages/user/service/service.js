@@ -1,7 +1,8 @@
 // pages/user/service/service.js
 const util = require('../../../utils/util.js')
 const {
-  getServiceList
+  getServiceList,
+  getYdList
 } = require('../../../utils/api.js')
 Page({
   /**
@@ -9,8 +10,9 @@ Page({
    */
   data: {
     type: 0,
-    zxType: ['未咨询', '已咨询', '未咨询'],//图文
-    jtType: ['未接通', '已接通', '未接通'],//视频
+    page: 0,
+    zxType: ['未咨询', '已咨询', '未咨询'], //图文
+    jtType: ['未接通', '已接通', '未接通'], //视频
     navTitleInfo: {
       type: 'left', //center 或者 left
       currentNavIndex: 0,
@@ -34,17 +36,27 @@ Page({
     })
     this.getServiceList()
   },
-  getServiceList() {
+  getServiceList(typeFirst = 0) {
     let {
       currentNavIndex
     } = this.data.navTitleInfo
-    getServiceList({
-      wz_type: currentNavIndex
+    let {
+      page,
+      type
+    } = this.data
+    let _tempFun = type == 0 ? getServiceList : getYdList //选择函数，是服务列表还是姚丹列表
+    _tempFun({
+      wz_type: currentNavIndex,
+      page: ++page
     }).then(res => {
       console.log(res)
       this.setData({
-        serviceList: res.data.code.list
+        serviceList: typeFirst == 0 ? res.data.code.list : [...this.data.serviceList, ...res.data.code.list],
+        page
       })
+    }).catch(e => {
+      console.log(e)
+      util.showToast('没有更多了哟~')
     })
   },
   itemClick(e) {
@@ -58,7 +70,8 @@ Page({
     let id = e.detail.id;
     console.log(e)
     this.setData({
-      ['navTitleInfo.currentNavIndex']: id
+      ['navTitleInfo.currentNavIndex']: id,
+      page: 0
     })
     this.getServiceList()
   },
@@ -101,7 +114,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-
+    this.getServiceList(1) //0或者null是首次加载  1是二次加载
   },
 
   /**

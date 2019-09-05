@@ -1,13 +1,21 @@
 // pages/order/orderDetail/orderDetail.js
 const {
-  getOrderSuccDetail
+  getOrderSuccDetail,
+  orderDelete,
+  orderCancel,
+  orderSuccess,
+  orderPay
 } = require('../../../utils/api.js')
+const {
+  showToast
+} = require('../../../utils/util.js')
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+    statusTitle: ['待付款', '已付款', '待收货', '已完成', '已取消'],
     infoList: [{
         id: 0,
         title: '订单金额',
@@ -106,5 +114,85 @@ Page({
    */
   onShareAppMessage: function() {
 
+  },
+
+
+
+
+  orderShowWl(e) {
+    let {
+      order_id
+    } = e.currentTarget.dataset;
+    // order_idShowWl({
+    //   order_id
+    // }).then(res => {
+    //   console.log(res)
+    // })
+  },
+  orderCancel(e) {
+    wx.showLoading({
+      title: '取消',
+    })
+    console.log(e)
+    let {
+      order_id
+    } = e.currentTarget.dataset;
+    orderCancel({
+      order_id
+    }).then(res => {
+      wx.hideLoading()
+      if (res.data.code == 1) {
+        showToast('取消成功')
+        this.onLoad(this.data)
+      }
+      console.log(res)
+    })
+  },
+  orderPay(e) {
+    let {
+      order_id,
+      cf_ye_money
+    } = e.currentTarget.dataset;
+    orderPay({
+      order_id,
+      cf_ye_money
+    }).then(res => {
+      console.log(res)
+    })
+  },
+  orderDelete(e) {
+    wx.showLoading({
+      title: '删除',
+    })
+    console.log(e)
+    let {
+      order_id
+    } = e.currentTarget.dataset;
+    orderDelete({
+      order_id
+    }).then(res => {
+      wx.hideLoading()
+      if (res.data.code == 1) {
+        wx.navigateBack({
+          delta: 1,
+        })
+      }
+      console.log(res)
+    })
+  },
+  orderSuccess(e) {
+    wx.showLoading({
+      title: '确认收货',
+    })
+    let {
+      order_id
+    } = e.currentTarget.dataset;
+    orderSuccess({
+      order_id
+    }).then(res => {
+      wx.hideLoading()
+      this.onLoad(this.data)
+      console.log(res)
+    })
   }
 })

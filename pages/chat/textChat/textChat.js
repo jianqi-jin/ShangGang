@@ -315,7 +315,7 @@ Page({
     if (item.type == 'orderClick') {
       //此处是药单的解析
       wx.navigateTo({
-        url: '/pages/user/service/ydDetail/ydDetail?orderId=' + item.data.id + '&order_cftype_status=1'
+        url: '/pages/user/service/ydDetail/ydDetail?orderId=' + item.data.order.order_id + '&order_cftype_status=1'
       })
     }
   },

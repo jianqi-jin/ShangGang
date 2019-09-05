@@ -1,7 +1,8 @@
 // pages/user/service/wzDetail/wzDetail.js
 const util = require('../../../../utils/util.js')
 const {
-  getWzDetail
+  getWzDetail,
+  getAccid
 } = require('../../../../utils/api.js')
 Page({
 
@@ -40,13 +41,29 @@ Page({
         ...this.data,
         ...res.data.code
       })
+      if (res.data.code.order_type == 1) { //视频
+        this.setData({
+          'infoList[1].title': '视频对话记录',
+          'infoList[1].url': '/pages/user/service/wzDetail/videoList/videoList?docId=' + this.data.doc_id
+        })
+      }
+      getAccid({
+        doc_id: this.data.doc_id
+      }).then(res => {
+        this.setData({
+          ...res.data.code
+        })
+        wx.setStorageSync('docIm', res.data.code.doc_im)
+        wx.setStorageSync('docAvatar', this.data.doc_avatar)
+        wx.setStorageSync('docName', this.data.doc_name)
+      })
     })
   },
   infoItemClick(e) {
     let item = e.currentTarget.dataset.item;
     let url = item.url;
     util.navigateTo({
-      url
+      url: url + '?orderId=' + this.data.order_id
     })
   },
   /**

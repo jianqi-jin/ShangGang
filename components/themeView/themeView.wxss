@@ -1,6 +1,6 @@
 /* components/themeView/themeView.wxss */
 .themeViewS{
-  --themeC: #F7BC54;
+  --themeC: #973f2b;
   --themeBorderC: #F7BC54;
   --themeBackC: #F7BC54;
   --themeBackCG: linear-gradient(90deg,rgba(255,191,91,1),rgba(255,222,141,1));

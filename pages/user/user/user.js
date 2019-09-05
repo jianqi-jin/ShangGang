@@ -1,6 +1,10 @@
 // pages/user/user.js
 const util = require('../../../utils/util.js')
 const {
+  getUserPageData,
+  getKefuPhone
+} = require('../../../utils/api.js')
+const {
   auth
 } = require('../../../utils/api.js')
 Page({
@@ -64,14 +68,25 @@ Page({
   onLoad: function(options) {
     this.setData({
       token: wx.getStorageSync('token'),
-      ...wx.getStorageSync('userInfo')
+      // ...wx.getStorageSync('userInfo')
+    })
+    this.getUserPageData()
+  },
+  getUserPageData() {
+    getUserPageData().then(res => {
+      getKefuPhone().then(res2 => {
+        this.setData({
+          ...res.data.code,
+          ...res2.data.code
+        })
+      })
     })
   },
   loginClick(e) {
     let userInfo = e.detail.userInfo;
-    this.setData({
-      ...userInfo
-    })
+    // this.setData({
+    //   ...userInfo
+    // })
     auth({
       wx_url: userInfo.avatarUrl,
       wx_name: userInfo.nickName,
@@ -84,6 +99,7 @@ Page({
           token: data.token
         })
         wx.setStorageSync('token', data.token)
+        this.getUserPageData()
       }
     })
   },
@@ -101,7 +117,7 @@ Page({
       case '联系客服':
         {
           wx.makePhoneCall({
-            phoneNumber: '1775555555',
+            phoneNumber: this.data.kf_tel,
           })
           break;
         }

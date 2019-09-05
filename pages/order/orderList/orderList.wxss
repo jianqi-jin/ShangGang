@@ -13,6 +13,16 @@
   justify-content: space-between;
 }
 
+.btnList {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.btnList view:last-child {
+  margin-left: 16rpx;
+}
+
 .titleLeft {
   font-size: 26rpx;
   font-family: PingFang-SC-Regular;
@@ -83,6 +93,12 @@
   border-radius: 100rpx;
   text-align: center;
   line-height: 54rpx;
+  color: #973f2b;
 }
 
 /* orderItem End */
+
+.cancel {
+  border-color: #999;
+  color: #999;
+}

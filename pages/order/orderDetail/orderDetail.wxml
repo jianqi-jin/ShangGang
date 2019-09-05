@@ -1,6 +1,6 @@
 <!--pages/order/orderDetail/orderDetail.wxml-->
 <!-- 已经确定的订单，，可以修改地址 -->
-<view class='statusBar'>{{order_status}}</view>
+<view class='statusBar'>{{statusTitle[order_status]}}</view>
 <!-- <address-item class='addressBar'></address-item> -->
 <view class='addressBar'>
   <view class='addTop'>
@@ -23,11 +23,24 @@
 
 <view class='infoBox'>
 
-  <info-item info='{{item}}' wx:for='{{infoList}}' wx:key='{{item.title}}'/>
+  <info-item info='{{item}}' wx:for='{{infoList}}' wx:key='{{item.title}}' />
 </view>
 
 
 <view class='footer'>
-    <view class='btn'>立即付款</view>
-    <view class='btn'>取消订单</view>
+  <!-- 取消按钮 -->
+  <view class='btnItem cancel' bindtap="orderCancel" data-order_id="{{order_id}}" wx:if='{{order_status == 0}}'>取消订单</view>
+  <!-- 取消按钮 -->
+  <!-- 删除按钮 -->
+  <view class='btnItem cancel' bindtap="orderDelete" data-order_id="{{order_id}}" wx:if='{{order_status > 2 }}'>删除订单</view>
+  <!-- 删除按钮 -->
+  <!-- 物流按钮 -->
+  <view class='btnItem cancel' bindtap="orderShowWl" data-order_id="{{order_id}}" wx:if='{{order_status >= 2 && order_status < 4}}'>查看物流</view>
+  <!-- 物流按钮 -->
+  <!-- 付款按钮 -->
+  <view class='btnItem' bindtap="orderPay" data-order_id="{{order_id}}" data-cf_ye_money="{{cf_ye_money}}" wx:if='{{order_status == 0}}'>立即付款</view>
+  <!-- 付款按钮 -->
+  <!-- 确认按钮 -->
+  <view class='btnItem' bindtap="orderSuccess" data-order_id="{{order_id}}" wx:if='{{order_status != 0 && order_status < 3}}'>确认收货</view>
+  <!-- 确认按钮 -->
 </view>
