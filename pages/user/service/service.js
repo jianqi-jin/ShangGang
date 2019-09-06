@@ -63,7 +63,7 @@ Page({
     let item = e.currentTarget.dataset.item;
     let uri = this.data.type == 0 ? 'wzDetail/wzDetail' : 'ydDetail/ydDetail'
     util.navigateTo({
-      url: '/pages/user/service/' + uri + '?order_id=' + item.order_id
+      url: '/pages/user/service/' + uri + '?order_id=' + item.order_id // + '&order_pid=' + item.sj_pid
     })
   },
   onNavChange(e) {

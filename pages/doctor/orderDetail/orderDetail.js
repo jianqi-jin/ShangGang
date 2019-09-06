@@ -2,7 +2,8 @@
 const util = require('../../../utils/util.js')
 const {
   getFwInfo,
-  payMentWz
+  payMentWz,
+  payFreeOrder
 } = require('../../../utils/api.js')
 Page({
 
@@ -20,7 +21,7 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad: function (options) {
+  onLoad: function(options) {
     // 判断options是什么类型
     let type = options.type;
     this.setData({
@@ -70,12 +71,25 @@ Page({
     }
     let order_price = this.data.doc_spwz || this.data.doc_twwz;
     let money = Number(order_price) - Number(this.data.doc_ye)
+    money = money > 0 ? money : 0
     data = {
       ...data,
       money,
       order_price,
       order_type: this.data.type,
       doc_id: this.data.doc_id
+    }
+    if (money == 0) {
+      payFreeOrder(data).then(res => {
+        if (res.data.code.status == 0) {
+
+          util.navigateTo({
+            url: '/pages/chat/' + this.data.typePage[type] + '/' + this.data.typePage[type]
+          })
+        }
+      })
+      return
+
     }
     payMentWz(data).then(res => {
       console.log(res)
@@ -108,7 +122,11 @@ Page({
   },
   showDialog() {
     //如果第二次进入则直接跳进聊天界面
-    let { typePage, type, mf_type} = this.data;
+    let {
+      typePage,
+      type,
+      mf_type
+    } = this.data;
     if (mf_type == 1) {
       util.navigateTo({
         url: '/pages/chat/' + typePage[type] + '/' + typePage[type]
@@ -122,49 +140,49 @@ Page({
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady: function () {
+  onReady: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
-  onShow: function () {
+  onShow: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
-  onHide: function () {
+  onHide: function() {
 
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
-  onUnload: function () {
+  onUnload: function() {
 
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
-  onPullDownRefresh: function () {
+  onPullDownRefresh: function() {
 
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
-  onReachBottom: function () {
+  onReachBottom: function() {
 
   },
 
   /**
    * 用户点击右上角分享
    */
-  onShareAppMessage: function () {
+  onShareAppMessage: function() {
 
   }
 })

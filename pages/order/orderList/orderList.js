@@ -41,7 +41,9 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function(options) {
-
+    this.setData({
+      'navTitleInfo.currentNavIndex': options.currentNavIndex
+    })
   },
   onItemClick(e) {
     let {
@@ -163,7 +165,7 @@ Page({
     }).then(res => {
       wx.hideLoading()
       if (res.data.code == 1) {
-        util. showToast('取消成功')
+        util.showToast('取消成功')
         this.getOrderList()
       }
       console.log(res)

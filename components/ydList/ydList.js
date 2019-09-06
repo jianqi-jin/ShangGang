@@ -15,7 +15,8 @@ Component({
    * 组件的初始数据
    */
   data: {
-
+    statusList: ['[未支付]', '', '', '', ''],
+    btnList: ['去支付', '', '', '', '处方已过期']
   },
 
   /**
@@ -25,7 +26,7 @@ Component({
 
     itemClick(e) {
       let item = e.currentTarget.dataset.item;
-      let uri = 'ydDetail/ydDetail?orderId=' + item.order_id
+      let uri = 'ydDetail/ydDetail?orderId=' + item.order_id + '&order_pid=' + item.sj_pid + '&order_cftype_status=' + item.order_cftype_status
       util.navigateTo({
         url: '/pages/user/service/' + uri
       })

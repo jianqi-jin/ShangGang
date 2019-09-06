@@ -16,23 +16,23 @@ Page({
     orderBtnList: [{
       title: '全部订单',
       icon: '/res/icon/order-01@3x.png',
-      url: '/pages/order/orderList/orderList'
+      url: '/pages/order/orderList/orderList?currentNavIndex=0'
     }, {
       title: '待付款',
       icon: '/res/icon/order-02@3x.png',
-      url: '/pages/order/orderList/orderList'
+        url: '/pages/order/orderList/orderList?currentNavIndex=1'
     }, {
       title: '待收货',
       icon: '/res/icon/order-03@3x.png',
-      url: '/pages/order/orderList/orderList'
+        url: '/pages/order/orderList/orderList?currentNavIndex=2'
     }, {
       title: '已完成',
       icon: '/res/icon/order-04@3x.png',
-      url: '/pages/order/orderList/orderList'
+        url: '/pages/order/orderList/orderList?currentNavIndex=3'
     }, {
       title: '已取消',
       icon: '/res/icon/order-05@3x.png',
-      url: '/pages/order/orderList/orderList'
+        url: '/pages/order/orderList/orderList?currentNavIndex=4'
     }],
     serviceBtnList: [{
         title: '我的问诊',

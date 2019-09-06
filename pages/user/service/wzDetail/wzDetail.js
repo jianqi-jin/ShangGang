@@ -30,6 +30,7 @@ Page({
     this.setData({
       ...options
     })
+    wx.setStorageSync('order_pid', this.data.order_id)
     this.getWzDetail()
   },
   getWzDetail() {

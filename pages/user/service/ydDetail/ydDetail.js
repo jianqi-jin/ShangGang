@@ -21,7 +21,8 @@ Page({
     })
     getYdDetail({
       order_id: this.data.orderId,
-      order_cftype_status: this.data.order_cftype_status
+      order_cftype_status: this.data.order_cftype_status,
+      order_pid: this.data.order_pid
     }).then(res => {
       console.log(res)
       this.setData({

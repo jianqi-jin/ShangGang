@@ -5,7 +5,7 @@
   <view class='ydItem' bindtap='itemClick' wx:for='{{ydList}}' data-item='{{item}}' wx:key='{{item.order_id}}'>
     <view class='ydTitle'>
       <view>{{item.drugtc_name}}</view>
-      <view>[{{item.order_status}}]</view>
+      <view>{{statusList[item.order_status]}}</view>
     </view>
     <view class='ydContent'>
       <view>【功效】{{item.drugtcj_effect}}</view>
@@ -14,7 +14,7 @@
     </view>
     <view class='ydBottom'>
       <view>医生：{{item.doc_name}} {{item.order_createtime}}</view>
-      <view>去支付</view>
+      <view wx:if='{{item.order_status == 4 || item.order_status == 0}}' class="{{item.order_status == 4 ?'outTime':''}}">{{btnList[item.order_status]}}</view>
     </view>
   </view>
 </view>

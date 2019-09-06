@@ -1,11 +1,17 @@
 // pages/user/service/wzDetail/ydList/ydList.js
+const {
+  getYdHis
+} = require("../../../../../utils/api.js")
+const {
+  showToast
+} = require("../../../../../utils/util.js")
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    page: 1
   },
 
   /**
@@ -15,9 +21,22 @@ Page({
     this.setData({
       ...options
     })
+    this.getOrderList()
   },
-  getOrderList(){
-    
+  getOrderList() {
+    getYdHis({
+      order_id: this.data.orderId,
+      page: this.data.page
+    }).then(res => {
+      console.log(res)
+      if (!res.data.code.jl){
+        showToast('没有更多记录了哟~')
+        return
+      }
+      this.setData({
+        page: this.data.page + 1
+      })
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -58,7 +77,7 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function() {
-
+    this.getOrderList()
   },
 
   /**

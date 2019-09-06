@@ -100,4 +100,12 @@
   border-radius: 22rpx;
   text-align: center;
   line-height: 43rpx;
+  color: #e9333c;
+}
+
+.outTime {
+  border: 0 !important;
+  font-size: 24rpx;
+  color: #ab8354 !important;
+  width: auto !important;
 }

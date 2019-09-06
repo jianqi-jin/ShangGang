@@ -101,7 +101,9 @@ Page({
   onLoad: function(options) {
     this.setData({
       docAvatar: wx.getStorageSync('docAvatar'),
-      docIm: wx.getStorageSync('docIm')
+      docIm: wx.getStorageSync('docIm'),
+      openid: wx.getStorageSync('openid').toLowerCase(),
+      avatarUrl: wx.getStorageSync('userInfo').avatarUrl,
     })
     getApp().onmsg = (msg) => {
       this.onmsg(msg)
@@ -315,7 +317,7 @@ Page({
     if (item.type == 'orderClick') {
       //此处是药单的解析
       wx.navigateTo({
-        url: '/pages/user/service/ydDetail/ydDetail?orderId=' + item.data.order.order_id + '&order_cftype_status=1'
+        url: '/pages/user/service/ydDetail/ydDetail?orderId=' + item.data.order.order_id + '&order_pid=' + wx.getStorageSync('order_pid') + '&order_cftype_status=1'
       })
     }
   },

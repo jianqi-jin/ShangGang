@@ -14,7 +14,11 @@ const request = (type, data) => new Promise((resolve, reject) => wx.request({
   dataType: 'json',
   responseType: 'text',
   success: function(res) {
-    if (res.data.code == "token无效" && getCurrentPages()[0].route != 'pages/user/user/user') {
+    let routePages = getCurrentPages()
+    if (res.data.code == "token无效" && routePages[routePages.length - 1].route != 'pages/user/user/user') {
+      wx.navigateBack({
+        delta: 1,
+      })
       wx.redirectTo({
         url: '/pages/user/user/user',
         success() {
@@ -119,5 +123,7 @@ module.exports = {
   orderSuccess: data => request('my/qrsh', data),
   orderCancel: data => request('my/qxdd', data),
   orderDelete: data => request('my/scdd', data),
+  payFreeOrder: data => request('index/doc_lzf', data),
+  getYdHis: data => request('my/wzyy_jl', data),
   //我的 End
 }
